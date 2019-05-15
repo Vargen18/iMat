@@ -2,22 +2,11 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.Favorites">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.FavoritesController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="113.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../Pictures/UML18_12_06.PNG" />
-         </image>
-      </ImageView>
-      <ButtonBar layoutX="200.0" layoutY="180.0" prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button mnemonicParsing="false" text="Button" />
-        </buttons>
-      </ButtonBar>
+      <ButtonBar layoutX="200.0" layoutY="180.0" prefHeight="40.0" prefWidth="200.0" />
+    <Button fx:id="switchSceneButton" layoutX="274.0" layoutY="168.0" mnemonicParsing="false" onAction="#switchScene" text="Button" />
    </children>
 </AnchorPane>
