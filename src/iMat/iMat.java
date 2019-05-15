@@ -22,7 +22,6 @@ public class iMat extends Application{
 
         System.out.println("This is a commit test");
 
-
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(getClass().getResource("iMat.fxml"), bundle);
