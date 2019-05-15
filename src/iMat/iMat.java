@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Control;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
@@ -24,7 +25,7 @@ public class iMat extends Application{
 
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
-        Parent root = FXMLLoader.load(getClass().getResource("iMat.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("Favorites.fxml"), bundle);
 
         Scene scene = new Scene(root);
 
@@ -32,11 +33,11 @@ public class iMat extends Application{
         stage.setScene(scene);
         stage.show();
 
-        for(int i = 0; i < 2; i++){
+        /*for(int i = 0; i < 2; i++){
             scene.setRoot(FXMLLoader.load(getClass().getResource("Favorites.fxml"), bundle));
             TimeUnit.SECONDS.sleep(1);
             scene.setRoot(FXMLLoader.load(getClass().getResource("iMat.fxml"), bundle));
-        }
+        }*/
     }
 
     /**
@@ -44,6 +45,14 @@ public class iMat extends Application{
      */
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static void switchScene(Control object, String target) throws Exception{
+        ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
+
+        Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);
+
+        object.getScene().setRoot(root);
     }
 }
 
