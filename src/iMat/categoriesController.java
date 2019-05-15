@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
-public class iMat_controller {
+public class categoriesController {
 
 
 
