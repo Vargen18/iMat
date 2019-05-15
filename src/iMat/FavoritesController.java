@@ -15,10 +15,12 @@ public class FavoritesController {
     @FXML
     private void switchScene() throws Exception{
 
-        ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
+        /*ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(getClass().getResource("iMat.fxml"), bundle);
 
-        switchSceneButton.getScene().setRoot(root);
+        switchSceneButton.getScene().setRoot(root);*/
+
+        iMat.switchScene(switchSceneButton, "iMat.fxml");
     }
 }
