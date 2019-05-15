@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.categoriesController">
    <children>
@@ -17,6 +18,11 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="320.0">
                <children>
                   <Button fx:id="switchSceneButton" layoutX="175.0" layoutY="180.0" mnemonicParsing="false" onAction="#switchScene" text="Button" />
+                  <Label layoutX="55.0" layoutY="30.0" text="Kategorier">
+                     <font>
+                        <Font name="Mongolian Baiti" size="64.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
         </items>
       </SplitPane>
