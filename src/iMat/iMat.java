@@ -1,6 +1,8 @@
 package iMat;
 
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -30,6 +32,12 @@ public class iMat extends Application{
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.show();
+
+        for(int i = 0; i < 2; i++){
+            scene.setRoot(FXMLLoader.load(getClass().getResource("Favorites.fxml"), bundle));
+            TimeUnit.SECONDS.sleep(1);
+            scene.setRoot(FXMLLoader.load(getClass().getResource("iMat.fxml"), bundle));
+        }
     }
 
     /**
@@ -38,6 +46,5 @@ public class iMat extends Application{
     public static void main(String[] args) {
         launch(args);
     }
-
 }
 
