@@ -15,6 +15,11 @@ public class iMat extends Application{
 
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
+        dataHandler.resetFirstRun();
+        System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
+
+        System.out.println("This is a commit test");
+
 
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
