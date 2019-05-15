@@ -17,8 +17,8 @@ public class FavoritesController {
 
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("iMat.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("iMat.fxml"), bundle);
 
-        switchSceneButton.getScene().setRoot(loader.getRoot());
+        switchSceneButton.getScene().setRoot(root);
     }
 }
