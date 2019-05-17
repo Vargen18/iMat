@@ -8,10 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="486.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
+<AnchorPane fx:id="anchorpane" prefHeight="486.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
       <ButtonBar layoutX="200.0" layoutY="180.0" prefHeight="40.0" prefWidth="200.0" />
-    <Button fx:id="switchSceneButton" layoutX="284.0" layoutY="286.0" mnemonicParsing="false" onAction="#switchToCategories" text="Button" />
+      <Label layoutX="228.0" layoutY="134.0" text="Favoriter">
+         <font>
+            <Font name="Courier New Bold Italic" size="36.0" />
+         </font>
+      </Label>
       <AnchorPane prefHeight="121.0" prefWidth="702.0" style="-fx-background-color: DD221C;">
          <children>
             <ImageView fx:id="escapehatch" fitHeight="133.0" fitWidth="148.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
@@ -21,10 +25,6 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Label layoutX="238.0" layoutY="128.0" text="Favoriter">
-         <font>
-            <Font name="Courier New Bold Italic" size="36.0" />
-         </font>
-      </Label>
+    <Button fx:id="switchSceneButton" layoutX="100.0" layoutY="194.0" mnemonicParsing="false" onAction="#switchToCategories" text="Button" />
    </children>
 </AnchorPane>
