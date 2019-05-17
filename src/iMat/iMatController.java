@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.control.Button;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.util.ResourceBundle;
 
@@ -11,6 +12,9 @@ public class iMatController {
 
     @FXML
     private Button switchSceneButton;
+
+
+    // IMatDataHandler dataHandler = new IMatDataHandler(); Den har private access. Tror vi måste komma åt den här
 
     @FXML
     private void switchToCategories() throws Exception{
