@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="881.0" style="-fx-background-color: BBBBBB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-      <SplitPane dividerPositions="0.21704605611434621" prefHeight="673.0" prefWidth="881.0">
+      <SplitPane dividerPositions="0.21704605611434621" prefHeight="673.0" prefWidth="881.0" style="-fx-background-color: rgba(0,0,0,0);">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="162.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="162.0" style="-fx-background-color: rgba(0,0,0,0);">
                <children>
-                  <AnchorPane prefHeight="91.0" prefWidth="188.0" style="-fx-background-color: DD221C;">
+                  <AnchorPane prefHeight="92.0" prefWidth="188.0" style="-fx-background-color: CC3311;">
                      <children>
                         <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -28,7 +28,7 @@
                   <Label layoutX="55.0" layoutY="223.0" text="It's ALIVE!" />
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="320.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="320.0" style="-fx-background-color: rgba(0,0,0,0);">
                <children>
                   <Label layoutX="189.0" layoutY="232.0" text="Kategorier">
                      <font>
@@ -40,18 +40,19 @@
                         <Image url="@resources/images/grill.jpg" />
                      </image>
                   </ImageView>
-                  <AnchorPane layoutY="303.0" prefHeight="370.0" prefWidth="686.0">
+                  <AnchorPane layoutY="303.0" prefHeight="370.0" prefWidth="686.0" style="-fx-background-color: rgba(0,0,0,0);">
                      <children>
-                        <ScrollPane prefHeight="370.0" prefWidth="686.0">
+                        <ScrollPane prefHeight="370.0" prefWidth="686.0" style="-fx-background-color: rgba(0,0,0,0);">
                            <content>
-                              <FlowPane prefHeight="314.0" prefWidth="538.0" />
+                              <FlowPane prefHeight="314.0" prefWidth="538.0" style="-fx-background-color: rgba(0,0,0,0);" />
                            </content>
                         </ScrollPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="93.0" prefWidth="686.0" style="-fx-background-color: DD221C;">
+                  <AnchorPane prefHeight="92.0" prefWidth="686.0" style="-fx-background-color: CC3311;">
                      <children>
-                        <Button fx:id="switchSceneButton" layoutX="609.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter" />
+                        <Button fx:id="switchToFavorites" layoutX="609.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter" />
+                        <Button fx:id="switchSceneButton" layoutX="502.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#switchToAccount" text="Mitt Konto" />
                      </children>
                   </AnchorPane>
                </children></AnchorPane>

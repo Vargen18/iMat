@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
 public class iMatController {
 
     @FXML
-    private Button switchSceneButton;
+    private Button switchSceneButton, switchToFavorites;
 
     @FXML
     private ImageView escapehatch;
@@ -40,6 +40,13 @@ public class iMatController {
     private void switchToAccount() throws  Exception{
 
         iMat.switchScene(switchSceneButton, "myPage.fxml");
+
+    }
+
+    @FXML
+    private void switchToCheckout() throws  Exception{
+
+        iMat.switchScene(switchSceneButton, "checkout.fxml");
 
     }
 }
