@@ -28,6 +28,7 @@ public class iMatController {
     private void switchToCategories() throws Exception{
 
         iMat.switchScene(switchSceneButton, "categories.fxml");
+
     }
 
     @FXML
