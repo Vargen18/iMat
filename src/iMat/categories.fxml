@@ -2,61 +2,97 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="673.0" prefWidth="881.0" style="-fx-background-color: BBBBBB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000" prefWidth="1920.0" style="-fx-background-color: BBBBBB;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-      <SplitPane dividerPositions="0.21704605611434621" prefHeight="673.0" prefWidth="881.0" style="-fx-background-color: rgba(0,0,0,0);">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="458.0" prefWidth="162.0" style="-fx-background-color: rgba(0,0,0,0);">
-               <children>
-                  <AnchorPane prefHeight="92.0" prefWidth="188.0" style="-fx-background-color: CC3311;">
+      <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: CC3311;">
+         <children>
+            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/homepagebutton.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="switchToFavorites" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font></Button>
+            <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" text="Mitt Konto">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font></Button>
+            <Button fx:id="checkOutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" text="varkorgen">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font></Button>
+            <Button fx:id="searchButton" layoutX="1138.0" layoutY="19.0" mnemonicParsing="false" onAction="#updateCategoryList" text="sök">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Button>
+            <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="232.0" layoutY="20.0" text="iMat">
+               <font>
+                  <Font name="Comic Sans MS" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="91.0" prefHeight="908.0" prefWidth="1920.0">
+         <children>
+            <SplitPane dividerPositions="0.2" prefHeight="908.0" prefWidth="1920.0" style="-fx-background-color: rgba(0,0,0,0);">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="908.0" prefWidth="384.0">
                      <children>
-                        <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/images/homepagebutton.png" />
-                           </image>
-                        </ImageView>
+                        <FlowPane fx:id="categoriesPane" prefHeight="908.0" prefWidth="376.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
-                  <Label layoutX="55.0" layoutY="223.0" text="It's ALIVE!" />
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="320.0" style="-fx-background-color: rgba(0,0,0,0);">
-               <children>
-                  <Label layoutX="189.0" layoutY="232.0" text="Kategorier">
-                     <font>
-                        <Font name="Mongolian Baiti" size="64.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="135.0" fitWidth="305.0" layoutX="225.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/images/grill.jpg" />
-                     </image>
-                  </ImageView>
-                  <AnchorPane layoutY="303.0" prefHeight="370.0" prefWidth="686.0" style="-fx-background-color: rgba(0,0,0,0);">
+                  <AnchorPane prefHeight="908.0" prefWidth="1536.0">
                      <children>
-                        <ScrollPane prefHeight="370.0" prefWidth="686.0" style="-fx-background-color: rgba(0,0,0,0);">
-                           <content>
-                              <FlowPane prefHeight="314.0" prefWidth="538.0" style="-fx-background-color: rgba(0,0,0,0);" />
-                           </content>
-                        </ScrollPane>
+                        <SplitPane dividerPositions="0.75" prefHeight="908.0" prefWidth="1536.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <Label layoutX="394.0" layoutY="22.0" text="Kategorier">
+                                       <font>
+                                          <Font name="Mongolian Baiti" size="64.0" />
+                                       </font>
+                                    </Label>
+                                    <GridPane layoutY="120.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Button" />
+                                    <ListView prefHeight="908.0" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="92.0" prefWidth="686.0" style="-fx-background-color: CC3311;">
-                     <children>
-                        <Button fx:id="switchToFavorites" layoutX="609.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter" />
-                        <Button fx:id="switchSceneButton" layoutX="502.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#switchToAccount" text="Mitt Konto" />
-                     </children>
-                  </AnchorPane>
-               </children></AnchorPane>
-        </items>
-      </SplitPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

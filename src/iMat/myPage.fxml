@@ -16,7 +16,7 @@
                   <Image url="@resources/images/homepagebutton.png" />
                </image>
             </ImageView>
-            <Button fx:id="switchSceneButton" layoutX="504.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#switchToFavorites" text="Favoriter" />
+            <Button fx:id="switchSceneButton" layoutX="504.0" layoutY="60.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter" />
          </children>
       </AnchorPane>
       <Label layoutX="187.0" layoutY="98.0" prefHeight="57.0" prefWidth="230.0" text="Mina Sidor">

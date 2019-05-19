@@ -1,5 +1,6 @@
 package iMat;
 
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Control;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
 public class iMat extends Application{
 
@@ -21,7 +24,6 @@ public class iMat extends Application{
         dataHandler.resetFirstRun();
         System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
 
-
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(getClass().getResource("categories.fxml"), bundle);
@@ -31,6 +33,7 @@ public class iMat extends Application{
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.show();
+
 
         /*for(int i = 0; i < 2; i++){
             scene.setRoot(FXMLLoader.load(getClass().getResource("Favorites.fxml"), bundle));
