@@ -6,6 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
@@ -17,7 +18,7 @@ public class CategoryListItem extends AnchorPane {
 
     @FXML private ImageView categoryImage;
     @FXML private Label categoryName;
-    public CategoryListItem(ProductCategory category, iMatController controller){
+    public CategoryListItem(Product product, iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("category_listitem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -29,9 +30,9 @@ public class CategoryListItem extends AnchorPane {
         }
 
         this.controller = controller;
-        this.category = category;
-        String imagePath = "resources\\images\\BREAD.jpg";
-        this.categoryImage.setImage(controller.getSquareImage(new Image(getClass().getClassLoader().getResourceAsStream(imagePath))));
+        this.category = product.getCategory();
+        String imagePath = product.getImageName();
+        //this.categoryImage.setImage((new Image(product.getImageName())));
         this.categoryName.setText(category.name());
     }
 }
