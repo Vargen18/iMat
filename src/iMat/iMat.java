@@ -17,6 +17,7 @@ public class iMat extends Application{
     public void start(Stage stage) throws Exception {
 
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+        iMatController iMatController = new iMatController();
         System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
         dataHandler.resetFirstRun();
         System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
@@ -52,6 +53,7 @@ public class iMat extends Application{
         Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);
 
         object.getScene().setRoot(root);
+
     }
 }
 

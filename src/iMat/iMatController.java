@@ -2,6 +2,7 @@ package iMat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,11 +12,15 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class iMatController {
+public class iMatController implements Initializable {
 
     @FXML
     private Button switchSceneButton, switchToFavorites, test;
@@ -32,7 +37,8 @@ public class iMatController {
     @FXML
     FlowPane categoryFlowPane;
 
-    public List<Product> products;
+    public List<ProductCategory> productCategories = Arrays.asList(ProductCategory.values());
+
 
 
 
@@ -41,6 +47,13 @@ public class iMatController {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
+        System.out.println("Testing");
+
+    }
 
 
     @FXML
@@ -58,7 +71,7 @@ public class iMatController {
     @FXML
     private void switchToAccount() throws  Exception{
 
-        iMat.switchScene(switchSceneButton, "categorybox.fxml");
+        iMat.switchScene(switchSceneButton, "productbox.fxml");
 
 
     }
