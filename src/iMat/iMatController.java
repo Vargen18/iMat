@@ -5,9 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Product;
 
 import java.util.ResourceBundle;
 
@@ -17,7 +19,7 @@ public class iMatController {
     private Button switchSceneButton, switchToFavorites;
 
     @FXML
-    private ImageView escapehatch;
+    private ImageView escapehatch, categoryBoxImage;
 
     @FXML
     AnchorPane anchorPane;
@@ -51,6 +53,12 @@ public class iMatController {
     private void switchToCheckout() throws  Exception{
 
         iMat.switchScene(switchSceneButton, "checkout.fxml");
+
+    }
+
+    private void populateCategoryBox(Product product) {
+        categoryBoxTitle.setText(product.getName());
+        categoryBoxImage.setImage(new Image(product.getImageName()));
 
     }
 }
