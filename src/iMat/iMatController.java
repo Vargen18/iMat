@@ -83,7 +83,7 @@ public class iMatController implements Initializable {
 
     }
     @FXML
-    private void populateCategoryBox() throws Exception {
+    private void populateProductBox() throws Exception {
         Product product = dataHandler.getProduct(25);
 
 

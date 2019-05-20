@@ -22,7 +22,7 @@
                   <Image url="@resources/images/bättrehjärta.png" />
                </image>
             </ImageView>
-            <Button fx:id="test" layoutX="120.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#populateCategoryBox" text="Press me" />
+            <Button fx:id="test" layoutX="120.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#populateProductBox" text="Press me" />
          </children>
       </AnchorPane>
       <ImageView fx:id="categoryBoxImage" fitHeight="100.0" fitWidth="222.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
