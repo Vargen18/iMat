@@ -71,7 +71,7 @@ public class iMatController implements Initializable {
     @FXML
     private void switchToAccount() throws  Exception{
 
-        iMat.switchScene(switchSceneButton, "productbox.fxml");
+        iMat.switchScene(switchSceneButton, "productBox.fxml");
 
 
     }
@@ -88,10 +88,10 @@ public class iMatController implements Initializable {
 
 
         System.out.println(product.getName());
-        categoryBoxTitle.setText("Test");
+        productBoxTitle.setText("Test");
         System.out.println(categoryBoxTitle);
-        categoryBoxTitle.setText(product.getName());
-        categoryBoxImage.setImage(dataHandler.getFXImage(product));
+        productBoxTitle.setText(product.getName());
+        productBoxImage.setImage(dataHandler.getFXImage(product));
 
     }
 
