@@ -97,7 +97,6 @@ public class iMatController {
 
     @FXML
     public void updateCategoryList() {
-        categoriesPane.getChildren().clear();
         ArrayList<CategoryListItem> categoryListItems = new ArrayList<CategoryListItem>();
         ProductCategory[] categories = ProductCategory.class.getEnumConstants();
         for (ProductCategory pc : categories) {

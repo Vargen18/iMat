@@ -30,7 +30,7 @@ public class CategoryListItem extends AnchorPane {
 
         this.controller = controller;
         this.category = category;
-        String imagePath = "resources\\images" + category.name() + ".jpg";
+        String imagePath = "resources\\images\\BREAD.jpg";
         this.categoryImage.setImage(controller.getSquareImage(new Image(getClass().getClassLoader().getResourceAsStream(imagePath))));
         this.categoryName.setText(category.name());
     }
