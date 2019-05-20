@@ -28,7 +28,13 @@ public class iMatController {
     Label categoryBoxTitle;
 
 
-    // IMatDataHandler dataHandler = new IMatDataHandler(); Den har private access. Tror vi måste komma åt den här
+
+
+
+
+    IMatDataHandler dataHandler = IMatDataHandler.getInstance(); // Den har private access. Tror vi måste komma åt den här
+
+
 
     @FXML
     private void switchToCategories() throws Exception{
@@ -45,7 +51,9 @@ public class iMatController {
     @FXML
     private void switchToAccount() throws  Exception{
 
-        iMat.switchScene(switchSceneButton, "myPage.fxml");
+        iMat.switchScene(switchSceneButton, "categorybox.fxml");
+        Product product = dataHandler.getProduct(25);
+        populateCategoryBox(product);
 
     }
 
