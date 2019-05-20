@@ -26,13 +26,13 @@ public class iMatController implements Initializable {
     private Button switchSceneButton, switchToFavorites, test;
 
     @FXML
-    private ImageView escapehatch, categoryBoxImage;
+    private ImageView escapehatch, categoryBoxImage, productBoxImage;
 
     @FXML
     AnchorPane anchorPane;
 
     @FXML
-    Label categoryBoxTitle;
+    Label categoryBoxTitle, productBoxTitle;
 
     @FXML
     FlowPane categoryFlowPane;
