@@ -95,5 +95,95 @@ public class iMatController implements Initializable {
 
     }
 
+    private void populateCategoryFlowPane() {
+
+        for (ProductCategory productCategory : productCategories) {
+            categoryFlowPaneItem item = new categoryFlowPaneItem();
+            String product = "shit";
+            switch (productCategory.toString()) {
+                case "POD":
+                    product = "Pod";
+                case "BREAD":
+                    product = "Bread";
+                case "BERRY":
+                    product = "Pod";
+                case "CITRUS_FRUIT":
+                    product = "Bread";
+                case "HOT_DRINKS":
+                    product = "Pod";
+                case "COLD_DRINKS":
+                    product = "Bread";
+                case "EXOTIC_FRUIT":
+                    product = "Pod";
+                case "FISH":
+                    product = "Bread";
+                case "VEGETABLE_FRUIT":
+                    product = "Pod";
+                case "CABBAGE":
+                    product = "Bread";
+                case "MEAT":
+                    product = "Pod";
+                case "DAIRIES":
+                    product = "Bread";
+                case "MELONS":
+                    product = "Pod";
+                case "FLOUR_SUGAR_SALT":
+                    product = "Bread";
+                case "NUTS_AND_SEEDS":
+                    product = "Pod";
+                case "PASTA":
+                    product = "Bread";
+                case "POTATO_RICE":
+                    product = "Pod";
+                case "ROOT_VEGETABLE":
+                    product = "Bread";
+                case "FRUIT":
+                    product = "Bread";
+                case "SWEET":
+                    product = "Pod";
+                case "HERB":
+                    product = "Bread";
+
+            }
+
+
+
+
+
+
+
+
+
+
+                    item.setCategoryTitle(product);
+                    item.setCategoryBoxImage(dataHandler.getFXImage(dataHandler.getProducts(productCategory).get(0)));
+
+
+        }
+    }
+                    /*POD,
+                    BREAD,
+                    BERRY,
+                    CITRUS_FRUIT,
+                    HOT_DRINKS,
+                    COLD_DRINKS,
+                    EXOTIC_FRUIT,
+                    FISH,
+                    VEGETABLE_FRUIT,
+                    CABBAGE,
+                    MEAT,
+                    DAIRIES,
+                    MELONS,
+                    FLOUR_SUGAR_SALT,
+                    NUTS_AND_SEEDS,
+                    PASTA,
+                    POTATO_RICE,
+                    ROOT_VEGETABLE,
+                    FRUIT,
+                    SWEET,
+                    HERB;*/
+
+
+
 
 }
