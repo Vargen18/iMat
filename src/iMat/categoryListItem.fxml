@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,10 +14,13 @@
             <Image url="@resources/images/BERRY.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="categoryName" layoutX="148.0" layoutY="13.0" text="kategori">
+      <Label fx:id="categoryName" layoutX="104.0" layoutY="13.0" text="kategori">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
    </children>
+   <opaqueInsets>
+      <Insets bottom="10.0" top="10.0" />
+   </opaqueInsets>
 </fx:root>

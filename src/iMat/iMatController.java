@@ -11,12 +11,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class iMatController implements Initializable {
@@ -25,29 +27,24 @@ public class iMatController implements Initializable {
     private Button switchSceneButton, switchToFavorites;
 
     @FXML
-    private ImageView escapehatch, categoryBoxImage;
+    private ImageView escapehatch;
 
     @FXML
     private AnchorPane anchorPane;
 
     @FXML
-    private Label categoryBoxTitle;
+    private FlowPane categoriesList, categoriesGrid;
 
-    @FXML
-    private FlowPane categoriesPane;
-
-
-
-
+    ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance(); // Den har private access. Tror vi måste komma åt den här
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        updateCategoryGrid();
         updateCategoryList();
 
         // TODO
-        //updateCategoryGrid();
         //updateshoppingcart();
         //updatefavorites();
 
@@ -69,8 +66,6 @@ public class iMatController implements Initializable {
     private void switchToAccount() throws  Exception{
 
         iMat.switchScene(switchSceneButton, "categorybox.fxml");
-        Product product = dataHandler.getProduct(25);
-        populateCategoryBox(product);
 
     }
 
@@ -81,9 +76,10 @@ public class iMatController implements Initializable {
 
     }
 
+    @FXML
     private void populateCategoryBox(Product product) {
-        categoryBoxTitle.setText(product.getName());
-        categoryBoxImage.setImage(new Image(product.getImageName()));
+        //categoryBoxTitle.setText(product.getName());
+        //categoryBoxImage.setImage(new Image(product.getImageName()));
 
     }
 
@@ -117,12 +113,20 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateCategoryList() {
-        ArrayList<CategoryListItem> categoryListItems = new ArrayList<CategoryListItem>();
-        ProductCategory[] categories = ProductCategory.class.getEnumConstants();
+
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(1);
-            //categoryListItems.add(new CategoryListItem(pc, this));
-            categoriesPane.getChildren().add(new CategoryListItem(p, this));
+            categoriesList.getChildren().add(new CategoryListItem(p));
+        }
+    }
+
+    @FXML
+    public void updateCategoryGrid() {
+
+        for (ProductCategory pc : categories) {
+            Product p = dataHandler.getProducts(pc).get(1);
+            System.out.println(p.getImageName());
+            categoriesGrid.getChildren().add(new CategoryBoxItem(p));
         }
     }
 }
