@@ -2,6 +2,7 @@ package iMat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -22,7 +23,7 @@ import java.util.ResourceBundle;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, switchToFavorites;
+    private Button switchSceneButton, switchToFavorites, checkoutButton, myPageButton, addToFavorites;
 
     @FXML
     private ImageView escapehatch;
@@ -33,14 +34,17 @@ public class iMatController implements Initializable {
     @FXML
     private FlowPane categoriesList, categoriesGrid;
 
+    @FXML
+    private Node escapebatch;
+
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
-    IMatDataHandler dataHandler = IMatDataHandler.getInstance(); // Den har private access. Tror vi måste komma åt den här
+    IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        updateCategoryGrid();
-        updateCategoryList();
+        //updateCategoryGrid();
+        //updateCategoryList();
 
         // TODO
         //updateshoppingcart();
@@ -51,27 +55,27 @@ public class iMatController implements Initializable {
     @FXML
     private void switchToCategories() throws Exception {
 
-        iMat.switchScene(switchSceneButton, "categories.fxml");
+        iMat.switchScene(escapehatch, "categories.fxml");
 
     }
 
     @FXML
     private void switchToFavorites() throws Exception {
 
-        iMat.switchScene(switchSceneButton, "Favorites.fxml");
+        iMat.switchScene(switchToFavorites, "Favorites.fxml");
     }
 
     @FXML
     private void switchToAccount() throws Exception {
 
-        iMat.switchScene(switchSceneButton, "categorybox.fxml");
+        iMat.switchScene(myPageButton, "myPage.fxml");
 
     }
 
     @FXML
     private void switchToCheckout() throws Exception {
 
-        iMat.switchScene(switchSceneButton, "checkout.fxml");
+        iMat.switchScene(checkoutButton, "checkout.fxml");
 
     }
 
@@ -123,6 +127,13 @@ public class iMatController implements Initializable {
             System.out.println(p.getImageName());
             categoriesGrid.getChildren().add(new CategoryBoxItem(p));
         }
+
+    }
+
+    public void updateFavorites(){
+
+        //Product product = addToFavorites.
+        //dataHandler.favorites().add(product);
 
     }
 
