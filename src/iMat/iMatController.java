@@ -112,7 +112,7 @@ public class iMatController implements Initializable {
     public void updateCategoryList() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(1);
+            Product p = dataHandler.getProducts(pc).get(0);
             categoriesList.getChildren().add(new CategoryListItem(p));
         }
     }
@@ -121,7 +121,7 @@ public class iMatController implements Initializable {
     public void updateCategoryGrid() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(1);
+            Product p = dataHandler.getProducts(pc).get(0);
             //System.out.println(p.getImageName());
             categoriesGrid.getChildren().add(new CategoryBoxItem(p));
         }
