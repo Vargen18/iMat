@@ -1,3 +1,5 @@
+package iMat;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -15,6 +17,8 @@ public class productBoxItem extends AnchorPane {
     @FXML
     private Label productName;
 
+    Product product;
+
 
     public String getName() {
         return name;
@@ -26,21 +30,24 @@ public class productBoxItem extends AnchorPane {
 
     public String name;
     public int antal;
-    public double price;
+    public double total;
+
+    public double getTotal() {
+        return total;
+    }
+
 
     public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+        return product.getPrice();
     }
 
 
 
-    public productBoxItem(Product product){
+
+
+    public productBoxItem(Product pro){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryBoxItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productBox.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -50,12 +57,12 @@ public class productBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-
+        product = pro;
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getCategory().name());
-        this.price = product.getPrice();
+
     }
 
     public void addOne() {
@@ -64,5 +71,9 @@ public class productBoxItem extends AnchorPane {
 
     public void removeOne() {
         antal =- antal;
+    }
+
+    public void totalCost(){
+        total = antal * product.getPrice();
     }
 }
