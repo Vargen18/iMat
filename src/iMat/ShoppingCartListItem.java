@@ -2,6 +2,7 @@ package iMat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -10,20 +11,25 @@ import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
-// Klassen för lådorna i mitten
-
-public class CategoryBoxItem extends AnchorPane {
+public class ShoppingCartListItem extends AnchorPane {
 
     @FXML
-    private ImageView categoryImage;
+    private Label ProductName;
+
     @FXML
-    private Label categoryName;
+    private Label Quantity;
+
+    @FXML
+    private Button RemoveProduct;
+
+    @FXML
+    private ImageView ProductImage;
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
 
-    public CategoryBoxItem(Product product){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryBoxItem.fxml"));
+    public ShoppingCartListItem(Product product){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("shoppingCartListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -33,7 +39,12 @@ public class CategoryBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.categoryImage.setImage(dataHandler.getFXImage(product));
-        this.categoryName.setText(product.getCategory().name());
+        //this.ProductImage.setImage(dataHandler.getFXImage(product));
+        this.ProductName.setText(product.getName());
     }
+
+    public void removeProductFromShoppingCart(){
+
+    }
+
 }

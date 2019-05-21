@@ -15,8 +15,13 @@ import java.io.IOException;
 
 public class CategoryListItem extends AnchorPane {
 
-    @FXML private ImageView categoryImage;
-    @FXML private Label categoryName;
+    @FXML
+    private ImageView categoryImage;
+
+    @FXML
+    private Label categoryName;
+
+    IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
     public CategoryListItem(Product product){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryListItem.fxml"));
