@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Control;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -57,6 +59,14 @@ public class iMat extends Application{
 
         object.getScene().setRoot(root);
 
+    }
+
+    public static void switchScene(ImageView object, String target) throws Exception{
+        ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
+
+        Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);
+
+        object.getScene().setRoot(root);
     }
 }
 
