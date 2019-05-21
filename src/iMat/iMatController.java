@@ -128,6 +128,7 @@ public class iMatController implements Initializable {
             System.out.println(p.getImageName());
             categoriesGrid.getChildren().add(new CategoryBoxItem(p));
         }
+
     }
 }
 
