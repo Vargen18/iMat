@@ -18,7 +18,9 @@ public class CategoryListItem extends AnchorPane {
     @FXML private ImageView categoryImage;
     @FXML private Label categoryName;
 
-    public CategoryListItem(Product product){
+    iMatController controller;
+
+    public CategoryListItem(Product product, iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -32,6 +34,8 @@ public class CategoryListItem extends AnchorPane {
         }
 
         this.categoryImage.setImage(dataHandler.getFXImage(product));
-        this.categoryName.setText(product.getCategory().name());
+        this.categoryName.setText(controller.switchName(product));
     }
+
+
 }
