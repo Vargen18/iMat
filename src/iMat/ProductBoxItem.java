@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -17,32 +18,31 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     private Label productName;
 
+    Product product;
 
-    public String getName() {
-        return name;
+    ShoppingItem shoppingItem;
+
+
+
+
+    public double total;
+
+    public double getTotal() {
+        return total;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String name;
-    public int antal;
-    public double price;
 
     public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
+        return product.getPrice();
     }
 
 
 
-    public ProductBoxItem(Product product){
+
+
+    public ProductBoxItem(Product pro){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryBoxItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productBox.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -52,19 +52,24 @@ public class ProductBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-
+        this.product = pro;
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getCategory().name());
-        this.price = product.getPrice();
+
     }
 
     public void addOne() {
-        antal =+ antal;
+        this.shoppingItem.setAmount(shoppingItem.getAmount()+1);
     }
 
     public void removeOne() {
-        antal =- antal;
+        this.shoppingItem.setAmount(shoppingItem.getAmount()-1);
+        if (this.shoppingItem.getAmount() < 0){
+            this.shoppingItem.setAmount(0);
+        }
     }
+
+
 }

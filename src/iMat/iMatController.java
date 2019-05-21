@@ -32,7 +32,7 @@ public class iMatController implements Initializable {
 
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
-    IMatDataHandler dataHandler = IMatDataHandler.getInstance(); // Den har private access. Tror vi måste komma åt den här
+    IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
