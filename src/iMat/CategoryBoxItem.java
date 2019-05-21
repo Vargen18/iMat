@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.io.IOException;
 
@@ -19,10 +20,10 @@ public class CategoryBoxItem extends AnchorPane {
     @FXML
     private Label categoryName;
 
-    IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+    Product product;
 
-
-    public CategoryBoxItem(Product product){
+    public CategoryBoxItem(Product product, iMatController controller){
+        IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryBoxItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -33,7 +34,14 @@ public class CategoryBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.product = product;
+
         this.categoryImage.setImage(dataHandler.getFXImage(product));
-        this.categoryName.setText(product.getCategory().name());
+        this.categoryName.setText(controller.switchName(this.product));
     }
+
+
+
+
+
 }

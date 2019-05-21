@@ -123,7 +123,7 @@ public class iMatController implements Initializable {
 
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(0);
-            categoriesList.getChildren().add(new CategoryListItem(p));
+            categoriesList.getChildren().add(new CategoryListItem(p, this));
         }
     }
 
@@ -133,7 +133,7 @@ public class iMatController implements Initializable {
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(0);
             //System.out.println(p.getImageName());
-            categoriesGrid.getChildren().add(new CategoryBoxItem(p));
+            categoriesGrid.getChildren().add(new CategoryBoxItem(p, this));
         }
 
     }
@@ -150,6 +150,60 @@ public class iMatController implements Initializable {
 
 
     }
+
+    public String switchName(Product product){
+        String name = product.getCategory().name();
+
+        switch (name) {
+            case "POD":
+                return "Pod";
+            case "BREAD":
+                return "Bread";
+            case "BERRY":
+                return "Pod";
+            case "CITRUS_FRUIT":
+                return "Bread";
+            case "HOT_DRINKS":
+                return "Pod";
+            case "COLD_DRINKS":
+                return "Bread";
+            case "EXOTIC_FRUIT":
+                return "Pod";
+            case "FISH":
+                return "Bread";
+            case "VEGETABLE_FRUIT":
+                return "Pod";
+            case "CABBAGE":
+                return "Bread";
+            case "MEAT":
+                return "Pod";
+            case "DAIRIES":
+                return "Bread";
+            case "MELONS":
+                return "Pod";
+            case "FLOUR_SUGAR_SALT":
+                return  "Bread";
+            case "NUTS_AND_SEEDS":
+                return  "Pod";
+            case "PASTA":
+                return  "Bread";
+            case "POTATO_RICE":
+                return  "Pod";
+            case "ROOT_VEGETABLE":
+                return  "Bread";
+            case "FRUIT":
+                return  "Bread";
+            case "SWEET":
+                return  "Pod";
+            case "HERB":
+                return "Bread";
+
+        } return name;
+
+
+    }
+
+
 
                     /*POD,
                     BREAD,

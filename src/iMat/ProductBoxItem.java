@@ -69,11 +69,11 @@ public class ProductBoxItem extends AnchorPane {
     }
     @FXML
     public void addOne(ActionEvent event) {
-        datahandler.addProduct(product);
+        datahandler.getShoppingCart().addProduct(product);
     }
     @FXML
     public void removeOne(ActionEvent event) {
-        datahandler.removeProduct(product);
+        datahandler.getShoppingCart().removeItem(shoppingItem);
 
     }
 
