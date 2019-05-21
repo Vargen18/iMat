@@ -41,7 +41,7 @@ public class iMat extends Application{
 
 
         /*for(int i = 0; i < 2; i++){
-            scene.setRoot(FXMLLoader.load(getClass().getResource("Favorites.fxml"), bundle));
+            scene.setRoot(FXMLLoader.load(getClass().getResource("favorites.fxml"), bundle));
             TimeUnit.SECONDS.sleep(1);
             scene.setRoot(FXMLLoader.load(getClass().getResource("categories.fxml"), bundle));
         }*/

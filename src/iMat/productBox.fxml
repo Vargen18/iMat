@@ -11,7 +11,7 @@
    <children>
       <AnchorPane prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FFFFFF;">
          <children>
-            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="26.0" prefWidth="105.0" text="Kategori">
+            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="26.0" prefWidth="105.0" text="Produkt">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -24,7 +24,7 @@
          </children>
       </AnchorPane>
       <ImageView fx:id="productImage" fitHeight="100.0" fitWidth="222.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-      <AnchorPane layoutX="-1.0" layoutY="141.0" prefHeight="42.0" prefWidth="222.0">
+      <AnchorPane fx:id="productAmount" layoutX="-1.0" layoutY="141.0" prefHeight="42.0" prefWidth="222.0">
          <children>
             <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="172.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,7 +36,7 @@
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
             </ImageView>
-            <TextField fx:id="productBoxPriceField" layoutX="62.0" layoutY="7.0" prefHeight="26.0" prefWidth="98.0" />
+            <TextField fx:id="productBoxAmount" layoutX="62.0" layoutY="7.0" prefHeight="26.0" prefWidth="98.0" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
