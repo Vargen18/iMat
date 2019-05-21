@@ -122,7 +122,7 @@ public class iMatController implements Initializable {
     public void updateCategoryList() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(0);
+            Product p = dataHandler.getProducts(pc).get(1);
             categoriesList.getChildren().add(new CategoryListItem(p, this));
         }
     }
@@ -131,7 +131,7 @@ public class iMatController implements Initializable {
     public void updateCategoryGrid() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(0);
+            Product p = dataHandler.getProducts(pc).get(1);
             categoriesGrid.getChildren().add(new CategoryBoxItem(p, this));
         }
 
@@ -165,45 +165,45 @@ public class iMatController implements Initializable {
             case "POD":
                 return "Pod";
             case "BREAD":
-                return "Bread";
+                return "Bröd";
             case "BERRY":
-                return "Pod";
+                return "Bär";
             case "CITRUS_FRUIT":
-                return "Bread";
+                return "Citrus Frukt?";
             case "HOT_DRINKS":
-                return "Pod";
+                return "Varm Dryck";
             case "COLD_DRINKS":
-                return "Bread";
+                return "Kall Dryck";
             case "EXOTIC_FRUIT":
-                return "Pod";
+                return "Exotiska Frukter?";
             case "FISH":
-                return "Bread";
+                return "Fisk";
             case "VEGETABLE_FRUIT":
-                return "Pod";
+                return "Grönsaker";
             case "CABBAGE":
-                return "Bread";
+                return "Kål";
             case "MEAT":
-                return "Pod";
+                return "Kött";
             case "DAIRIES":
-                return "Bread";
+                return "Mejeri";
             case "MELONS":
-                return "Pod";
+                return "Melon";
             case "FLOUR_SUGAR_SALT":
-                return  "Bread";
+                return  "Salt&Socker&mjöl";
             case "NUTS_AND_SEEDS":
-                return  "Pod";
+                return  "Nötter";
             case "PASTA":
-                return  "Bread";
+                return  "Pasta";
             case "POTATO_RICE":
-                return  "Pod";
+                return  "Ris&Potatis";
             case "ROOT_VEGETABLE":
-                return  "Bread";
+                return  "Rot Frukt?";
             case "FRUIT":
-                return  "Bread";
+                return  "Frukt";
             case "SWEET":
-                return  "Pod";
+                return  "Sötsaker";
             case "HERB":
-                return "Bread";
+                return "Örter";
 
         } return name;
 
