@@ -10,6 +10,8 @@ import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
+// Klassen för lådorna i mitten
+
 public class CategoryBoxItem extends AnchorPane {
 
     @FXML
