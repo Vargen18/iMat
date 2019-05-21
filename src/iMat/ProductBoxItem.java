@@ -11,7 +11,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class productBoxItem extends AnchorPane {
+public class ProductBoxItem extends AnchorPane {
 
     @FXML
     private ImageView productImage;
@@ -40,7 +40,7 @@ public class productBoxItem extends AnchorPane {
 
 
 
-    public productBoxItem(Product pro){
+    public ProductBoxItem(Product pro){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productBox.fxml"));
         fxmlLoader.setRoot(this);
