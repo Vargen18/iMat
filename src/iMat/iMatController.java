@@ -33,7 +33,7 @@ public class iMatController implements Initializable {
     private AnchorPane anchorPane;
 
     @FXML
-    private FlowPane categoriesList, categoriesGrid;
+    private FlowPane categoriesList, categoriesGrid, shoppingCartList;
 
     @FXML
     private TextField productBoxAmount;
@@ -52,10 +52,10 @@ public class iMatController implements Initializable {
         if (iMat.scene.equals("categories.fxml")) {
             updateCategoryGrid();
             updateCategoryList();
+            updateShoppingCartList();
         }
 
         // TODO
-        //updateshoppingcart();
         //updatefavorites();
 
     }
@@ -132,7 +132,6 @@ public class iMatController implements Initializable {
 
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(0);
-            //System.out.println(p.getImageName());
             categoriesGrid.getChildren().add(new CategoryBoxItem(p, this));
         }
 
@@ -146,10 +145,18 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void updateShoppingCart(){
-
-
+    public void updateShoppingCartList(){
+        for (int i = 0; i < 15; i++) {
+            shoppingCartList.getChildren().add(new ShoppingCartListItem(products.get(i), this));
+        }
     }
+
+
+    @FXML
+    public void removeProductFromShoppingCart(ShoppingCartListItem item){
+        shoppingCartList.getChildren().remove(item);
+    }
+
 
     public String switchName(Product product){
         String name = product.getCategory().name();
@@ -203,29 +210,6 @@ public class iMatController implements Initializable {
 
     }
 
-
-
-                    /*POD,
-                    BREAD,
-                    BERRY,
-                    CITRUS_FRUIT,
-                    HOT_DRINKS,
-                    COLD_DRINKS,
-                    EXOTIC_FRUIT,
-                    FISH,
-                    VEGETABLE_FRUIT,
-                    CABBAGE,
-                    MEAT,
-                    DAIRIES,
-                    MELONS,
-                    FLOUR_SUGAR_SALT,
-                    NUTS_AND_SEEDS,
-                    PASTA,
-                    POTATO_RICE,
-                    ROOT_VEGETABLE,
-                    FRUIT,
-                    SWEET,
-                    HERB;*/
 
 
 }

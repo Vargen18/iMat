@@ -14,21 +14,22 @@ import java.io.IOException;
 public class ShoppingCartListItem extends AnchorPane {
 
     @FXML
-    private Label ProductName;
+    private Label productName;
 
     @FXML
-    private Label Quantity;
+    private Label quantity;
 
     @FXML
-    private Button RemoveProduct;
+    private Button removeProduct;
 
     @FXML
-    private ImageView ProductImage;
+    private ImageView productImage;
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+    Product product;
+    iMatController controller;
 
-
-    public ShoppingCartListItem(Product product){
+    public ShoppingCartListItem(Product product, iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("shoppingCartListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -39,12 +40,15 @@ public class ShoppingCartListItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        //this.ProductImage.setImage(dataHandler.getFXImage(product));
-        this.ProductName.setText(product.getName());
+        this.product = product;
+        this.controller = controller;
+        this.productImage.setImage(dataHandler.getFXImage(product));
+        this.productName.setText(product.getName());
+        this.quantity.setText("3");
     }
 
     public void removeProductFromShoppingCart(){
-
+        controller.removeProductFromShoppingCart(this);
     }
 
 }

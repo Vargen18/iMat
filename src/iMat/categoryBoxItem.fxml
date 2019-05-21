@@ -8,7 +8,7 @@
 
 <fx:root prefHeight="275.0" prefWidth="275.0" style="-fx-background-color: #FFFFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="categoryImage" fitHeight="180.0" fitWidth="240.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="categoryImage" fitWidth="255.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/images/BREAD.jpg" />
          </image>
