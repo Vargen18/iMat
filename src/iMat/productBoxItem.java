@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -19,16 +20,10 @@ public class productBoxItem extends AnchorPane {
 
     Product product;
 
+    ShoppingItem shoppingItem;
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String name;
     public int antal;
     public double total;
 
@@ -57,7 +52,7 @@ public class productBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        product = pro;
+        this.product = pro;
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));
@@ -66,14 +61,15 @@ public class productBoxItem extends AnchorPane {
     }
 
     public void addOne() {
-        antal =+ antal;
+        this.antal =+ this.antal;
     }
 
     public void removeOne() {
-        antal =- antal;
+        this.antal =- this.antal;
     }
 
     public void totalCost(){
-        total = antal * product.getPrice();
+        this.total = this.antal * this.product.getPrice();
+
     }
 }
