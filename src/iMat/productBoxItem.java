@@ -24,7 +24,7 @@ public class productBoxItem extends AnchorPane {
 
 
 
-    public int antal;
+
     public double total;
 
     public double getTotal() {
@@ -61,15 +61,15 @@ public class productBoxItem extends AnchorPane {
     }
 
     public void addOne() {
-        this.antal =+ this.antal;
+        this.shoppingItem.setAmount(shoppingItem.getAmount()+1);
     }
 
     public void removeOne() {
-        this.antal =- this.antal;
+        this.shoppingItem.setAmount(shoppingItem.getAmount()-1);
+        if (this.shoppingItem.getAmount() < 0){
+            this.shoppingItem.setAmount(0);
+        }
     }
 
-    public void totalCost(){
-        this.total = this.antal * this.product.getPrice();
 
-    }
 }
