@@ -1,3 +1,5 @@
+package iMat;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -8,7 +10,7 @@ import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
-public class productBoxItem extends AnchorPane {
+public class ProductBoxItem extends AnchorPane {
 
     @FXML
     private ImageView productImage;
@@ -38,7 +40,7 @@ public class productBoxItem extends AnchorPane {
 
 
 
-    public productBoxItem(Product product){
+    public ProductBoxItem(Product product){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryBoxItem.fxml"));
         fxmlLoader.setRoot(this);

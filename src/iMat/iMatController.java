@@ -32,12 +32,17 @@ public class iMatController implements Initializable {
 
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
-    IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+    IMatDataHandler dataHandler = IMatDataHandler.getInstance(); // Den har private access. Tror vi måste komma åt den här
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //updateCategoryGrid();
-        //updateCategoryList();
+
+
+
+        if (iMat.scene.equals("categories.fxml")) {
+            updateCategoryGrid();
+            updateCategoryList();
+        }
 
         // TODO
         //updateshoppingcart();
@@ -117,7 +122,7 @@ public class iMatController implements Initializable {
 
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(1);
-            System.out.println(p.getImageName());
+            //System.out.println(p.getImageName());
             categoriesGrid.getChildren().add(new CategoryBoxItem(p));
         }
 

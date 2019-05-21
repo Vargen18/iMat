@@ -18,6 +18,8 @@ import se.chalmers.cse.dat216.project.ProductCategory;
 
 public class iMat extends Application{
 
+    static String scene = "categories.fxml";
+
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -53,6 +55,7 @@ public class iMat extends Application{
     }
 
     public static void switchScene(Control object, String target) throws Exception{
+        scene = target;
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);
@@ -62,6 +65,7 @@ public class iMat extends Application{
     }
 
     public static void escapehatch(ImageView object, String target) throws Exception{
+        scene = target;
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);

@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: CC3311;">
          <children>
-            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/homepagebutton.png" />
                </image>
