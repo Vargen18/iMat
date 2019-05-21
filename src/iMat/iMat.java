@@ -61,7 +61,7 @@ public class iMat extends Application{
 
     }
 
-    public static void switchScene(ImageView object, String target) throws Exception{
+    public static void escapehatch(ImageView object, String target) throws Exception{
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);

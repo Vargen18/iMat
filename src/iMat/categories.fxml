@@ -21,7 +21,7 @@
                   <Image url="@resources/images/homepagebutton.png" />
                </image>
             </ImageView>
-            <Button fx:id="switchToFavorites" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter">
+            <Button fx:id="switchToFavorites" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" onMouseClicked="#switchToFavorites" text="Favoriter">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font></Button>
@@ -29,7 +29,7 @@
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font></Button>
-            <Button fx:id="checkOutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" text="Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" onMouseClicked="#switchToCheckout" text="Varukorgen">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font></Button>

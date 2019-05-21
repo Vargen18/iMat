@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-      <Button fx:id="switchSceneButton" layoutX="97.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Button" />
+      <Button fx:id="escapehatch" layoutX="339.0" layoutY="113.0" mnemonicParsing="false" onAction="#switchToCategories" text="Button" />
+      <ImageView fx:id="escapehatch" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/images/homepagebutton.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -34,8 +34,6 @@ public class iMatController implements Initializable {
     @FXML
     private FlowPane categoriesList, categoriesGrid;
 
-    @FXML
-    private Node escapebatch;
 
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
@@ -55,7 +53,7 @@ public class iMatController implements Initializable {
     @FXML
     private void switchToCategories() throws Exception {
 
-        iMat.switchScene(escapehatch, "categories.fxml");
+        iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
 
