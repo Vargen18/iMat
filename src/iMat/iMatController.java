@@ -3,6 +3,7 @@ package iMat;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -13,6 +14,7 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class iMatController implements Initializable {
@@ -29,10 +31,14 @@ public class iMatController implements Initializable {
     @FXML
     private FlowPane categoriesList, categoriesGrid;
 
+    @FXML
+    private TextField productBoxAmount;
 
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+
+    List<Product> products = dataHandler.getProducts();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -60,7 +66,7 @@ public class iMatController implements Initializable {
     @FXML
     private void switchToFavorites() throws Exception {
 
-        iMat.switchScene(favoritesButton, "Favorites.fxml");
+        iMat.switchScene(favoritesButton, "favorites.fxml");
     }
 
     @FXML
@@ -132,6 +138,12 @@ public class iMatController implements Initializable {
 
         //Product product = addToFavorites.
         //dataHandler.favorites().add(product);
+
+    }
+
+    @FXML
+    public void updateShoppingCart(){
+
 
     }
 

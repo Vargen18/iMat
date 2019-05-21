@@ -19,7 +19,7 @@ public class categoriesController {
     @FXML
     private void switchScene() throws Exception{
 
-        iMat.switchScene(switchSceneButton, "Favorites.fxml");
+        iMat.switchScene(switchSceneButton, "favorites.fxml");
     }
 
 

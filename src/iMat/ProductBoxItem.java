@@ -1,8 +1,10 @@
 package iMat;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -17,10 +19,15 @@ public class ProductBoxItem extends AnchorPane {
     private ImageView productImage;
     @FXML
     private Label productName;
+    @FXML
+    private TextField amount;
+
 
     Product product;
 
     ShoppingItem shoppingItem;
+
+    IMatDataHandler datahandler = IMatDataHandler.getInstance();
 
 
 
@@ -40,7 +47,7 @@ public class ProductBoxItem extends AnchorPane {
 
 
 
-    public ProductBoxItem(Product pro){
+    public ProductBoxItem(Product product){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productBox.fxml"));
         fxmlLoader.setRoot(this);
@@ -52,23 +59,26 @@ public class ProductBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        this.product = pro;
+
+        this.product = product;
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getCategory().name());
 
     }
+    @FXML
+    public void addOne(ActionEvent event) {
+        datahandler.addProduct(product);
+    }
+    @FXML
+    public void removeOne(ActionEvent event) {
+        datahandler.removeProduct(product);
 
-    public void addOne() {
-        this.shoppingItem.setAmount(shoppingItem.getAmount()+1);
     }
 
-    public void removeOne() {
-        this.shoppingItem.setAmount(shoppingItem.getAmount()-1);
-        if (this.shoppingItem.getAmount() < 0){
-            this.shoppingItem.setAmount(0);
-        }
+    public void updateamount(int amount){
+        this.shoppingItem.setAmount(amount);
     }
 
 
