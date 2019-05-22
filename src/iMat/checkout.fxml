@@ -22,17 +22,17 @@
             </ImageView>
             <Button fx:id="favoritesButton1" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter">
                <font>
-                  <Font name="Comic Sans MS" size="24.0" />
+                  <Font name="Roboto" size="24.0" />
                </font>
             </Button>
             <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" text="Mitt Konto">
                <font>
-                  <Font name="Comic Sans MS" size="24.0" />
+                  <Font name="Roboto" size="24.0" />
                </font>
             </Button>
             <Button fx:id="searchButton" layoutX="1138.0" layoutY="19.0" mnemonicParsing="false" text="sök">
                <font>
-                  <Font name="Comic Sans MS" size="24.0" />
+                  <Font name="Roboto" size="24.0" />
                </font>
             </Button>
             <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0">
@@ -42,7 +42,7 @@
             </TextField>
             <Label layoutX="232.0" layoutY="20.0" text="iMat">
                <font>
-                  <Font name="Comic Sans MS" size="36.0" />
+                  <Font name="Roboto" size="36.0" />
                </font>
             </Label>
          </children>
@@ -60,7 +60,7 @@
          <children>
             <Label layoutX="43.0" layoutY="58.0" text="Varukorg:">
                <font>
-                  <Font name="System Bold" size="36.0" />
+                  <Font name="Roboto" size="36.0" />
                </font>
             </Label>
          </children>
