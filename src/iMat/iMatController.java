@@ -16,10 +16,8 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.net.URL;
+import java.util.*;
 import java.util.List;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 public class iMatController implements Initializable {
 
@@ -141,6 +139,16 @@ public class iMatController implements Initializable {
 
         //Product product = addToFavorites.
         //dataHandler.favorites().add(product);
+
+    }
+
+    @FXML
+    public void updateProductGrid(ProductCategory category){
+        categoriesGrid.getChildren().removeAll();
+        List<Product> products = dataHandler.getProducts(category);
+        for (Product product : products) {
+            categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
+        }
 
     }
 

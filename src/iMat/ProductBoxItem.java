@@ -29,6 +29,8 @@ public class ProductBoxItem extends AnchorPane {
 
     IMatDataHandler datahandler = IMatDataHandler.getInstance();
 
+    iMatController controller;
+
 
 
 
@@ -47,7 +49,7 @@ public class ProductBoxItem extends AnchorPane {
 
 
 
-    public ProductBoxItem(Product product){
+    public ProductBoxItem(Product product, iMatController controller){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productBox.fxml"));
         fxmlLoader.setRoot(this);
@@ -61,6 +63,8 @@ public class ProductBoxItem extends AnchorPane {
 
 
         this.product = product;
+        this.controller = controller;
+
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));

@@ -20,6 +20,8 @@ public class CategoryBoxItem extends AnchorPane {
     @FXML
     private Label categoryName;
 
+    iMatController controller;
+
     Product product;
 
     public CategoryBoxItem(Product product, iMatController controller){
@@ -35,9 +37,14 @@ public class CategoryBoxItem extends AnchorPane {
         }
 
         this.product = product;
-
+        this.controller = controller;
         this.categoryImage.setImage(dataHandler.getFXImage(product));
         this.categoryName.setText(controller.switchName(this.product));
+    }
+
+    @FXML
+    public void updateProductGrid() {
+        controller.updateProductGrid(product.getCategory());
     }
 
 
