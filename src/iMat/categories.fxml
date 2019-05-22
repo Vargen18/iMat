@@ -24,21 +24,21 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" onMouseClicked="#switchToFavorites" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
+            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" onMouseClicked="#switchToFavorites" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
+            <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" onMouseClicked="#switchToCheckout" text="Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" onMouseClicked="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
