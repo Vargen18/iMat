@@ -20,7 +20,7 @@
                   <Image url="@resources/images/homepagebutton.png" />
                </image>
             </ImageView>
-            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter">
+            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#updateFavoriteGrid" text="Favoriter">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font></Button>

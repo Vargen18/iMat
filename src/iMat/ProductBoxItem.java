@@ -87,5 +87,10 @@ public class ProductBoxItem extends AnchorPane {
         this.shoppingItem.setAmount(amount);
     }
 
+    public void changeFavorite(){
+        this.controller.changeFavorite(product);
+        System.out.println("TEXT HERE TEXT HERE TEX HERE TEX asiog");
+    }
+
 
 }

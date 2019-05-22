@@ -18,7 +18,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="addToFavorites" onMouseClicked="#changeFavorite" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/bättrehjärta.png" />
                </image>
