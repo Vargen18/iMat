@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="180.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="AnchorPane">
+<fx:root prefHeight="275.0" prefWidth="275.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-style: solid;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FFFFFF;">
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="42.0" prefWidth="268.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
          <children>
-            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="26.0" prefWidth="105.0" text="Produkt">
+            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="202.0" text="Produkt">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="185.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="225.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/bättrehjärta.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fx:id="productImage" fitHeight="100.0" fitWidth="222.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
-      <AnchorPane fx:id="productAmount" layoutX="-1.0" layoutY="141.0" prefHeight="42.0" prefWidth="222.0">
+      <ImageView fx:id="productImage" fitHeight="191.0" fitWidth="275.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0" />
+      <AnchorPane fx:id="productAmount" layoutX="26.0" layoutY="232.0" prefHeight="42.0" prefWidth="222.0" AnchorPane.bottomAnchor="0.0">
          <children>
             <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="172.0" layoutY="3.0" onMouseClicked="#addOne" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,7 +36,7 @@
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
             </ImageView>
-            <TextField fx:id="productBoxAmount" layoutX="62.0" layoutY="7.0" prefHeight="26.0" prefWidth="98.0" />
+            <TextField fx:id="productBoxAmount" layoutX="62.0" layoutY="8.0" prefHeight="26.0" prefWidth="98.0" />
          </children></AnchorPane>
    </children>
 </fx:root>

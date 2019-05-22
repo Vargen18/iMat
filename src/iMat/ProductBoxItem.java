@@ -55,6 +55,7 @@ public class ProductBoxItem extends AnchorPane {
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
+
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -68,7 +69,8 @@ public class ProductBoxItem extends AnchorPane {
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));
-        this.productTitle.setText(product.getCategory().name());
+
+        this.productTitle.setText(product.getName());
 
     }
     @FXML

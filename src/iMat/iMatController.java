@@ -36,6 +36,10 @@ public class iMatController implements Initializable {
     @FXML
     private TextField productBoxAmount;
 
+    @FXML
+    private Label mainLabel;
+
+
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
@@ -60,7 +64,7 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToCategories() throws Exception {
-
+        mainLabel.setText("Kategorier");
         iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
@@ -146,6 +150,7 @@ public class iMatController implements Initializable {
     public void updateProductGrid(ProductCategory category){
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.getProducts(category);
+        mainLabel.setText(category.toString());
         for (Product product : products) {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
         }
