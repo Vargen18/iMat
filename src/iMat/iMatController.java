@@ -12,9 +12,7 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.*;
 
 import java.net.URL;
 import java.util.*;
@@ -68,8 +66,10 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToCategories() throws Exception {
+        if(iMat.scene.equals("categories.fxml")) {
+            mainLabel.setText("Kategorier");
+        }
         iMat.escapehatch(escapehatch, "categories.fxml");
-// TODO Nullpointer exception       mainLabel.setText("Kategorier");
 
     }
 
@@ -93,12 +93,6 @@ public class iMatController implements Initializable {
 
     }
 
-    @FXML
-    private void populateCategoryBox(Product product) {
-        //categoryBoxTitle.setText(product.getName());
-        //categoryBoxImage.setImage(new Image(product.getImageName()));
-
-    }
 
     public Image getSquareImage(Image image) {
 
@@ -164,8 +158,10 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateShoppingCartList(){
-        for (int i = 0; i < 15; i++) {
-            shoppingCartList.getChildren().add(new ShoppingCartListItem(products.get(i), this));
+
+
+        for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++){
+            shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
     }
 
@@ -173,6 +169,54 @@ public class iMatController implements Initializable {
     @FXML
     public void removeProductFromShoppingCart(ShoppingCartListItem item){
         shoppingCartList.getChildren().remove(item);
+    }
+
+    public void add(Product product) {
+        int change = 1;
+        changeAmount(product,change);
+
+        updateShoppingCartList();
+
+    }
+
+    public void remove(Product product) {
+        int change = -1;
+        changeAmount(product, change);
+        updateShoppingCartList();
+    }
+
+    public void changeAmount(Product product, int change){
+
+        Boolean found = false;
+        ShoppingCart shoppingCart = dataHandler.getShoppingCart();
+        ShoppingItem item = new ShoppingItem(product);
+        int i = 0;
+        double amount = 0;
+        for (ShoppingItem shitem : shoppingCart.getItems()){
+            if (shitem.getProduct() == item.getProduct()){
+                found = true;
+                break;
+            }  found = false;
+            i++;
+
+
+        }
+        if (found) {
+            amount = shoppingCart.getItems().get(i).getAmount() + change;
+            if(amount < 0){
+                shoppingCart.removeItem(i);
+            }else {
+                shoppingCart.getItems().get(i).setAmount(amount);
+            }
+        } else {
+            shoppingCart.addProduct(product);
+        }
+
+
+    }
+
+    public void clearShoppingCartList() {
+        shoppingCartList.getChildren().clear();
     }
 
 

@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.io.IOException;
 
@@ -29,7 +31,9 @@ public class ShoppingCartListItem extends AnchorPane {
     Product product;
     iMatController controller;
 
-    public ShoppingCartListItem(Product product, iMatController controller){
+
+
+    public ShoppingCartListItem(Product product, iMatController controller, double amount){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("shoppingCartListItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -44,11 +48,15 @@ public class ShoppingCartListItem extends AnchorPane {
         this.controller = controller;
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getName());
-        this.quantity.setText("3");
+        setQuantity(amount);
     }
 
     public void removeProductFromShoppingCart(){
         controller.removeProductFromShoppingCart(this);
+    }
+
+    public void setQuantity(Double quantity){
+        this.quantity.setText(quantity.toString());
     }
 
 }
