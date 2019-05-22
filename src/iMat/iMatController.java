@@ -48,10 +48,14 @@ public class iMatController implements Initializable {
 
     List<Product> products = dataHandler.getProducts();
 
+    public void changeFavorite(Product product) {
+        System.out.println("Favorited " + product.getName());
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-
+        dataHandler.addFavorite(25);
 
         if (iMat.scene.equals("categories.fxml")) {
             System.out.println(dataHandler.getShoppingCart().getItems().size());
@@ -155,6 +159,17 @@ public class iMatController implements Initializable {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
         }
 
+    }
+
+    @FXML
+    public void updateFavoriteGrid(){
+        categoriesScrollPane.setVvalue(0);
+        categoriesGrid.getChildren().clear();
+        List<Product> products = dataHandler.favorites();
+        mainLabel.setText("Favoriter");
+        for (Product product : products) {
+            categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
+        }
     }
 
     @FXML
