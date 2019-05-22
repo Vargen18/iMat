@@ -54,6 +54,7 @@ public class iMatController implements Initializable {
 
 
         if (iMat.scene.equals("categories.fxml")) {
+            System.out.println(dataHandler.getShoppingCart().getItems().size());
             updateCategoryGrid();
             updateCategoryList();
             updateShoppingCartList();
@@ -67,7 +68,7 @@ public class iMatController implements Initializable {
     @FXML
     private void switchToCategories() throws Exception {
         if(iMat.scene.equals("categories.fxml")) {
-            mainLabel.setText("Kategorier");
+          //          mainLabel.setText("Kategorier");
         }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
@@ -159,7 +160,8 @@ public class iMatController implements Initializable {
     @FXML
     public void updateShoppingCartList(){
 
-
+        System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
+            shoppingCartList.getChildren().clear();
         for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++){
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
@@ -168,6 +170,8 @@ public class iMatController implements Initializable {
 
     @FXML
     public void removeProductFromShoppingCart(ShoppingCartListItem item){
+        int change = -10000000;
+        changeAmount(item.product,change);
         shoppingCartList.getChildren().remove(item);
     }
 
@@ -179,30 +183,33 @@ public class iMatController implements Initializable {
 
     }
 
-    public void remove(Product product) {
+    public void minus(Product product) {
         int change = -1;
         changeAmount(product, change);
         updateShoppingCartList();
+    }
+
+    public void removeItem(ShoppingItem item){
+
+        dataHandler.getShoppingCart().removeItem(item);
     }
 
     public void changeAmount(Product product, int change){
 
         Boolean found = false;
         ShoppingCart shoppingCart = dataHandler.getShoppingCart();
-        ShoppingItem item = new ShoppingItem(product);
+
         int i = 0;
         double amount = 0;
         for (ShoppingItem shitem : shoppingCart.getItems()){
-            if (shitem.getProduct() == item.getProduct()){
+            if (shitem.getProduct() == product){
                 found = true;
                 break;
             }  found = false;
             i++;
-
-
         }
         if (found) {
-            amount = shoppingCart.getItems().get(i).getAmount() + change;
+            amount = (shoppingCart.getItems().get(i).getAmount()) + change;
             if(amount < 0){
                 shoppingCart.removeItem(i);
             }else {

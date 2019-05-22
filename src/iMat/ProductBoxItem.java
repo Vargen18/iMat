@@ -1,6 +1,5 @@
 package iMat;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -78,10 +77,7 @@ public class ProductBoxItem extends AnchorPane {
         controller.add(product);
     }
     @FXML
-    public void remove() {
-        controller.remove(product);
-
-    }
+    public void remove() { controller.minus(product);}
 
     public void updateamount(int amount){
         this.shoppingItem.setAmount(amount);
