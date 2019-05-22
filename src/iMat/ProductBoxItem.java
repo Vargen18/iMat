@@ -79,7 +79,7 @@ public class ProductBoxItem extends AnchorPane {
     }
     @FXML
     public void remove() {
-        //controller.remove(product);
+        controller.remove(product);
 
     }
 
