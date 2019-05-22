@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
@@ -15,28 +16,37 @@
          <children>
             <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="202.0" text="Produkt">
                <font>
-                  <Font name="System Bold" size="24.0" />
+                  <Font name="Roboto" size="24.0" />
                </font>
             </Label>
             <ImageView fx:id="addToFavorites" onMouseClicked="#changeFavorite" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/bättrehjärta.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <Separator layoutY="40.0" prefHeight="1.0" prefWidth="271.0" style="-fx-background-color: black;" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="259.0" prefHeight="42.0" prefWidth="269.0" style=": solid;" AnchorPane.bottomAnchor="0.0">
          <children>
-            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="201.0" layoutY="3.0" onMouseClicked="#addOne" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="35.0">
+            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="201.0" layoutY="3.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="35.0">
                <image>
                   <Image url="@resources/images/plus-sign.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="36.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="35.0">
+            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="36.0" layoutY="3.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="35.0">
                <image>
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
             <Separator prefHeight="1.0" prefWidth="271.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="39.0" AnchorPane.topAnchor="0.0" />
