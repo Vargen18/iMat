@@ -24,6 +24,7 @@ public class CategoryListItem extends AnchorPane {
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
     iMatController controller;
+    Product product;
 
     public CategoryListItem(Product product, iMatController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryListItem.fxml"));
@@ -37,9 +38,16 @@ public class CategoryListItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
+        this.controller = controller;
+        this.product = product;
         this.categoryImage.setImage(dataHandler.getFXImage(product));
         this.categoryName.setText(controller.switchName(product));
+    }
+
+
+    @FXML
+    public void updateProductGrid(){
+        controller.updateProductGrid(product.getCategory());
     }
 
 

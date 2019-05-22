@@ -78,7 +78,7 @@
                     <content>
                       <AnchorPane prefWidth="1148.0">
                            <children>
-                              <FlowPane fx:id="categoriesGrid" hgap="6.0" prefWidth="1148.0" style="-fx-background-color: ffffff;" vgap="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" prefWidth="1148.0" style="-fx-background-color: ffffff;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
                                     <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                                  </padding></FlowPane>

@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="275.0" prefWidth="275.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-style: solid;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="275.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-style: solid;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="42.0" prefWidth="268.0" style="-fx-background-color: FFFFFF;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+      <ImageView fx:id="productImage" fitHeight="203.0" fitWidth="271.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="42.0" prefWidth="269.0" style="-fx-background-color: FFFFFF;">
          <children>
             <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="202.0" text="Produkt">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="225.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/bättrehjärta.png" />
                </image>
             </ImageView>
+            <Separator layoutY="40.0" prefHeight="1.0" prefWidth="271.0" style="-fx-background-color: black;" />
          </children>
       </AnchorPane>
-      <ImageView fx:id="productImage" fitHeight="191.0" fitWidth="275.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0" />
-      <AnchorPane fx:id="productAmount" layoutX="26.0" layoutY="232.0" prefHeight="42.0" prefWidth="222.0" AnchorPane.bottomAnchor="0.0">
+      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="259.0" prefHeight="42.0" prefWidth="269.0" style=": solid;" AnchorPane.bottomAnchor="0.0">
          <children>
-            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="172.0" layoutY="3.0" onMouseClicked="#addOne" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="201.0" layoutY="3.0" onMouseClicked="#addOne" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="35.0">
                <image>
                   <Image url="@resources/images/plus-sign.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="36.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="35.0">
                <image>
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
             </ImageView>
-            <TextField fx:id="productBoxAmount" layoutX="62.0" layoutY="8.0" prefHeight="26.0" prefWidth="98.0" />
+            <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
+            <Separator prefHeight="1.0" prefWidth="271.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="39.0" AnchorPane.topAnchor="0.0" />
          </children></AnchorPane>
    </children>
 </fx:root>

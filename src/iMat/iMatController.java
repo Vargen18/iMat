@@ -23,10 +23,10 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, addToFavorites;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton;
 
     @FXML
-    private ImageView escapehatch;
+    private ImageView escapehatch, addToFavorites;
 
     @FXML
     private AnchorPane anchorPane;
@@ -155,7 +155,7 @@ public class iMatController implements Initializable {
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.getProducts(category);
-        mainLabel.setText(category.toString());
+        mainLabel.setText(switchName(products.get(0)));
         for (Product product : products) {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
         }
