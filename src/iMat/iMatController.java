@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -39,6 +40,9 @@ public class iMatController implements Initializable {
     @FXML
     private Label mainLabel;
 
+
+    @FXML
+    ScrollPane categoriesScrollPane;
 
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
@@ -148,6 +152,7 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateProductGrid(ProductCategory category){
+        categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.getProducts(category);
         mainLabel.setText(category.toString());

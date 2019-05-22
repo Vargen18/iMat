@@ -74,7 +74,7 @@
                         <Font name="Mongolian Baiti" size="64.0" />
                      </font>
                   </Label>
-                  <ScrollPane hbarPolicy="NEVER" layoutY="107.0" pannable="true" prefWidth="1152.0">
+                  <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="107.0" pannable="true" prefWidth="1152.0">
                     <content>
                       <AnchorPane prefWidth="1148.0">
                            <children>
