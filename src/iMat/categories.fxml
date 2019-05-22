@@ -24,7 +24,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
+            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" onMouseClicked="#switchToFavorites" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -38,7 +38,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" text="Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" onMouseClicked="#switchToCheckout" text="Varukorgen">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -50,7 +50,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="232.0" layoutY="20.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0">
+            <Label layoutX="232.0" layoutY="20.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0">
                <font>
                   <Font name="Roboto" size="36.0" />
                </font>

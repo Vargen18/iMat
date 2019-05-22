@@ -68,8 +68,8 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToCategories() throws Exception {
-        mainLabel.setText("Kategorier");
         iMat.escapehatch(escapehatch, "categories.fxml");
+// TODO Nullpointer exception       mainLabel.setText("Kategorier");
 
     }
 
