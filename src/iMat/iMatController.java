@@ -144,7 +144,7 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateProductGrid(ProductCategory category){
-        categoriesGrid.getChildren().removeAll();
+        categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.getProducts(category);
         for (Product product : products) {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="180.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="180.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="AnchorPane">
    <children>
       <AnchorPane prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: FFFFFF;">
          <children>
@@ -39,4 +39,4 @@
             <TextField fx:id="productBoxAmount" layoutX="62.0" layoutY="7.0" prefHeight="26.0" prefWidth="98.0" />
          </children></AnchorPane>
    </children>
-</AnchorPane>
+</fx:root>

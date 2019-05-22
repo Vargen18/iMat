@@ -18,7 +18,7 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     private ImageView productImage;
     @FXML
-    private Label productName;
+    private Label productTitle;
     @FXML
     private TextField amount;
 
@@ -68,7 +68,7 @@ public class ProductBoxItem extends AnchorPane {
 
 
         this.productImage.setImage(dataHandler.getFXImage(product));
-        this.productName.setText(product.getCategory().name());
+        this.productTitle.setText(product.getCategory().name());
 
     }
     @FXML
