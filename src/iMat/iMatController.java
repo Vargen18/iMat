@@ -163,19 +163,19 @@ public class iMatController implements Initializable {
 
         switch (name) {
             case "POD":
-                return "Pod";
+                return "Böner & Ärtor";
             case "BREAD":
                 return "Bröd";
             case "BERRY":
                 return "Bär";
             case "CITRUS_FRUIT":
-                return "Citrus Frukt?";
+                return "Citrus Frukter";
             case "HOT_DRINKS":
                 return "Varm Dryck";
             case "COLD_DRINKS":
                 return "Kall Dryck";
             case "EXOTIC_FRUIT":
-                return "Exotiska Frukter?";
+                return "Exotiska Frukter";
             case "FISH":
                 return "Fisk";
             case "VEGETABLE_FRUIT":
@@ -189,15 +189,15 @@ public class iMatController implements Initializable {
             case "MELONS":
                 return "Melon";
             case "FLOUR_SUGAR_SALT":
-                return  "Salt&Socker&mjöl";
+                return  "Salt & Socker & Mjöl";
             case "NUTS_AND_SEEDS":
                 return  "Nötter";
             case "PASTA":
                 return  "Pasta";
             case "POTATO_RICE":
-                return  "Ris&Potatis";
+                return  "Ris & Potatis";
             case "ROOT_VEGETABLE":
-                return  "Rot Frukt?";
+                return  "Rotfrukter";
             case "FRUIT":
                 return  "Frukt";
             case "SWEET":
