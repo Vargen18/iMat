@@ -4,12 +4,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
+import java.io.File;
 import java.io.IOException;
 
 public class ProductBoxItem extends AnchorPane {
@@ -20,6 +22,8 @@ public class ProductBoxItem extends AnchorPane {
     private Label productTitle;
     @FXML
     private TextField amount;
+    @FXML
+    private ImageView addToFavorites;
 
 
     Product product;
@@ -61,12 +65,16 @@ public class ProductBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-
+        //System.out.println("Working Directory = " + System.getProperty("user.dir"));
         this.product = product;
         this.controller = controller;
 
-
-
+        if(datahandler.isFavorite(product)){
+            this.addToFavorites.setImage(new Image(new File("src/iMat/resources/images/bättrast_hjärta.png").toURI().toString()));
+        } else {
+            this.addToFavorites.setImage(new Image(new File("src/iMat/resources/images/bättrast_hjärta_tom_transparent.png").toURI().toString()));
+        }
+        //System.out.println(file.toURI().toString());
         this.productImage.setImage(dataHandler.getFXImage(product));
 
         this.productTitle.setText(product.getName());
@@ -85,7 +93,12 @@ public class ProductBoxItem extends AnchorPane {
 
     public void changeFavorite(){
         this.controller.changeFavorite(product);
-        System.out.println("TEXT HERE TEXT HERE TEX HERE TEX asiog");
+        if(datahandler.isFavorite(product)){
+            this.addToFavorites.setImage(new Image(new File("src/iMat/resources/images/bättrast_hjärta.png").toURI().toString()));
+        } else {
+            this.addToFavorites.setImage(new Image(new File("src/iMat/resources/images/bättrast_hjärta_tom_transparent.png").toURI().toString()));
+        }
+        //System.out.println("TEXT HERE TEXT HERE TEX HERE TEX asiog");
     }
 
 

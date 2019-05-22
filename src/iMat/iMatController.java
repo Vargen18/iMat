@@ -49,7 +49,12 @@ public class iMatController implements Initializable {
     List<Product> products = dataHandler.getProducts();
 
     public void changeFavorite(Product product) {
-        System.out.println("Favorited " + product.getName());
+        if(dataHandler.isFavorite(product)) {
+            dataHandler.removeFavorite(product);
+        } else {
+            dataHandler.addFavorite(product);
+        }
+        //System.out.println("Favorited " + product.getName());
     }
 
     @Override
@@ -175,7 +180,7 @@ public class iMatController implements Initializable {
     @FXML
     public void updateShoppingCartList(){
 
-        System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
+        //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
             shoppingCartList.getChildren().clear();
         for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++){
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
