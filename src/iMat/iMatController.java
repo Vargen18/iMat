@@ -158,7 +158,8 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateShoppingCartList(){
-        clearShoppingCartList();
+
+
         for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++){
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
