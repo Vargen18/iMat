@@ -28,12 +28,12 @@
       </AnchorPane>
       <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="259.0" prefHeight="42.0" prefWidth="269.0" style=": solid;" AnchorPane.bottomAnchor="0.0">
          <children>
-            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="201.0" layoutY="3.0" onMouseClicked="#addOne" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="35.0">
+            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="201.0" layoutY="3.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="35.0">
                <image>
                   <Image url="@resources/images/plus-sign.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="36.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="35.0">
+            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="36.0" layoutY="3.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="35.0">
                <image>
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
