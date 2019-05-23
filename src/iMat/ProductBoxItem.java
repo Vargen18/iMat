@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.File;
@@ -21,7 +22,7 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     private Label productTitle;
     @FXML
-    private TextField amount;
+    private TextField productBoxAmount;
     @FXML
     private ImageView addToFavorites;
 
@@ -35,7 +36,7 @@ public class ProductBoxItem extends AnchorPane {
     iMatController controller;
 
 
-
+    private int amount = 0;
 
     public double total;
 
@@ -59,6 +60,7 @@ public class ProductBoxItem extends AnchorPane {
         fxmlLoader.setController(this);
 
 
+
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -78,17 +80,48 @@ public class ProductBoxItem extends AnchorPane {
         this.productImage.setImage(dataHandler.getFXImage(product));
 
         this.productTitle.setText(product.getName());
+        this.productBoxAmount.setText(String.valueOf(amount));
 
     }
     @FXML
     public void add() {
         controller.add(product);
+        if(shoppingItem == null) {
+            for(ShoppingItem shitem : datahandler.getShoppingCart().getItems()) {
+                if(shitem.getProduct().getName().equals(product.getName())) {
+                    shoppingItem = shitem;
+                }
+            }
+        }
+        amount++;
+        productBoxAmount.setText(String.valueOf(amount));
     }
     @FXML
-    public void remove() { controller.minus(product);}
+    public void remove() { controller.minus(product);
+        amount--;
+        if(amount <= 0){
+            amount = 0;
+        }
 
-    public void updateamount(int amount){
+        productBoxAmount.setText(String.valueOf(amount));
+    }
+
+    @FXML
+    public void updateAmount(){
+        if(shoppingItem == null) {
+            shoppingItem = controller.findShoppingItem(product);
+        }
+        if(shoppingItem == null) {
+            datahandler.getShoppingCart().addProduct(product);
+            shoppingItem = controller.findShoppingItem(product);
+        }
+        int amount = Integer.parseInt(productBoxAmount.getText());
         this.shoppingItem.setAmount(amount);
+
+        controller.updateShoppingCartList();
+        if(amount <= 0){
+            amount = 0;
+        }
     }
 
     public void changeFavorite(){
@@ -98,7 +131,6 @@ public class ProductBoxItem extends AnchorPane {
         } else {
             this.addToFavorites.setImage(new Image(new File("src/iMat/resources/images/bättrast_hjärta_tom_transparent.png").toURI().toString()));
         }
-        //System.out.println("TEXT HERE TEXT HERE TEX HERE TEX asiog");
     }
 
 

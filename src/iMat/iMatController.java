@@ -216,25 +216,16 @@ public class iMatController implements Initializable {
     }
 
     public void changeAmount(Product product, int change){
-
-        Boolean found = false;
         ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
-        int i = 0;
-        double amount = 0;
-        for (ShoppingItem shitem : shoppingCart.getItems()){
-            if (shitem.getProduct() == product){
-                found = true;
-                break;
-            }  found = false;
-            i++;
-        }
-        if (found) {
-            amount = (shoppingCart.getItems().get(i).getAmount()) + change;
-            if(amount < 0){
-                shoppingCart.removeItem(i);
+        ShoppingItem shitem = findShoppingItem(product);
+        double amount;
+        if (shitem != null) {
+            amount = (shitem.getAmount() + change);
+            if(amount <= 0){
+                shoppingCart.removeItem(shitem);
             }else {
-                shoppingCart.getItems().get(i).setAmount(amount);
+                shitem.setAmount(amount);
             }
         } else {
             shoppingCart.addProduct(product);
@@ -300,7 +291,17 @@ public class iMatController implements Initializable {
 
     }
 
+    public ShoppingItem findShoppingItem(Product product){
+        boolean found = false;
+        ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
+        for (ShoppingItem shitem : shoppingCart.getItems()){
+            if (shitem.getProduct() == product){
+                return shitem;
+            }
+        }
+        return null;
+    }
 
 }
 
