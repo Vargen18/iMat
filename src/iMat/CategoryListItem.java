@@ -49,6 +49,4 @@ public class CategoryListItem extends AnchorPane {
     public void updateProductGrid(){
         controller.updateProductGrid(product.getCategory());
     }
-
-
 }

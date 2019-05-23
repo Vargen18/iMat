@@ -2,17 +2,16 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="275.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-style: solid;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="275.0" style="-fx-border-color: BLACK;" styleClass="button" stylesheets="@boxItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="productImage" fitHeight="203.0" fitWidth="271.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
-      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="42.0" prefWidth="269.0" style="-fx-background-color: FFFFFF;">
+      <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="46.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
          <children>
             <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="202.0" text="Produkt">
                <font>
@@ -27,12 +26,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Separator layoutY="40.0" prefHeight="1.0" prefWidth="271.0" style="-fx-background-color: black;" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="259.0" prefHeight="42.0" prefWidth="269.0" style=": solid;" AnchorPane.bottomAnchor="0.0">
+      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="248.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
          <children>
-            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="201.0" layoutY="3.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="35.0">
+            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="204.0" layoutY="4.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="31.853557586669922">
                <image>
                   <Image url="@resources/images/plus-sign.png" />
                </image>
@@ -40,7 +38,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="36.0" layoutY="3.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="35.0">
+            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="33.0" layoutY="4.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="33.0">
                <image>
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
@@ -48,8 +46,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" onAction="#updateAmount" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
-            <Separator prefHeight="1.0" prefWidth="271.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="39.0" AnchorPane.topAnchor="0.0" />
+            <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
          </children></AnchorPane>
    </children>
 </fx:root>

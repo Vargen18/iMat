@@ -21,7 +21,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton;
+    private Button switchSceneButton, favoriteButton, checkoutButton, myPageButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -84,10 +84,9 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    private void switchToFavorites() throws Exception { //TODO Switch to favorites from another scene
+    private void switchToFavorites() throws Exception {
 
-        iMat.switchScene(favoritesButton, "categories.fxml");
-        updateFavoriteGrid();
+        iMat.switchScene(favoriteButton, "favorites.fxml");
     }
 
     @FXML
