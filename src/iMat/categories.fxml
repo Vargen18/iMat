@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;">
          <children>
-            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1807.0">
+            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/homepagebutton.png" />
                </image>
@@ -50,7 +50,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="232.0" layoutY="20.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0">
+            <Label layoutX="119.0" layoutY="23.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE">
                <font>
                   <Font name="Roboto" size="36.0" />
                </font>
@@ -58,7 +58,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <Button fx:id="searchButton" layoutX="1026.0" layoutY="22.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25; -fx-background-color: FFFF;" text="Sök">
+            <Button fx:id="searchButton" layoutX="1026.0" layoutY="22.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -72,7 +72,7 @@
          <children>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: ffffff;">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane hbarPolicy="NEVER" style="-fx-background-color: ffffff;">
                     <content>
                       <AnchorPane style="-fx-background-color: ffffff;">
                            <children>
