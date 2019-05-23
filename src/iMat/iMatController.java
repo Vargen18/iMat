@@ -84,9 +84,10 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    private void switchToFavorites() throws Exception {
+    private void switchToFavorites() throws Exception { //TODO Switch to favorites from another scene
 
-        iMat.switchScene(favoritesButton, "favorites.fxml");
+        iMat.switchScene(favoritesButton, "categories.fxml");
+        updateFavoriteGrid();
     }
 
     @FXML
