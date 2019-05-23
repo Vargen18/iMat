@@ -50,7 +50,7 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="119.0" layoutY="23.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE">
+            <Label layoutX="119.0" layoutY="23.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="23.5">
                <font>
                   <Font name="Roboto" size="36.0" />
                </font>

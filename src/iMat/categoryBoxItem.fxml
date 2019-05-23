@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#updateProductGrid" prefHeight="275.0" prefWidth="275.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-style: solid; -fx-background-color: #FFFF;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#updateProductGrid" prefHeight="275.0" prefWidth="277.0" style="-fx-background-color: #FFFF; -fx-padding: 2; -fx-border-color: BLACK; -fx-border-width: 1;" styleClass="button" stylesheets="@boxItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="categoryImage" fitHeight="230.0" fitWidth="271.0" layoutX="18.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label fx:id="categoryName" layoutX="18.0" layoutY="232.0" prefHeight="39.0" prefWidth="240.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.bottomAnchor="3.999999999999986">
+      <ImageView fx:id="categoryImage" fitHeight="227.0" fitWidth="295.0" layoutX="9.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <Label fx:id="categoryName" layoutX="9.0" layoutY="212.0" prefHeight="47.0" prefWidth="295.0" style="-fx-alignment: center;" styleClass="lowerCol" text="Label" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
          <font>
             <Font size="24.0" />
          </font>
