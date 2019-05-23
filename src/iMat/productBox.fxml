@@ -18,7 +18,7 @@
                   <Font name="Roboto" size="24.0" />
                </font>
             </Label>
-            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" onMouseClicked="#changeFavorite" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@resources/images/bättrehjärta.png" />
                </image>
@@ -46,7 +46,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
+            <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" onAction="#updateAmount" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
          </children></AnchorPane>
    </children>
 </fx:root>

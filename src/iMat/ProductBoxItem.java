@@ -1,11 +1,14 @@
 package iMat;
 
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -36,7 +39,8 @@ public class ProductBoxItem extends AnchorPane {
     iMatController controller;
 
 
-    private int amount = 0;
+    private int amount;
+
 
     public double total;
 
@@ -67,6 +71,8 @@ public class ProductBoxItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        addToFavorites.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> changeFavorite());
+
         //System.out.println("Working Directory = " + System.getProperty("user.dir"));
         this.product = product;
         this.controller = controller;
@@ -78,6 +84,20 @@ public class ProductBoxItem extends AnchorPane {
         }
         //System.out.println(file.toURI().toString());
         this.productImage.setImage(dataHandler.getFXImage(product));
+
+        if(shoppingItem == null) {
+            for(ShoppingItem shitem : datahandler.getShoppingCart().getItems()) {
+                if(shitem.getProduct().getName().equals(product.getName())) {
+                    shoppingItem = shitem;
+                }
+            }
+        }
+
+        amount = 0;
+        if(shoppingItem != null){
+            this.amount = (int) shoppingItem.getAmount();
+        }
+
 
         this.productTitle.setText(product.getName());
         this.productBoxAmount.setText(String.valueOf(amount));
@@ -119,8 +139,9 @@ public class ProductBoxItem extends AnchorPane {
         this.shoppingItem.setAmount(amount);
 
         controller.updateShoppingCartList();
-        if(amount <= 0){
-            amount = 0;
+        this.amount = amount;
+        if(this.amount <= 0){
+            this.amount = 0;
         }
     }
 
