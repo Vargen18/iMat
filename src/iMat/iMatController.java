@@ -75,6 +75,10 @@ public class iMatController implements Initializable {
             updateShoppingCartList();
         }
 
+        if (iMat.scene.equals(("myPage.fxml"))){
+            loadMyPage();
+        }
+
         // TODO
         //updatefavorites();
 
@@ -97,7 +101,7 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToAccount() throws Exception {
-
+        iMat.scene = "myPage.fxml";
         iMat.switchScene(myPageButton, "myPage.fxml");
 
     }
@@ -151,13 +155,6 @@ public class iMatController implements Initializable {
             Product p = dataHandler.getProducts(pc).get(1);
             categoriesGrid.getChildren().add(new CategoryBoxItem(p, this));
         }
-
-    }
-
-    public void updateFavorites(){
-
-        //Product product = addToFavorites.
-        //dataHandler.favorites().add(product);
 
     }
 
