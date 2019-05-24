@@ -43,7 +43,7 @@ public class CheckoutProductBox extends AnchorPane {
 
     public CheckoutProductBox(Product product, iMatController controller){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productBox.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("checkoutProductBox.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

@@ -39,10 +39,10 @@ public class iMatController implements Initializable {
     private Label mainLabel;
 
     @FXML
-    private ComboBox <String> cardTypeComboBox;
+    private ComboBox<String> cardTypeComboBox;
 
     @FXML
-    private  ComboBox<Integer> monthComboBox;
+    private ComboBox<Integer> monthComboBox;
 
     @FXML
     private FlowPane checkoutList;
@@ -58,7 +58,7 @@ public class iMatController implements Initializable {
     List<Product> products = dataHandler.getProducts();
 
     public void changeFavorite(Product product) {
-        if(dataHandler.isFavorite(product)) {
+        if (dataHandler.isFavorite(product)) {
             dataHandler.removeFavorite(product);
         } else {
             dataHandler.addFavorite(product);
@@ -84,13 +84,13 @@ public class iMatController implements Initializable {
             updateShoppingCartList();
         }
 
-        if (iMat.scene.equals(("myPage.fxml"))){
+        if (iMat.scene.equals(("myPage.fxml"))) {
             comboBox();
             Platform.runLater(() -> cardTypeComboBox.requestFocus());
             loadMyPage();
         }
 
-        if(iMat.scene.equals("checkout.fxml")){
+        if (iMat.scene.equals("checkout.fxml")) {
             updateCheckoutList();
         }
 
@@ -101,8 +101,8 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToCategories() throws Exception {
-        if(iMat.scene.equals("categories.fxml")) {
-          //          mainLabel.setText("Kategorier");
+        if (iMat.scene.equals("categories.fxml")) {
+            //          mainLabel.setText("Kategorier");
         }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
@@ -174,7 +174,7 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void updateProductGrid(ProductCategory category){
+    public void updateProductGrid(ProductCategory category) {
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.getProducts(category);
@@ -186,7 +186,7 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void updateFavoriteGrid(){
+    public void updateFavoriteGrid() {
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.favorites();
@@ -197,19 +197,19 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void updateShoppingCartList(){
+    public void updateShoppingCartList() {
 
         //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
-            shoppingCartList.getChildren().clear();
-        for (int i = dataHandler.getShoppingCart().getItems().size()-1; i >= 0 ; i--){
+        shoppingCartList.getChildren().clear();
+        for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
     }
 
     @FXML
     public void updateCheckoutList() {
-
-        for (int i = dataHandler.getShoppingCart().getItems().size()-1; i >= 0 ; i--){
+        checkoutList.getChildren().clear();
+        for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
             checkoutList.getChildren().add(new CheckoutProductBox(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this));
         }
 
@@ -217,41 +217,50 @@ public class iMatController implements Initializable {
 
 
     @FXML
-    public void removeProductFromShoppingCart(ShoppingCartListItem item){
+    public void removeProductFromShoppingCart(ShoppingCartListItem item) {
         int change = -10000000;
-        changeAmount(item.product,change);
+        changeAmount(item.product, change);
         shoppingCartList.getChildren().remove(item);
     }
 
     public void add(Product product) {
         int change = 1;
-        changeAmount(product,change);
+        changeAmount(product, change);
 
-        updateShoppingCartList();
+        if (iMat.scene.equals("checkout.fxml")) {
+            updateCheckoutList();
+        } else if (iMat.scene.equals("favorites.fxml")) {
+            updateFavoriteGrid();
+        }
 
     }
 
     public void minus(Product product) {
         int change = -1;
         changeAmount(product, change);
-        updateShoppingCartList();
+        if (iMat.scene.equals("checkout.fxml")) {
+            updateCheckoutList();
+        } else if (iMat.scene.equals("favorites.fxml")) {
+            updateFavoriteGrid();
+        }
+
     }
 
-    public void removeItem(ShoppingItem item){
+    public void removeItem(ShoppingItem item) {
 
         dataHandler.getShoppingCart().removeItem(item);
     }
 
-    public void changeAmount(Product product, int change){
+    public void changeAmount(Product product, int change) {
         ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
         ShoppingItem shitem = findShoppingItem(product);
         double amount;
         if (shitem != null) {
             amount = (shitem.getAmount() + change);
-            if(amount <= 0){
+            if (amount <= 0) {
                 shoppingCart.removeItem(shitem);
-            }else {
+            } else {
                 shitem.setAmount(amount);
             }
         } else if (change > 0) {
@@ -266,7 +275,7 @@ public class iMatController implements Initializable {
     }
 
 
-    public String switchName(Product product){
+    public String switchName(Product product) {
         String name = product.getCategory().name();
 
         switch (name) {
@@ -297,33 +306,34 @@ public class iMatController implements Initializable {
             case "MELONS":
                 return "Melon";
             case "FLOUR_SUGAR_SALT":
-                return  "Salt & Socker & Mjöl";
+                return "Salt & Socker & Mjöl";
             case "NUTS_AND_SEEDS":
-                return  "Nötter";
+                return "Nötter";
             case "PASTA":
-                return  "Pasta";
+                return "Pasta";
             case "POTATO_RICE":
-                return  "Ris & Potatis";
+                return "Ris & Potatis";
             case "ROOT_VEGETABLE":
-                return  "Rotfrukter";
+                return "Rotfrukter";
             case "FRUIT":
-                return  "Frukt";
+                return "Frukt";
             case "SWEET":
-                return  "Sötsaker";
+                return "Sötsaker";
             case "HERB":
                 return "Örter";
 
-        } return name;
+        }
+        return name;
 
 
     }
 
-    public ShoppingItem findShoppingItem(Product product){
+    public ShoppingItem findShoppingItem(Product product) {
         boolean found = false;
         ShoppingCart shoppingCart = dataHandler.getShoppingCart();
 
-        for (ShoppingItem shitem : shoppingCart.getItems()){
-            if (shitem.getProduct() == product){
+        for (ShoppingItem shitem : shoppingCart.getItems()) {
+            if (shitem.getProduct() == product) {
                 return shitem;
             }
         }
@@ -335,8 +345,8 @@ public class iMatController implements Initializable {
         CreditCard creditCard = dataHandler.getCreditCard();
 
 
-        cardTypeComboBox.getItems().addAll("MasterCard","Visa", "Maestro");
-        monthComboBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
+        cardTypeComboBox.getItems().addAll("MasterCard", "Visa", "Maestro");
+        monthComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 
         //this.cardTypeComboBox.getItems().addAll("MasterCard","Visa", "Maestro");
 
@@ -354,7 +364,6 @@ public class iMatController implements Initializable {
         this.yearField.setText(String.valueOf(creditCard.getValidYear()));
         this.cardNumberField.setText(creditCard.getCardNumber());
         this.cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
-
 
 
     }
@@ -382,7 +391,7 @@ public class iMatController implements Initializable {
         System.out.println(customer.getFirstName());
     }
 
-    public void comboBox(){
+    public void comboBox() {
 
         CreditCard creditCard = dataHandler.getCreditCard();
 
