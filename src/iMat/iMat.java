@@ -53,6 +53,11 @@ public class iMat extends Application{
      */
     public static void main(String[] args) {
         launch(args);
+        Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+            public void run() {
+                IMatDataHandler.getInstance().shutDown();
+            }
+        }));
     }
 
     public static void switchScene(Control object, String target) throws Exception{
