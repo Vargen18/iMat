@@ -231,6 +231,8 @@ public class iMatController implements Initializable {
             updateCheckoutList();
         } else if (iMat.scene.equals("favorites.fxml")) {
             updateFavoriteGrid();
+        } else if (iMat.scene.equals("categories.fxml")) {
+            updateShoppingCartList();
         }
 
     }
@@ -242,8 +244,9 @@ public class iMatController implements Initializable {
             updateCheckoutList();
         } else if (iMat.scene.equals("favorites.fxml")) {
             updateFavoriteGrid();
+        } else if (iMat.scene.equals("categories.fxml")) {
+            updateShoppingCartList();
         }
-
     }
 
     public void removeItem(ShoppingItem item) {
