@@ -11,7 +11,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.net.URL;
@@ -21,7 +20,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoriteButton, checkoutButton, myPageButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -60,11 +59,17 @@ public class iMatController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        dataHandler.addFavorite(25);
+        //dataHandler.addFavorite(25);
 
         if (iMat.scene.equals("categories.fxml")) {
             System.out.println(dataHandler.getShoppingCart().getItems().size());
             updateCategoryGrid();
+            updateCategoryList();
+            updateShoppingCartList();
+        }
+
+        if (iMat.scene.equals("favorites.fxml")) {
+            updateFavoriteGrid();
             updateCategoryList();
             updateShoppingCartList();
         }
@@ -85,8 +90,8 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToFavorites() throws Exception {
-
-        iMat.switchScene(favoriteButton, "favorites.fxml");
+        iMat.scene = "favorites.fxml";
+        iMat.switchScene(favoritesButton, "categories.fxml");
     }
 
     @FXML
@@ -99,6 +104,7 @@ public class iMatController implements Initializable {
     @FXML
     private void switchToCheckout() throws Exception {
 
+        iMat.scene = "checkout.fxml";
         iMat.switchScene(checkoutButton, "checkout.fxml");
 
     }

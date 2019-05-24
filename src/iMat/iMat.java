@@ -56,7 +56,7 @@ public class iMat extends Application{
     }
 
     public static void switchScene(Control object, String target) throws Exception{
-        scene = target;
+        //scene = target;
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
         Parent root = FXMLLoader.load(iMat.class.getResource(target), bundle);
