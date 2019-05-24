@@ -33,7 +33,7 @@ public class iMatController implements Initializable {
     private FlowPane categoriesList, categoriesGrid, shoppingCartList;
 
     @FXML
-    private TextField productBoxAmount;
+    private TextField productBoxAmount, firstNameField, lastNameField, phoneField, mobileField, mailField, adressField, postCodeField;
 
     @FXML
     private Label mainLabel;
@@ -183,7 +183,7 @@ public class iMatController implements Initializable {
 
         //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
             shoppingCartList.getChildren().clear();
-        for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++){
+        for (int i = dataHandler.getShoppingCart().getItems().size()-1; i > 0 ; i--){
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
     }
@@ -301,6 +301,30 @@ public class iMatController implements Initializable {
             }
         }
         return null;
+    }
+
+    public void loadMyPage() {
+        Customer customer = dataHandler.getCustomer();
+
+        this.firstNameField.setText(customer.getFirstName());
+        this.lastNameField.setText(customer.getLastName());
+        this.phoneField.setText(customer.getPhoneNumber());
+        this.mobileField.setText(customer.getMobilePhoneNumber());
+        this.mailField.setText(customer.getEmail());
+        this.adressField.setText(customer.getAddress());
+        this.postCodeField.setText(customer.getPostCode());
+    }
+
+    public void updateMyPage() {
+        Customer customer = dataHandler.getCustomer();
+
+        customer.setFirstName(this.firstNameField.getText());
+        customer.setLastName(this.lastNameField.getText());
+        customer.setPhoneNumber(this.phoneField.getText());
+        customer.setMobilePhoneNumber(this.mobileField.getText());
+        customer.setEmail(this.mailField.getText());
+        customer.setAddress(this.adressField.getText());
+        customer.setPostCode(this.postCodeField.getText());
     }
 
 }
