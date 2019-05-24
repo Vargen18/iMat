@@ -128,7 +128,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="611.0" layoutY="201.0" prefHeight="17.0" prefWidth="91.0" text="Ägare:" textAlignment="RIGHT">
+            <Label alignment="CENTER_RIGHT" layoutX="552.0" layoutY="201.0" prefHeight="27.0" prefWidth="150.0" text="Kortinnehavare:" textAlignment="RIGHT">
                <font>
                   <Font size="18.0" />
                </font>
