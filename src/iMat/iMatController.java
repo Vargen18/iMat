@@ -33,7 +33,7 @@ public class iMatController implements Initializable {
     private TextField productBoxAmount, firstNameField, lastNameField, phoneField, mobileField, mailField, adressField, postCodeField;
 
     @FXML
-    private TextField cardTypeField, holderNameField, monthField, yearField, cardNumberField, cvcField;
+    private TextField holderNameField, yearField, cardNumberField, cvcField;
 
     @FXML
     private Label mainLabel;
@@ -358,7 +358,10 @@ public class iMatController implements Initializable {
         this.adressField.setText(customer.getAddress());
         this.postCodeField.setText(customer.getPostCode());
 
-        //this.cardTypeField.setText(creditCard.getCardType());
+
+
+        cardTypeComboBox.getSelectionModel().select(creditCard.getCardType());
+        monthComboBox.getSelectionModel().select(creditCard.getValidMonth());
 
         this.holderNameField.setText(creditCard.getHoldersName());
         this.yearField.setText(String.valueOf(creditCard.getValidYear()));
@@ -383,6 +386,7 @@ public class iMatController implements Initializable {
         //creditCard.setCardType(this.cardTypeField.getText());
         comboBox();
         creditCard.setCardType(cardTypeComboBox.getSelectionModel().getSelectedItem().toString());
+        creditCard.setValidMonth(this.monthComboBox.getSelectionModel().getSelectedIndex());
         creditCard.setHoldersName(this.holderNameField.getText());
         creditCard.setValidYear(Integer.parseInt(this.yearField.getText()));
         creditCard.setCardNumber(this.cardNumberField.getText());
@@ -396,8 +400,7 @@ public class iMatController implements Initializable {
         CreditCard creditCard = dataHandler.getCreditCard();
 
 
-        cardTypeComboBox.getSelectionModel().select(creditCard.getCardType());
-        monthComboBox.getSelectionModel().select(creditCard.getValidMonth());
+
 
         cardTypeComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             String result = (String) cardTypeComboBox.getSelectionModel().getSelectedItem();
