@@ -11,7 +11,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.net.URL;
@@ -230,7 +229,7 @@ public class iMatController implements Initializable {
             }else {
                 shitem.setAmount(amount);
             }
-        } else {
+        } else if (change > 0) {
             shoppingCart.addProduct(product);
         }
 
@@ -318,7 +317,7 @@ public class iMatController implements Initializable {
         this.postCodeField.setText(customer.getPostCode());
     }
 
-    public void updateMyPage() {
+    public void saveMypage() {
         Customer customer = dataHandler.getCustomer();
 
         customer.setFirstName(this.firstNameField.getText());
@@ -328,6 +327,8 @@ public class iMatController implements Initializable {
         customer.setEmail(this.mailField.getText());
         customer.setAddress(this.adressField.getText());
         customer.setPostCode(this.postCodeField.getText());
+
+        System.out.println(customer.getFirstName());
     }
 
 }

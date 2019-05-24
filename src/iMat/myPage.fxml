@@ -35,7 +35,7 @@
                    <cursor>
                        <Cursor fx:constant="HAND" />
                    </cursor></Button>
-               <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" onMouseClicked="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
+               <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
                    <font>
                        <Font name="Roboto" size="24.0" />
                    </font>
@@ -77,7 +77,7 @@
             <Label alignment="CENTER_RIGHT" layoutX="275.0" layoutY="203.0" prefHeight="17.0" prefWidth="91.0" text="Efternamn:" textAlignment="RIGHT" />
             <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="248.0" prefHeight="17.0" prefWidth="91.0" text="Telefon:" textAlignment="RIGHT" />
             <TextField fx:id="lastNameField" layoutX="370.0" layoutY="200.0" />
-            <TextField fx:id="phfoneField" layoutX="370.0" layoutY="245.0" />
+            <TextField fx:id="phoneField" layoutX="370.0" layoutY="245.0" />
             <TextField fx:id="mobileField" layoutX="370.0" layoutY="290.0" />
             <TextField fx:id="mailField" layoutX="370.0" layoutY="335.0" />
             <TextField fx:id="adressField" layoutX="370.0" layoutY="380.0" />
@@ -86,7 +86,7 @@
             <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="338.0" prefHeight="17.0" prefWidth="91.0" text="E-mail:" textAlignment="RIGHT" />
             <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="383.0" prefHeight="17.0" prefWidth="91.0" text="Adress:" textAlignment="RIGHT" />
             <Label alignment="CENTER_RIGHT" layoutX="276.0" layoutY="428.0" prefHeight="17.0" prefWidth="91.0" text="Postkod:" textAlignment="RIGHT" />
-            <Button fx:id="saveMyPage" layoutX="376.0" layoutY="498.0" mnemonicParsing="false" onAction="#updateMyPage" text="Spara" />
+            <Button fx:id="saveMyPage" layoutX="376.0" layoutY="498.0" mnemonicParsing="false" onAction="#saveMypage" text="Spara" />
          </children>
       </AnchorPane>
    </children>
