@@ -55,6 +55,11 @@ public class ShoppingCartListItem extends AnchorPane {
         controller.removeProductFromShoppingCart(this);
     }
 
+    @FXML
+    public void switchCategory() {
+        controller.updateProductGrid(product.getCategory());
+    }
+
     public void setQuantity(Double quantity){
         this.quantity.setText(quantity.toString());
     }

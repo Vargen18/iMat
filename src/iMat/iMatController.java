@@ -1,11 +1,9 @@
 package iMat;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -35,7 +33,16 @@ public class iMatController implements Initializable {
     private TextField productBoxAmount, firstNameField, lastNameField, phoneField, mobileField, mailField, adressField, postCodeField;
 
     @FXML
+    private TextField cardTypeField, holderNameField, monthField, yearField, cardNumberField, cvcField;
+
+    @FXML
     private Label mainLabel;
+
+    @FXML
+    private ComboBox <String> cardTypeComboBox;
+
+    @FXML
+    private  ComboBox<Integer> monthComboBox;
 
 
     @FXML
@@ -75,6 +82,8 @@ public class iMatController implements Initializable {
         }
 
         if (iMat.scene.equals(("myPage.fxml"))){
+            comboBox();
+            Platform.runLater(() -> cardTypeComboBox.requestFocus());
             loadMyPage();
         }
 
@@ -307,6 +316,13 @@ public class iMatController implements Initializable {
 
     public void loadMyPage() {
         Customer customer = dataHandler.getCustomer();
+        CreditCard creditCard = dataHandler.getCreditCard();
+
+
+        cardTypeComboBox.getItems().addAll("MasterCard","Visa", "Maestro");
+        monthComboBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
+
+        //this.cardTypeComboBox.getItems().addAll("MasterCard","Visa", "Maestro");
 
         this.firstNameField.setText(customer.getFirstName());
         this.lastNameField.setText(customer.getLastName());
@@ -315,10 +331,21 @@ public class iMatController implements Initializable {
         this.mailField.setText(customer.getEmail());
         this.adressField.setText(customer.getAddress());
         this.postCodeField.setText(customer.getPostCode());
+
+        //this.cardTypeField.setText(creditCard.getCardType());
+
+        this.holderNameField.setText(creditCard.getHoldersName());
+        this.yearField.setText(String.valueOf(creditCard.getValidYear()));
+        this.cardNumberField.setText(creditCard.getCardNumber());
+        this.cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
+
+
+
     }
 
     public void saveMypage() {
         Customer customer = dataHandler.getCustomer();
+        CreditCard creditCard = dataHandler.getCreditCard();
 
         customer.setFirstName(this.firstNameField.getText());
         customer.setLastName(this.lastNameField.getText());
@@ -328,7 +355,39 @@ public class iMatController implements Initializable {
         customer.setAddress(this.adressField.getText());
         customer.setPostCode(this.postCodeField.getText());
 
+        //creditCard.setCardType(this.cardTypeField.getText());
+        comboBox();
+        creditCard.setCardType(cardTypeComboBox.getSelectionModel().getSelectedItem().toString());
+        creditCard.setHoldersName(this.holderNameField.getText());
+        creditCard.setValidYear(Integer.parseInt(this.yearField.getText()));
+        creditCard.setCardNumber(this.cardNumberField.getText());
+        creditCard.setVerificationCode(Integer.parseInt(this.cvcField.getText()));
+
         System.out.println(customer.getFirstName());
+    }
+
+    public void comboBox(){
+
+        CreditCard creditCard = dataHandler.getCreditCard();
+
+
+        cardTypeComboBox.getSelectionModel().select(creditCard.getCardType());
+        monthComboBox.getSelectionModel().select(creditCard.getValidMonth());
+
+        cardTypeComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            String result = (String) cardTypeComboBox.getSelectionModel().getSelectedItem();
+
+            creditCard.setCardType(result);
+        });
+
+        monthComboBox.getSelectionModel().select(creditCard.getValidMonth());
+
+        monthComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            int result = monthComboBox.getSelectionModel().getSelectedIndex();
+
+            creditCard.setValidMonth(result);
+        });
+
     }
 
 }
