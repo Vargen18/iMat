@@ -185,7 +185,7 @@ public class iMatController implements Initializable {
 
         //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
             shoppingCartList.getChildren().clear();
-        for (int i = dataHandler.getShoppingCart().getItems().size()-1; i > 0 ; i--){
+        for (int i = dataHandler.getShoppingCart().getItems().size()-1; i >= 0 ; i--){
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
     }
