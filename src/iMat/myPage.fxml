@@ -21,7 +21,7 @@
                        <Cursor fx:constant="HAND" />
                    </cursor>
                </ImageView>
-               <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" onMouseClicked="#switchToFavorites" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
+               <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
                    <font>
                        <Font name="Roboto" size="24.0" />
                    </font>
@@ -65,5 +65,28 @@
                </Button>
            </children>
        </AnchorPane>
+      <AnchorPane layoutX="375.0" layoutY="91.0" prefHeight="910.0" prefWidth="740.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <TextField layoutX="370.0" layoutY="155.0" />
+            <Label layoutX="326.0" layoutY="47.0" text="Min Sida">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="275.0" layoutY="158.0" prefHeight="17.0" prefWidth="91.0" text="Förnamn:" textAlignment="RIGHT" />
+            <Label layoutX="275.0" layoutY="203.0" prefHeight="17.0" prefWidth="91.0" text="Efternamn:" textAlignment="RIGHT" />
+            <Label layoutX="276.0" layoutY="248.0" prefHeight="17.0" prefWidth="91.0" text="Telefon:" textAlignment="RIGHT" />
+            <TextField layoutX="370.0" layoutY="200.0" />
+            <TextField layoutX="370.0" layoutY="245.0" />
+            <TextField layoutX="370.0" layoutY="290.0" />
+            <TextField layoutX="370.0" layoutY="335.0" />
+            <TextField layoutX="370.0" layoutY="380.0" />
+            <TextField layoutX="370.0" layoutY="425.0" />
+            <Label layoutX="276.0" layoutY="293.0" prefHeight="17.0" prefWidth="91.0" text="Mobil:" textAlignment="RIGHT" />
+            <Label layoutX="276.0" layoutY="338.0" prefHeight="17.0" prefWidth="91.0" text="E-mail:" textAlignment="RIGHT" />
+            <Label layoutX="276.0" layoutY="383.0" prefHeight="17.0" prefWidth="91.0" text="Adress:" textAlignment="RIGHT" />
+            <Label layoutX="276.0" layoutY="428.0" prefHeight="17.0" prefWidth="91.0" text="Postkod:" textAlignment="RIGHT" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
