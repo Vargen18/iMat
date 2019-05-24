@@ -167,7 +167,7 @@ public class iMatController implements Initializable {
     public void updateCategoryGrid() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(1);
+            Product p = dataHandler.getProducts(pc).get(0);
             categoriesGrid.getChildren().add(new CategoryBoxItem(p, this));
         }
 

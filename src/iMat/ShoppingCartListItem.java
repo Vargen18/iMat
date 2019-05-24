@@ -48,7 +48,7 @@ public class ShoppingCartListItem extends AnchorPane {
         this.controller = controller;
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getName());
-        setQuantity(amount);
+        setQuantity((int)amount);
     }
 
     public void removeProductFromShoppingCart(){
@@ -60,8 +60,8 @@ public class ShoppingCartListItem extends AnchorPane {
         controller.updateProductGrid(product.getCategory());
     }
 
-    public void setQuantity(Double quantity){
-        this.quantity.setText(quantity.toString());
+    public void setQuantity(int quantity){
+        this.quantity.setText("Antal: " + quantity);
     }
 
 }
