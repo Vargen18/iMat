@@ -38,7 +38,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" onMouseClicked="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
