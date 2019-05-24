@@ -44,6 +44,9 @@ public class iMatController implements Initializable {
     @FXML
     private  ComboBox<Integer> monthComboBox;
 
+    @FXML
+    private FlowPane checkoutList;
+
 
     @FXML
     ScrollPane categoriesScrollPane;
@@ -85,6 +88,10 @@ public class iMatController implements Initializable {
             comboBox();
             Platform.runLater(() -> cardTypeComboBox.requestFocus());
             loadMyPage();
+        }
+
+        if(iMat.scene.equals("checkout.fxml")){
+            updateCheckoutList();
         }
 
         // TODO
@@ -197,6 +204,15 @@ public class iMatController implements Initializable {
         for (int i = dataHandler.getShoppingCart().getItems().size()-1; i >= 0 ; i--){
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
+    }
+
+    @FXML
+    public void updateCheckoutList() {
+
+        for (int i = dataHandler.getShoppingCart().getItems().size()-1; i >= 0 ; i--){
+            checkoutList.getChildren().add(new CheckoutProductBox(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this));
+        }
+
     }
 
 
