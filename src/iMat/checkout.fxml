@@ -70,9 +70,9 @@
                 </Button>
             </children>
         </AnchorPane>
-      <AnchorPane layoutX="381.0" layoutY="223.0" prefHeight="777.0" prefWidth="734.0">
+      <AnchorPane layoutX="381.0" layoutY="223.0" prefHeight="777.0" prefWidth="750.0">
          <children>
-            <ScrollPane layoutY="56.0" prefWidth="736.0">
+            <ScrollPane layoutY="56.0" maxHeight="721.0" prefWidth="750.0">
                <content>
                   <FlowPane fx:id="checkoutList" prefWidth="734.0">
                      <opaqueInsets>
@@ -95,7 +95,7 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Line endX="643.0" layoutX="101.0" layoutY="56.0" startX="-100.0" />
+            <Line endX="645.0" layoutX="101.0" layoutY="56.0" startX="-100.0" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="381.0" layoutY="91.0" prefHeight="133.0" prefWidth="734.0">
