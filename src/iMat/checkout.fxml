@@ -16,6 +16,31 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000" prefWidth="1920.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
     <children>
+      <AnchorPane layoutX="3.0" layoutY="92.0" prefHeight="909.0" prefWidth="1920.0">
+         <children>
+            <Text fx:id="total" layoutX="679.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp: Z" x="330.0" y="40.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="backButton" layoutX="160.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Till kategorier">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backButton1" layoutX="1270.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Fortsätt &gt;">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
         <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;">
             <children>
                 <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
@@ -32,21 +57,24 @@
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
-                    </cursor></Button>
+                    </cursor>
+            </Button>
                 <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: FFFF; -fx-background-radius: 25;" stylesheets="@boxItem.css" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
                     <font>
                         <Font name="Roboto" size="24.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
-                    </cursor></Button>
+                    </cursor>
+            </Button>
                 <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" stylesheets="@boxItem.css" text="Varukorgen">
                     <font>
                         <Font name="Roboto" size="24.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
-                    </cursor></Button>
+                    </cursor>
+            </Button>
                 <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                     <font>
                         <Font size="18.0" />
@@ -77,7 +105,8 @@
                   <FlowPane fx:id="checkoutList" prefWidth="734.0">
                      <opaqueInsets>
                         <Insets />
-                     </opaqueInsets></FlowPane>
+                     </opaqueInsets>
+                  </FlowPane>
                </content>
             </ScrollPane>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" x="320.0" y="40.0">
@@ -98,7 +127,7 @@
             <Line endX="645.0" layoutX="101.0" layoutY="56.0" startX="-100.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="381.0" layoutY="91.0" prefHeight="133.0" prefWidth="734.0">
+      <AnchorPane layoutX="381.0" layoutY="91.0" prefHeight="133.0" prefWidth="574.0">
          <children>
             <Label layoutX="43.0" layoutY="58.0" text="Varukorg:">
                <font>

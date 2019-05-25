@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
 import java.net.URL;
@@ -46,6 +47,9 @@ public class iMatController implements Initializable {
 
     @FXML
     private FlowPane checkoutList;
+
+    @FXML
+    private Text total;
 
 
     @FXML
@@ -212,6 +216,8 @@ public class iMatController implements Initializable {
         for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
             checkoutList.getChildren().add(new CheckoutProductBox(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this));
         }
+
+        total.setText("Totalbelopp: " + dataHandler.getShoppingCart().getTotal() + " kr");
 
     }
 
