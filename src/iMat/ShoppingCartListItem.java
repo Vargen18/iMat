@@ -19,13 +19,13 @@ public class ShoppingCartListItem extends AnchorPane {
     private Label productName;
 
     @FXML
-    private Label quantity;
+    private Label quantity, priceLabel;
 
     @FXML
     private Button removeProduct;
 
     @FXML
-    private ImageView productImage;
+    private ImageView productImage, addButton, minusButton;
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
     Product product;
@@ -48,6 +48,8 @@ public class ShoppingCartListItem extends AnchorPane {
         this.controller = controller;
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getName());
+        this.priceLabel.setText(String.valueOf(product.getPrice()) + "kr/st");
+
         setQuantity((int)amount);
     }
 
@@ -61,7 +63,17 @@ public class ShoppingCartListItem extends AnchorPane {
     }
 
     public void setQuantity(int quantity){
-        this.quantity.setText("Antal: " + quantity);
+        this.quantity.setText(quantity + " st");
+    }
+
+    @FXML
+    public void addAmount(){
+        controller.add(product);
+    }
+
+    @FXML
+    public void minusAmount(){
+        controller.minus(product);
     }
 
 }

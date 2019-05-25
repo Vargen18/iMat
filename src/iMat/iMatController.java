@@ -349,6 +349,10 @@ public class iMatController implements Initializable {
         return null;
     }
 
+    public double returnPrice(Product product){
+      return product.getPrice();
+    }
+
     public void loadMyPage() {
         Customer customer = dataHandler.getCustomer();
         CreditCard creditCard = dataHandler.getCreditCard();

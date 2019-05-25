@@ -20,7 +20,7 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     private ImageView productImage;
     @FXML
-    private Label productTitle;
+    private Label productTitle, priceLabel;
     @FXML
     private TextField productBoxAmount;
     @FXML
@@ -98,6 +98,7 @@ public class ProductBoxItem extends AnchorPane {
 
         this.productTitle.setText(product.getName());
         this.productBoxAmount.setText(String.valueOf(amount));
+        this.priceLabel.setText(String.valueOf(product.getPrice()) + "kr/st");
 
     }
     @FXML
@@ -113,6 +114,9 @@ public class ProductBoxItem extends AnchorPane {
         amount++;
         productBoxAmount.setText(String.valueOf(amount));
     }
+
+
+
     @FXML
     public void remove() { controller.minus(product);
         amount--;

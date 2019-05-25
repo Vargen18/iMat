@@ -13,7 +13,7 @@
       <ImageView fx:id="productImage" fitHeight="203.0" fitWidth="271.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="46.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
          <children>
-            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="202.0" text="Produkt">
+            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="124.0" text="Produkt">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -26,6 +26,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
+            <Label fx:id="priceLabel" layoutX="125.0" layoutY="6.0" text="Pris">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="248.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
