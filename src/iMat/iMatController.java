@@ -46,7 +46,7 @@ public class iMatController implements Initializable {
     private ComboBox<Integer> monthComboBox;
 
     @FXML
-    private FlowPane checkoutList;
+    private FlowPane checkoutList, priorOrdersFlowPane;
 
     @FXML
     private Text total;
@@ -76,7 +76,7 @@ public class iMatController implements Initializable {
         //dataHandler.addFavorite(25);
 
         if (iMat.scene.equals("categories.fxml")) {
-            System.out.println(dataHandler.getShoppingCart().getItems().size());
+            //System.out.println(dataHandler.getShoppingCart().getItems().size());
             updateCategoryGrid();
             updateCategoryList();
             updateShoppingCartList();
@@ -382,6 +382,13 @@ public class iMatController implements Initializable {
         this.cardNumberField.setText(creditCard.getCardNumber());
         this.cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
 
+        this.priorOrdersFlowPane.getChildren().clear();
+        for (Order order : dataHandler.getOrders()){
+
+            this.priorOrdersFlowPane.getChildren().add(new orderBox(order, this));
+        }
+
+        System.out.println(dataHandler.getOrders().size());
 
     }
 
@@ -406,7 +413,9 @@ public class iMatController implements Initializable {
         creditCard.setCardNumber(this.cardNumberField.getText());
         creditCard.setVerificationCode(Integer.parseInt(this.cvcField.getText()));
 
-        System.out.println(customer.getFirstName());
+        //System.out.println(customer.getFirstName());
+
+        dataHandler.placeOrder();
     }
 
     public void comboBox() {

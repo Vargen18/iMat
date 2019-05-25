@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1050.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FlowPane fx:id="orderFlowPane" layoutX="30.0" layoutY="100.0" />
+      <Text fx:id="date" layoutX="15.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="total" layoutX="200.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</fx:root>
