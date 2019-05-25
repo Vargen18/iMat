@@ -415,7 +415,7 @@ public class iMatController implements Initializable {
 
         //System.out.println(customer.getFirstName());
 
-        dataHandler.placeOrder();
+        //dataHandler.placeOrder();
     }
 
     public void comboBox() {
