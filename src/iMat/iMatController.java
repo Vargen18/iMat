@@ -19,7 +19,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -37,7 +37,7 @@ public class iMatController implements Initializable {
     private TextField holderNameField, yearField, cardNumberField, cvcField;
 
     @FXML
-    private Label mainLabel, totalLabel;
+    private Label mainLabel, totalLabel, quantityLabel;
 
     @FXML
     private ComboBox<String> cardTypeComboBox;
@@ -209,6 +209,7 @@ public class iMatController implements Initializable {
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
         totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
+        quantityLabel.setText(String.valueOf("Antal: " + dataHandler.getShoppingCart().getItems().size()) + " st");
     }
 
     @FXML
@@ -278,10 +279,6 @@ public class iMatController implements Initializable {
         }
 
 
-    }
-
-    public void clearShoppingCartList() {
-        shoppingCartList.getChildren().clear();
     }
 
 
@@ -439,6 +436,13 @@ public class iMatController implements Initializable {
             creditCard.setValidMonth(result);
         });
 
+    }
+
+    public void clearShoppingCart(){
+        for (ShoppingItem p: dataHandler.getShoppingCart().getItems()) {
+            p.setAmount(0);
+        }
+        shoppingCartList.getChildren().clear();
     }
 
 }
