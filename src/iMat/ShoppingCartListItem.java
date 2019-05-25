@@ -19,7 +19,7 @@ public class ShoppingCartListItem extends AnchorPane {
     private Label productName;
 
     @FXML
-    private Label quantity, priceLabel;
+    private Label quantity, priceLabel, totalLabel;
 
     @FXML
     private Button removeProduct;
@@ -48,9 +48,10 @@ public class ShoppingCartListItem extends AnchorPane {
         this.controller = controller;
         this.productImage.setImage(dataHandler.getFXImage(product));
         this.productName.setText(product.getName());
-        this.priceLabel.setText(String.valueOf(product.getPrice()) + "kr/st");
+
 
         setQuantity((int)amount);
+        setTotal((int)amount);
     }
 
     public void removeProductFromShoppingCart(){
@@ -64,6 +65,11 @@ public class ShoppingCartListItem extends AnchorPane {
 
     public void setQuantity(int quantity){
         this.quantity.setText(quantity + " st");
+    }
+
+    @FXML void setTotal(int amount){
+        double total = product.getPrice() * amount;
+        this.totalLabel.setText(total + "kr");
     }
 
     @FXML

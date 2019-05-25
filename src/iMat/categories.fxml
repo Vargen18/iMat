@@ -88,11 +88,11 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="384.0">
+            <AnchorPane layoutX="1536.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="384.0">
                <children>
                   <ScrollPane hbarPolicy="NEVER" layoutX="197.0" prefHeight="908.0" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <AnchorPane prefHeight="908.0" prefWidth="384.0">
+                        <AnchorPane prefHeight="837.0" prefWidth="384.0">
                            <children>
                               <FlowPane fx:id="shoppingCartList" hgap="20.0" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: ffffff;" vgap="10.0">
                                  <padding>
@@ -120,6 +120,11 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
+            <Label fx:id="totalLabel" layoutX="1536.0" layoutY="53.0" text="Label">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

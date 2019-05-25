@@ -98,7 +98,7 @@ public class ProductBoxItem extends AnchorPane {
 
         this.productTitle.setText(product.getName());
         this.productBoxAmount.setText(String.valueOf(amount));
-        this.priceLabel.setText(String.valueOf(product.getPrice()) + "kr/st");
+        this.priceLabel.setText(String.valueOf(product.getPrice()) + " " + product.getUnit());
 
     }
     @FXML

@@ -26,11 +26,6 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Label fx:id="priceLabel" layoutX="125.0" layoutY="6.0" text="Pris">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="248.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
@@ -53,5 +48,10 @@
             </ImageView>
             <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" onAction="#updateAmount" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
          </children></AnchorPane>
+      <Label fx:id="priceLabel" layoutX="76.0" layoutY="214.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </fx:root>

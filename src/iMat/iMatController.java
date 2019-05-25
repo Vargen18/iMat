@@ -37,7 +37,7 @@ public class iMatController implements Initializable {
     private TextField holderNameField, yearField, cardNumberField, cvcField;
 
     @FXML
-    private Label mainLabel;
+    private Label mainLabel, totalLabel;
 
     @FXML
     private ComboBox<String> cardTypeComboBox;
@@ -208,6 +208,7 @@ public class iMatController implements Initializable {
         for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
+        totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
     }
 
     @FXML

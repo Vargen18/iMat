@@ -18,7 +18,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="productName" layoutX="113.0" layoutY="10.0" text="Namn">
+      <Label fx:id="productName" layoutX="113.0" layoutY="16.0" text="Namn">
          <font>
             <Font size="18.0" />
          </font>
@@ -33,7 +33,7 @@
             <Image url="@resources/images/minus-sign2.png" />
          </image>
       </ImageView>
-      <Label fx:id="priceLabel" layoutX="113.0" layoutY="37.0" prefHeight="27.0" prefWidth="69.0" text="Pris">
+      <Label fx:id="totalLabel" layoutX="113.0" layoutY="43.0" text="total">
          <font>
             <Font size="18.0" />
          </font>
