@@ -25,9 +25,9 @@ public class iMat extends Application{
 
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         iMatController iMatController = new iMatController();
-        System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
+        //System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
         dataHandler.resetFirstRun();
-        System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
+        //System.out.println(dataHandler.isFirstRun()); //Testade en backend-funktion
 
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat/resources/iMat");
 
