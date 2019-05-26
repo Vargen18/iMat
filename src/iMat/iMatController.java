@@ -19,7 +19,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -37,7 +37,7 @@ public class iMatController implements Initializable {
     private TextField holderNameField, yearField, cardNumberField, cvcField;
 
     @FXML
-    private Label mainLabel, totalLabel;
+    private Label mainLabel, totalLabel, quantityLabel;
 
     @FXML
     private ComboBox<String> cardTypeComboBox;
@@ -133,31 +133,6 @@ public class iMatController implements Initializable {
 
     }
 
-
-    public Image getSquareImage(Image image) {
-
-        int x = 0;
-        int y = 0;
-        int width = 0;
-        int height = 0;
-
-        if (image.getWidth() > image.getHeight()) {
-            width = (int) image.getHeight();
-            height = (int) image.getHeight();
-            x = (int) (image.getWidth() - width) / 2;
-            y = 0;
-        } else if (image.getHeight() > image.getWidth()) {
-            width = (int) image.getWidth();
-            height = (int) image.getWidth();
-            x = 0;
-            y = (int) (image.getHeight() - height) / 2;
-        } else {
-            //Width equals Height, return original image
-            return image;
-        }
-        return new WritableImage(image.getPixelReader(), x, y, width, height);
-    }
-
     @FXML
     public void updateCategoryList() {
 
@@ -209,6 +184,7 @@ public class iMatController implements Initializable {
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
         totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
+        quantityLabel.setText(String.valueOf("Antal: " + dataHandler.getShoppingCart().getItems().size()) + " st");
     }
 
     @FXML
@@ -441,5 +417,12 @@ public class iMatController implements Initializable {
 
     }
 
+
+    @FXML
+    public void ClearShoppingCart(){
+        dataHandler.getShoppingCart().getItems().clear();
+        shoppingCartList.getChildren().clear();
+        updateShoppingCartList();
+    }
 }
 

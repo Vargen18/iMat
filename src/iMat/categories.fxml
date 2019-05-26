@@ -70,6 +70,22 @@
       </AnchorPane>
       <AnchorPane layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1920.0" style="-fx-background-color: ffffff;" AnchorPane.leftAnchor="0.0">
          <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: ffffff;">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" maxHeight="909.0" style="-fx-background-color: ffffff;">
+                    <content>
+                      <AnchorPane style="-fx-background-color: ffffff;">
+                           <children>
+                              <FlowPane fx:id="categoriesList" hgap="20.0" prefWidth="384.0" style="-fx-background-color: ffffff;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <padding>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </padding></FlowPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
             <AnchorPane layoutX="384.0" prefWidth="1152.0" style="-fx-background-color: ffffff;">
                <children>
                   <Label fx:id="mainLabel" layoutX="447.0" layoutY="22.0" text="Kategorier">
@@ -88,13 +104,28 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1536.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="384.0">
+            <AnchorPane layoutX="1536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="384.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" layoutX="197.0" prefHeight="908.0" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="totalLabel" layoutX="8.0" layoutY="2.0" text="Label">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="quantityLabel" layoutX="8.0" layoutY="49.0" text="Label">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="clearShoppingCartButton" layoutX="88.0" layoutY="851.0" mnemonicParsing="false" onAction="#ClearShoppingCart" text="Töm varukorgen">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="105.0" prefWidth="384.0">
                      <content>
-                        <AnchorPane prefHeight="837.0" prefWidth="384.0">
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="384.0">
                            <children>
-                              <FlowPane fx:id="shoppingCartList" hgap="20.0" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: ffffff;" vgap="10.0">
+                              <FlowPane fx:id="shoppingCartList" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: ffffff;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
                                     <Insets bottom="10.0" top="10.0" />
                                  </padding></FlowPane>
@@ -104,27 +135,6 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: ffffff;">
-               <children>
-                  <ScrollPane hbarPolicy="NEVER" maxHeight="909.0" style="-fx-background-color: ffffff;">
-                    <content>
-                      <AnchorPane style="-fx-background-color: ffffff;">
-                           <children>
-                              <FlowPane fx:id="categoriesList" hgap="20.0" prefWidth="384.0" style="-fx-background-color: ffffff;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <padding>
-                                    <Insets bottom="10.0" top="10.0" />
-                                 </padding></FlowPane>
-                           </children>
-                        </AnchorPane>
-                    </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
-            <Label fx:id="totalLabel" layoutX="1536.0" layoutY="53.0" text="Label">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
    </children>

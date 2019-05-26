@@ -104,13 +104,6 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     public void add() {
         controller.add(product);
-        if(shoppingItem == null) {
-            for(ShoppingItem shitem : dataHandler.getShoppingCart().getItems()) {
-                if(shitem.getProduct().getName().equals(product.getName())) {
-                    shoppingItem = shitem;
-                }
-            }
-        }
         amount++;
         productBoxAmount.setText(String.valueOf(amount));
     }
@@ -129,9 +122,6 @@ public class ProductBoxItem extends AnchorPane {
 
     @FXML
     public void updateAmount(){
-        if(shoppingItem == null) {
-            shoppingItem = controller.findShoppingItem(product);
-        }
         if(shoppingItem == null) {
             dataHandler.getShoppingCart().addProduct(product);
             shoppingItem = controller.findShoppingItem(product);
