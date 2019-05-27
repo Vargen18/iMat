@@ -9,14 +9,14 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#updateProductGrid" prefHeight="310.0" prefWidth="275.0" style="-fx-background-color: #FFFF; -fx-border-color: BLACK; -fx-border-width: 1;" styleClass="button" stylesheets="@boxItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="categoryImage" fitHeight="250.0" fitWidth="269.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="categoryImage" fitHeight="275.0" fitWidth="270.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../.dat215/imat/images/product_1.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="3.0" layoutY="205.0" prefHeight="103.0" prefWidth="269.0">
+      <AnchorPane layoutX="3.0" layoutY="225.0" prefHeight="50.0" prefWidth="270.0">
          <children>
-            <Label fx:id="categoryName" blendMode="MULTIPLY" layoutX="2.0" layoutY="17.0" prefHeight="69.0" prefWidth="264.0" style="-fx-alignment: center;" styleClass="lowerCol" text="Produkt" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Label fx:id="categoryName" blendMode="MULTIPLY" layoutY="7.0" prefHeight="70.0" prefWidth="270.0" style="-fx-alignment: center;" styleClass="lowerCol" text="Produkt" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="Roboto" size="30.0" />
                </font>

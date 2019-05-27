@@ -23,7 +23,7 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="backButton" layoutX="160.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Till kategorier">
+            <Button fx:id="backButton" layoutX="148.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Till kategorier">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -31,7 +31,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="paymentButton" layoutX="1270.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToPayment" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Fortsätt &gt;">
+            <Button fx:id="paymentButton" layoutX="1270.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToPayment" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Fortsätt &gt;">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -94,7 +94,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button fx:id="favoritesButton" layoutX="1160.7" layoutY="22.0" mnemonicParsing="false" onAction="#switchToFavorites" prefHeight="50.0" prefWidth="202.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Favoriter" AnchorPane.leftAnchor="1152.0" AnchorPane.rightAnchor="566.0">
+            <Button fx:id="favoritesButton" layoutX="1160.7" layoutY="22.0" mnemonicParsing="false" onAction="#switchToFavorites" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Favoriter" AnchorPane.leftAnchor="1152.0" AnchorPane.rightAnchor="566.0">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -109,7 +109,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="myPageButton" layoutX="1687.7" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" prefHeight="51.0" prefWidth="206.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1679.0" AnchorPane.rightAnchor="35.0">
+            <Button fx:id="myPageButton" layoutX="1687.7" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1679.0" AnchorPane.rightAnchor="35.0">
                <font>
                   <Font size="24.0" />
                </font>
