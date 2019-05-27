@@ -9,6 +9,7 @@ import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -37,6 +38,10 @@ public class orderBox extends AnchorPane {
 
         //System.out.println("Working Directory = " + System.getProperty("user.dir"));
         this.order = order;
+        for (int i = 0; i < order.getItems().size(); i++){
+            ShoppingItem shoppingItem = order.getItems().get(i);
+            orderFlowPane.getChildren().add(new CheckoutProductBox(shoppingItem, controller));
+        }
     }
 
 }
