@@ -118,7 +118,7 @@
                   </Button>
                   <ScrollPane hbarPolicy="NEVER" layoutY="105.0" prefHeight="691.0" prefWidth="384.0" style="-fx-background-color: e6e6e6;">
                      <content>
-                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="384.0">
+                        <AnchorPane prefHeight="697.0" prefWidth="384.0">
                            <children>
                               <FlowPane fx:id="shoppingCartList" hgap="20.0" prefHeight="691.0" prefWidth="384.0" style="-fx-background-color: f3f3f3;" vgap="10.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
