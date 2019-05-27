@@ -19,7 +19,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -40,10 +40,10 @@ public class iMatController implements Initializable {
     private Label mainLabel, totalLabel, quantityLabel;
 
     @FXML
-    private ComboBox<String> cardTypeComboBox;
+    private ComboBox<String> deliveryMonthComboBox, cardTypeComboBox;
 
     @FXML
-    private ComboBox<Integer> monthComboBox;
+    private ComboBox<Integer> monthComboBox, deliveryDayComboBox;
 
     @FXML
     private FlowPane checkoutList, priorOrdersFlowPane;
@@ -80,23 +80,21 @@ public class iMatController implements Initializable {
             updateCategoryGrid();
             updateCategoryList();
             updateShoppingCartList();
-        }
-
-        if (iMat.scene.equals("favorites.fxml")) {
+        }else if (iMat.scene.equals("favorites.fxml")) {
             updateFavoriteGrid();
             updateCategoryList();
             updateShoppingCartList();
-        }
-
-        if (iMat.scene.equals(("myPage.fxml"))) {
+        }else if (iMat.scene.equals(("myPage.fxml"))) {
             comboBox();
             Platform.runLater(() -> cardTypeComboBox.requestFocus());
             loadMyPage();
+        }else if (iMat.scene.equals("checkout.fxml")) {
+            updateCheckoutList();
+        }else if (iMat.scene.equals("payment.fxml")){
+            loadPayment();
         }
 
-        if (iMat.scene.equals("checkout.fxml")) {
-            updateCheckoutList();
-        }
+
 
         // TODO
         //updatefavorites();
@@ -132,6 +130,14 @@ public class iMatController implements Initializable {
         iMat.switchScene(checkoutButton, "checkout.fxml");
 
     }
+
+    @FXML
+    private void switchToPayment() throws  Exception {
+        iMat.scene = "payment.fxml";
+        iMat.switchScene(paymentButton, "payment.fxml");
+    }
+
+
 
     @FXML
     public void updateCategoryList() {
@@ -368,6 +374,31 @@ public class iMatController implements Initializable {
 
     }
 
+    public void loadPayment(){
+
+
+        cardTypeComboBox.getItems().addAll("MasterCard", "Visa", "Maestro");
+        monthComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+        deliveryDayComboBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
+        deliveryMonthComboBox.getItems().addAll("Januari","February","Mars","April","Maj","Juni","Juli", "Augusti","September","Oktober","November","December");
+
+        Customer customer = dataHandler.getCustomer();
+        CreditCard creditCard = dataHandler.getCreditCard();
+        adressField.setText(customer.getAddress());
+        postCodeField.setText(customer.getPostCode());
+        yearField.setText(String.valueOf(creditCard.getValidYear()));
+        monthComboBox.getSelectionModel().select(creditCard.getValidMonth());
+        cardTypeComboBox.getSelectionModel().select(creditCard.getCardType());
+        holderNameField.setText(creditCard.getHoldersName());
+        cardNumberField.setText(creditCard.getCardNumber());
+        cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
+
+        totalLabel.setText("Totalkostnad: " +  String.valueOf(dataHandler.getShoppingCart().getTotal()) + "kr");
+
+
+
+    }
+
     public void saveMypage() {
         Customer customer = dataHandler.getCustomer();
         CreditCard creditCard = dataHandler.getCreditCard();
@@ -418,11 +449,18 @@ public class iMatController implements Initializable {
     }
 
 
+
+
     @FXML
     public void ClearShoppingCart(){
         dataHandler.getShoppingCart().getItems().clear();
         shoppingCartList.getChildren().clear();
         updateShoppingCartList();
+    }
+
+    @FXML
+    public void placeOrder(){
+        dataHandler.placeOrder();
     }
 }
 

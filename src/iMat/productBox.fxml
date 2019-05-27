@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="275.0" style="-fx-border-color: BLACK;" styleClass="button" stylesheets="@boxItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="275.0" style="-fx-border-color: BLACK;" styleClass="button" stylesheets="@boxItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="productImage" fitHeight="203.0" fitWidth="271.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="46.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
@@ -28,7 +28,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="248.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
+      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="292.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
          <children>
             <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="204.0" layoutY="4.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="31.853557586669922">
                <image>
@@ -48,7 +48,7 @@
             </ImageView>
             <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" onAction="#updateAmount" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
          </children></AnchorPane>
-      <Label fx:id="priceLabel" layoutX="76.0" layoutY="214.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
+      <Label fx:id="priceLabel" layoutX="78.0" layoutY="257.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
          <font>
             <Font size="24.0" />
          </font>

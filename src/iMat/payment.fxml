@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;">
          <children>
@@ -70,18 +69,44 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="314.0" layoutY="91.0" prefHeight="919.0" prefWidth="880.0">
+      <AnchorPane layoutX="443.0" layoutY="81.0" prefHeight="919.0" prefWidth="880.0">
          <children>
-            <Label fx:id="totalCost" layoutX="284.0" layoutY="376.0" prefHeight="53.0" prefWidth="284.0" text="Totalbelopp:">
+            <Label fx:id="totalLabel" layoutX="257.0" layoutY="366.0" prefHeight="53.0" prefWidth="284.0" text="Totalbelopp:">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button layoutX="373.0" layoutY="479.0" mnemonicParsing="false" text="Betala">
+            <Button fx:id="payButton" layoutX="407.0" layoutY="754.0" mnemonicParsing="false" onAction="#placeOrder" text="Betala">
                <font>
                   <Font size="36.0" />
                </font>
             </Button>
+            <ComboBox fx:id="deliveryDayComboBox" layoutX="405.0" layoutY="506.0" prefWidth="150.0" />
+            <ComboBox fx:id="deliveryMonthComboBox" layoutX="406.0" layoutY="545.0" prefWidth="150.0" visibleRowCount="12" />
+            <Label layoutX="368.0" layoutY="501.0" text="Dag" />
+            <Label layoutX="356.0" layoutY="549.0" text="Månad" />
+            <Label layoutX="365.0" layoutY="460.0" text="Leveransdatum:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="adressField" layoutX="406.0" layoutY="668.0" />
+            <TextField fx:id="postCodeField" layoutX="406.0" layoutY="713.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="309.0" layoutY="666.0" prefHeight="17.0" prefWidth="91.0" text="Adress:" textAlignment="RIGHT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="309.0" layoutY="711.0" prefHeight="17.0" prefWidth="91.0" text="Postkod:" textAlignment="RIGHT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="366.0" layoutY="631.0" text="Leveransadress:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <Label alignment="CENTER_RIGHT" layoutX="622.0" layoutY="392.0" prefHeight="17.0" prefWidth="91.0" text="CVC:" textAlignment="RIGHT">

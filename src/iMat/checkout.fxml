@@ -31,7 +31,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="backButton1" layoutX="1270.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Fortsätt &gt;">
+            <Button fx:id="paymentButton" layoutX="1270.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToPayment" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Fortsätt &gt;">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
