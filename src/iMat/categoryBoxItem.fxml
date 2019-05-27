@@ -12,12 +12,17 @@
       <ImageView fx:id="categoryImage" fitHeight="250.0" fitWidth="269.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../.dat215/imat/images/product_1.jpg" />
-         </image></ImageView>
-      <Label fx:id="categoryName" layoutX="3.0" layoutY="247.0" prefHeight="63.0" prefWidth="269.0" style="-fx-alignment: center;" styleClass="lowerCol" text="Label" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="3.0" layoutY="205.0" prefHeight="103.0" prefWidth="269.0">
+         <children>
+            <Label fx:id="categoryName" blendMode="MULTIPLY" layoutX="2.0" layoutY="17.0" prefHeight="69.0" prefWidth="264.0" style="-fx-alignment: center;" styleClass="lowerCol" text="Produkt" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Verdana" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
    </children>
    <cursor>
       <Cursor fx:constant="HAND" />

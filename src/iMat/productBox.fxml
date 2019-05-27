@@ -13,9 +13,9 @@
       <ImageView fx:id="productImage" fitHeight="203.0" fitWidth="271.0" layoutX="2.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane layoutX="2.0" layoutY="3.0" prefHeight="46.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
          <children>
-            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="124.0" text="Produkt">
+            <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="204.0" text="Produkt">
                <font>
-                  <Font name="Roboto" size="24.0" />
+                  <Font name="Verdana" size="24.0" />
                </font>
             </Label>
             <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
@@ -28,9 +28,9 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="292.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
+      <AnchorPane fx:id="productAmount" layoutX="2.0" layoutY="269.0" prefHeight="69.0" prefWidth="271.0" style="-fx-background-color: FFFF;">
          <children>
-            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="204.0" layoutY="4.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="31.853557586669922">
+            <ImageView fitHeight="55.0" fitWidth="45.0" layoutX="193.0" layoutY="13.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.1875" AnchorPane.rightAnchor="33.0">
                <image>
                   <Image url="@resources/images/plus-sign.png" />
                </image>
@@ -38,7 +38,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="35.0" fitWidth="46.0" layoutX="33.0" layoutY="4.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="33.0">
+            <ImageView fitHeight="46.0" fitWidth="45.0" layoutX="35.0" layoutY="12.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.233161926269531" AnchorPane.leftAnchor="35.0">
                <image>
                   <Image url="@resources/images/minus-sign2.png" />
                </image>
@@ -46,11 +46,14 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <TextField fx:id="productBoxAmount" layoutX="86.0" layoutY="8.0" onAction="#updateAmount" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="85.5" />
+            <TextField fx:id="productBoxAmount" alignment="CENTER" layoutX="87.0" layoutY="16.0" onAction="#updateAmount" prefHeight="26.0" prefWidth="98.0" AnchorPane.leftAnchor="87.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
          </children></AnchorPane>
-      <Label fx:id="priceLabel" layoutX="78.0" layoutY="257.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
+      <Label fx:id="priceLabel" layoutX="72.0" layoutY="234.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
          <font>
-            <Font size="24.0" />
+            <Font name="Verdana" size="24.0" />
          </font>
       </Label>
    </children>

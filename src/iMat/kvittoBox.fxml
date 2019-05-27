@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
       <ImageView fx:id="productImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" />
       <Text fx:id="productNameText" layoutX="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varunamn" AnchorPane.topAnchor="33.0">
          <font>
-            <Font size="24.0" />
+            <Font name="Verdana" size="24.0" />
          </font>
       </Text>
       <Text fx:id="productPriceText" layoutX="320.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" AnchorPane.topAnchor="33.0">
@@ -20,25 +19,15 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField fx:id="productAmountTextField" alignment="CENTER" layoutX="505.0" layoutY="31.0" prefHeight="25.0" prefWidth="60.0" AnchorPane.topAnchor="31.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="465.0" layoutY="31.0" onMouseClicked="#remove" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="31.0">
-         <image>
-            <Image url="@resources/images/minus-sign2.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="567.0" layoutY="29.0" onMouseClicked="#add" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="31.0">
-         <image>
-            <Image url="@resources/images/plus-sign.png" />
-         </image>
-      </ImageView>
       <Text fx:id="sumText" layoutX="650.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summa">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
+      <Label fx:id="amount" layoutX="473.0" layoutY="31.0" text="Antal">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

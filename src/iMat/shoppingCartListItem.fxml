@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,30 +14,33 @@
             <Image url="@resources/images/MELONS.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="quantity" layoutX="259.0" layoutY="29.0" prefHeight="27.0" prefWidth="58.0" text="3 st">
+      <Label fx:id="quantity" layoutX="256.0" layoutY="41.0" prefHeight="27.0" prefWidth="58.0" text="3 st">
          <font>
-            <Font size="18.0" />
+            <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="productName" layoutX="113.0" layoutY="16.0" text="Namn">
+      <Label fx:id="productName" layoutX="111.0" layoutY="10.0" prefHeight="23.0" prefWidth="243.0" text="Väldigt långt produktnamn">
          <font>
-            <Font size="18.0" />
+            <Font name="Verdana" size="18.0" />
          </font>
       </Label>
-      <ImageView fx:id="addButton" fitHeight="39.0" fitWidth="39.0" layoutX="317.0" layoutY="23.0" onMouseClicked="#addAmount" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="addButton" fitHeight="39.0" fitWidth="39.0" layoutX="317.0" layoutY="37.0" onMouseClicked="#addAmount" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/images/plus-sign.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="minusButton" fitHeight="39.0" fitWidth="39.0" layoutX="213.0" layoutY="23.0" onMouseClicked="#minusAmount" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="minusButton" fitHeight="39.0" fitWidth="39.0" layoutX="213.0" layoutY="37.0" onMouseClicked="#minusAmount" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/images/minus-sign2.png" />
          </image>
       </ImageView>
-      <Label fx:id="totalLabel" layoutX="113.0" layoutY="43.0" text="total">
+      <Label fx:id="totalLabel" layoutX="113.0" layoutY="41.0" text="total">
          <font>
-            <Font size="18.0" />
+            <Font name="Verdana" size="18.0" />
          </font>
       </Label>
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </fx:root>

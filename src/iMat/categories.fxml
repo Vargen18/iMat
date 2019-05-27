@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000" prefWidth="1920.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000" prefWidth="1920.0" style="-fx-background-color: e6e6e6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;">
          <children>
@@ -24,23 +24,23 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#updateFavoriteGrid" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
+            <Button fx:id="favoritesButton" layoutX="1231.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateFavoriteGrid" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFFF; -fx-background-radius: 26; -fx-border-color: BLACK; -fx-border-radius: 26;" text="Favoriter" AnchorPane.leftAnchor="1231.0" AnchorPane.rightAnchor="539.0">
                <font>
-                  <Font name="Roboto" size="24.0" />
+                  <Font name="Verdana" size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: FFFF;" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
                <font>
-                  <Font name="Roboto" size="24.0" />
+                  <Font size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
             <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
                <font>
-                  <Font name="Roboto" size="24.0" />
+                  <Font name="Verdana" size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -52,15 +52,15 @@
             </TextField>
             <Label layoutX="119.0" layoutY="23.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="23.5">
                <font>
-                  <Font name="Roboto" size="36.0" />
+                  <Font size="36.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <Button fx:id="searchButton" layoutX="1026.0" layoutY="22.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
+            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
-                  <Font name="Roboto" size="24.0" />
+                  <Font size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -68,15 +68,15 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1920.0" style="-fx-background-color: ffffff;" AnchorPane.leftAnchor="0.0">
+      <AnchorPane layoutY="98.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1920.0" style="-fx-background-color: e6e6e6;" AnchorPane.leftAnchor="0.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: ffffff;">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="384.0" style="-fx-background-color: e6e6e6;">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" maxHeight="909.0" style="-fx-background-color: ffffff;">
+                  <ScrollPane hbarPolicy="NEVER" maxHeight="909.0" style="-fx-background-color: e6e6e6;">
                     <content>
-                      <AnchorPane style="-fx-background-color: ffffff;">
+                      <AnchorPane style="-fx-background-color: e6e6e6;">
                            <children>
-                              <FlowPane fx:id="categoriesList" hgap="20.0" prefWidth="384.0" style="-fx-background-color: ffffff;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <FlowPane fx:id="categoriesList" hgap="4.0" prefWidth="384.0" style="-fx-background-color: e6e6e6;" vgap="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
                                     <Insets bottom="10.0" top="10.0" />
                                  </padding></FlowPane>
@@ -86,16 +86,16 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="384.0" prefWidth="1152.0" style="-fx-background-color: ffffff;">
+            <AnchorPane layoutX="384.0" prefWidth="1152.0" style="-fx-background-color: #e6e6e6;">
                <children>
-                  <Label fx:id="mainLabel" layoutX="447.0" layoutY="22.0" text="Kategorier">
+                  <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="83.0" prefWidth="1152.0" text="Kategorier">
                      <font>
-                        <Font name="Roboto" size="64.0" />
+                        <Font name="Verdana" size="64.0" />
                      </font>
                   </Label>
-                  <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="107.0" maxHeight="802.0" pannable="true" prefWidth="1152.0">
+                  <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="107.0" maxHeight="802.0" pannable="true" prefWidth="1152.0" style="-fx-background-color: #e6e6e6;">
                      <content>
-                        <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" prefWidth="1148.0" style="-fx-background-color: ffffff;" vgap="10.0">
+                        <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" prefWidth="1148.0" style="-fx-background-color: #e6e6e6;" vgap="10.0">
                            <padding>
                               <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                            </padding>
@@ -104,28 +104,23 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="384.0">
+            <AnchorPane layoutX="1536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="384.0" style="-fx-background-color: f6f6f6;">
                <children>
-                  <Label fx:id="totalLabel" layoutX="8.0" layoutY="2.0" text="Label">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="quantityLabel" layoutX="8.0" layoutY="49.0" text="Label">
+                  <Label fx:id="totalLabel" layoutX="8.0" layoutY="2.0" text="Totalkostnad:">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
                   <Button fx:id="clearShoppingCartButton" layoutX="88.0" layoutY="851.0" mnemonicParsing="false" onAction="#ClearShoppingCart" text="Töm varukorgen">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="Verdana" size="24.0" />
                      </font>
                   </Button>
-                  <ScrollPane hbarPolicy="NEVER" layoutY="105.0" prefWidth="384.0">
+                  <ScrollPane hbarPolicy="NEVER" layoutY="105.0" prefHeight="691.0" prefWidth="384.0" style="-fx-background-color: e6e6e6;">
                      <content>
-                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="384.0">
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="384.0">
                            <children>
-                              <FlowPane fx:id="shoppingCartList" hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: ffffff;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <FlowPane fx:id="shoppingCartList" hgap="20.0" prefHeight="691.0" prefWidth="384.0" style="-fx-background-color: f3f3f3;" vgap="10.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
                                     <Insets bottom="10.0" top="10.0" />
                                  </padding></FlowPane>
@@ -133,6 +128,19 @@
                         </AnchorPane>
                      </content>
                   </ScrollPane>
+                  <Button fx:id="paymentButton" layoutX="15.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="48.0" prefWidth="200.0" text="Till kassan">
+                     <font>
+                        <Font name="Verdana" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="quantityLabel" layoutX="88.0" layoutY="812.0" text="Antal:">
+                     <font>
+                        <Font name="Verdana" size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>

@@ -3,14 +3,15 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;">
          <children>
@@ -69,5 +70,53 @@
             </Button>
          </children>
       </AnchorPane>
+      <Label layoutX="176.0" layoutY="166.0" prefHeight="141.0" prefWidth="1034.0" text="Tack för ditt köp!">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="888.0" layoutY="346.0" text="Pris: 1000kr">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="746.0" layoutY="416.0" prefHeight="53.0" prefWidth="544.0" text="Din beställning kommer levereras:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="927.0" layoutY="480.0" text="1 Mars">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="897.0" layoutY="561.0" text="Till adressen:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="843.0" layoutY="633.0" text="Eklandagatan 48">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="334.0" prefHeight="669.0" prefWidth="724.0">
+         <children>
+            <ScrollPane prefHeight="669.0" prefWidth="724.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <FlowPane fx:id="thankyouList" prefHeight="206.0" prefWidth="204.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="backToCategories" layoutX="887.0" layoutY="726.0" mnemonicParsing="false" onAction="#switchToCategories" text="Handla mera!">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

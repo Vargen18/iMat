@@ -19,7 +19,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -46,7 +46,7 @@ public class iMatController implements Initializable {
     private ComboBox<Integer> monthComboBox, deliveryDayComboBox;
 
     @FXML
-    private FlowPane checkoutList, priorOrdersFlowPane;
+    private FlowPane checkoutList, priorOrdersFlowPane, thankyouList;
 
     @FXML
     private Text total;
@@ -92,6 +92,8 @@ public class iMatController implements Initializable {
             updateCheckoutList();
         }else if (iMat.scene.equals("payment.fxml")){
             loadPayment();
+        }else if (iMat.scene.equals("thankyou.fxml")){
+            loadThankYou();
         }
 
 
@@ -133,8 +135,16 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToPayment() throws  Exception {
+
         iMat.scene = "payment.fxml";
         iMat.switchScene(paymentButton, "payment.fxml");
+    }
+
+    @FXML
+    private void switchToThankYou() throws Exception {
+        dataHandler.placeOrder();
+        iMat.scene = "thankyou.fxml";
+        iMat.switchScene(payButton, "thankyou.fxml");
     }
 
 
@@ -167,7 +177,6 @@ public class iMatController implements Initializable {
         for (Product product : products) {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
         }
-
     }
 
     @FXML
@@ -201,6 +210,14 @@ public class iMatController implements Initializable {
         }
 
         total.setText("Totalbelopp: " + dataHandler.getShoppingCart().getTotal() + " kr");
+    }
+
+    @FXML
+    public void updateThankYouList(){
+        thankyouList.getChildren().clear();
+        for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >=0; i--) {
+            thankyouList.getChildren().add(new kvittoBox(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this));
+        }
 
     }
 
@@ -217,7 +234,6 @@ public class iMatController implements Initializable {
         changeAmount(product, change);
 
         updateScene();
-
     }
 
     public void minus(Product product) {
@@ -258,7 +274,6 @@ public class iMatController implements Initializable {
         } else if (change > 0) {
             shoppingCart.addProduct(product);
         }
-
 
     }
 
@@ -317,7 +332,6 @@ public class iMatController implements Initializable {
         }
         return name;
 
-
     }
 
     public ShoppingItem findShoppingItem(Product product) {
@@ -354,8 +368,6 @@ public class iMatController implements Initializable {
         this.adressField.setText(customer.getAddress());
         this.postCodeField.setText(customer.getPostCode());
 
-
-
         cardTypeComboBox.getSelectionModel().select(creditCard.getCardType());
         monthComboBox.getSelectionModel().select(creditCard.getValidMonth());
 
@@ -371,7 +383,6 @@ public class iMatController implements Initializable {
         }
 
         System.out.println(dataHandler.getOrders().size());
-
     }
 
     public void loadPayment(){
@@ -394,8 +405,6 @@ public class iMatController implements Initializable {
         cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
 
         totalLabel.setText("Totalkostnad: " +  String.valueOf(dataHandler.getShoppingCart().getTotal()) + "kr");
-
-
 
     }
 
@@ -429,9 +438,6 @@ public class iMatController implements Initializable {
 
         CreditCard creditCard = dataHandler.getCreditCard();
 
-
-
-
         cardTypeComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             String result = (String) cardTypeComboBox.getSelectionModel().getSelectedItem();
 
@@ -448,8 +454,10 @@ public class iMatController implements Initializable {
 
     }
 
+    public void loadThankYou(){
+        updateThankYouList();
 
-
+    }
 
     @FXML
     public void ClearShoppingCart(){
@@ -458,9 +466,6 @@ public class iMatController implements Initializable {
         updateShoppingCartList();
     }
 
-    @FXML
-    public void placeOrder(){
-        dataHandler.placeOrder();
-    }
+
 }
 
