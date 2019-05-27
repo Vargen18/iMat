@@ -21,6 +21,8 @@ public class orderBox extends AnchorPane {
     @FXML
     FlowPane orderFlowPane;
 
+    private  double totalCost;
+
     private Order order;
 
     public orderBox(Order order, iMatController controller) {
@@ -41,7 +43,9 @@ public class orderBox extends AnchorPane {
         for (int i = 0; i < order.getItems().size(); i++){
             ShoppingItem shoppingItem = order.getItems().get(i);
             orderFlowPane.getChildren().add(new CheckoutProductBox(shoppingItem, controller));
+            this.totalCost += this.totalCost + shoppingItem.getTotal();
         }
+        this.total.setText("Antal pengar: " + String.valueOf(totalCost));
     }
 
 }

@@ -116,6 +116,11 @@
                   </Label>
                   <ComboBox fx:id="cardTypeComboBox" layoutX="709.0" layoutY="157.0" prefWidth="150.0" />
                   <ComboBox fx:id="monthComboBox" layoutX="709.0" layoutY="246.0" prefWidth="150.0" visibleRowCount="12" />
+                  <Label layoutX="22.0" layoutY="550.0" text="Tidigare köp: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                   <AnchorPane layoutY="585.0" prefHeight="320.0" prefWidth="1080.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
                      <children>
                         <ScrollPane prefHeight="320.0" prefWidth="1080.0">
@@ -129,11 +134,6 @@
                         </ScrollPane>
                      </children>
                   </AnchorPane>
-                  <Label layoutX="22.0" layoutY="550.0" text="Tidigare köp: ">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
                </children>
             </AnchorPane>
          </content>
