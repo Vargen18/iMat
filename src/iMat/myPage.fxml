@@ -14,60 +14,6 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;">
-           <children>
-               <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
-                   <image>
-                       <Image url="@resources/images/homepagebutton.png" />
-                   </image>
-                   <cursor>
-                       <Cursor fx:constant="HAND" />
-                   </cursor>
-               </ImageView>
-               <Button fx:id="favoritesButton" layoutX="1230.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToFavorites" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" text="Favoriter" AnchorPane.leftAnchor="1230.0" AnchorPane.rightAnchor="557.0">
-                   <font>
-                       <Font name="Roboto" size="24.0" />
-                   </font>
-                   <cursor>
-                       <Cursor fx:constant="HAND" />
-                   </cursor></Button>
-               <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: FFFF;" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
-                   <font>
-                       <Font name="Roboto" size="24.0" />
-                   </font>
-                   <cursor>
-                       <Cursor fx:constant="HAND" />
-                   </cursor></Button>
-               <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
-                   <font>
-                       <Font name="Roboto" size="24.0" />
-                   </font>
-                   <cursor>
-                       <Cursor fx:constant="HAND" />
-                   </cursor></Button>
-               <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
-                   <font>
-                       <Font size="18.0" />
-                   </font>
-               </TextField>
-               <Label layoutX="119.0" layoutY="23.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="23.5">
-                   <font>
-                       <Font name="Roboto" size="36.0" />
-                   </font>
-                   <cursor>
-                       <Cursor fx:constant="HAND" />
-                   </cursor>
-               </Label>
-               <Button fx:id="searchButton" layoutX="1026.0" layoutY="22.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
-                   <font>
-                       <Font name="Roboto" size="24.0" />
-                   </font>
-                   <cursor>
-                       <Cursor fx:constant="HAND" />
-                   </cursor>
-               </Button>
-           </children>
-       </AnchorPane>
       <ScrollPane layoutX="416.0" layoutY="91.0" prefHeight="909.0" prefWidth="1088.0">
          <content>
             <AnchorPane prefHeight="907.0" prefWidth="1086.0" style="-fx-background-color: FFFFFF;">
@@ -83,7 +29,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" layoutX="198.0" layoutY="200.0" prefHeight="17.0" prefWidth="91.0" text="Efternamn:" textAlignment="RIGHT">
+                  <Label alignment="CENTER_RIGHT" layoutX="182.0" layoutY="200.0" prefHeight="23.0" prefWidth="107.0" text="Efternamn:" textAlignment="RIGHT">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -119,7 +65,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="saveMyPage" layoutX="501.0" layoutY="523.0" mnemonicParsing="false" onAction="#saveMypage" prefHeight="43.0" prefWidth="133.0" text="Spara">
+                  <Button fx:id="saveMyPage" layoutX="501.0" layoutY="523.0" mnemonicParsing="false" onAction="#saveMypage" prefHeight="43.0" prefWidth="133.0" style="-fx-background-radius: 25; -fx-background-color: FFFF; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Spara">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -184,5 +130,83 @@
             </AnchorPane>
          </content>
       </ScrollPane>
+      <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
+         <children>
+            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/images/homepagebutton.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="favoritesButton" layoutX="1160.7" layoutY="22.0" mnemonicParsing="false" onAction="#switchToFavorites" prefHeight="50.0" prefWidth="202.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Favoriter" AnchorPane.leftAnchor="1152.0" AnchorPane.rightAnchor="566.0">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/bättrast_hjärta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="myPageButton" layoutX="1687.7" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" prefHeight="51.0" prefWidth="206.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1679.0" AnchorPane.rightAnchor="35.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/avatar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Varukorgen">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/shopping-cart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="119.0" layoutY="23.0" onMouseClicked="#switchToCategories" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="23.5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
