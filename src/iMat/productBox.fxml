@@ -51,7 +51,7 @@
                   <Font size="18.0" />
                </font></TextField>
          </children></AnchorPane>
-      <Label fx:id="priceLabel" layoutX="72.0" layoutY="234.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
+      <Label fx:id="priceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="234.0" prefHeight="35.0" prefWidth="271.0" style="-fx-background-color: FFFFFF;" text="Pris">
          <font>
             <Font name="Roboto" size="24.0" />
          </font>
