@@ -42,8 +42,8 @@ public class orderBox extends AnchorPane {
         this.order = order;
         for (int i = 0; i < order.getItems().size(); i++){
             ShoppingItem shoppingItem = order.getItems().get(i);
-            orderFlowPane.getChildren().add(new CheckoutProductBox(shoppingItem, controller));
-            this.totalCost += this.totalCost + shoppingItem.getTotal();
+            orderFlowPane.getChildren().add(new kvittoBox(shoppingItem.getProduct(), controller));
+            this.totalCost += (this.totalCost + shoppingItem.getTotal());
         }
         this.total.setText("Antal pengar: " + String.valueOf(totalCost));
     }

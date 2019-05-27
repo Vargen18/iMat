@@ -371,8 +371,8 @@ public class iMatController implements Initializable {
 
         this.priorOrdersFlowPane.getChildren().clear();
         for (Order order : dataHandler.getOrders()){
-
-            this.priorOrdersFlowPane.getChildren().add(new orderBox(order, this));
+            orderBox orderBox = new orderBox(order, this);
+            this.priorOrdersFlowPane.getChildren().add(orderBox);
         }
 
         System.out.println(dataHandler.getOrders().size());

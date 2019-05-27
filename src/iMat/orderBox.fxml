@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
@@ -7,7 +8,15 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1050.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <FlowPane fx:id="orderFlowPane" layoutX="30.0" layoutY="100.0" />
+      <ScrollPane prefHeight="100.0" prefWidth="1050.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="96.0" prefWidth="1049.0">
+               <children>
+                  <FlowPane fx:id="orderFlowPane" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
       <Text fx:id="date" layoutX="15.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum: ">
          <font>
             <Font size="18.0" />
