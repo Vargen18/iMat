@@ -18,7 +18,7 @@
          <children>
             <Label fx:id="categoryName" blendMode="MULTIPLY" layoutX="2.0" layoutY="17.0" prefHeight="69.0" prefWidth="264.0" style="-fx-alignment: center;" styleClass="lowerCol" text="Produkt" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
-                  <Font name="Verdana" size="30.0" />
+                  <Font name="Roboto" size="30.0" />
                </font>
             </Label>
          </children>
