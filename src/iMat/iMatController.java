@@ -206,20 +206,13 @@ public class iMatController implements Initializable {
     public void updateCheckoutList() {
         checkoutList.getChildren().clear();
         for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
-            checkoutList.getChildren().add(new CheckoutProductBox(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this));
+            checkoutList.getChildren().add(new CheckoutProductBox(dataHandler.getShoppingCart().getItems().get(i), this));
         }
 
         total.setText("Totalbelopp: " + dataHandler.getShoppingCart().getTotal() + " kr");
     }
 
-    @FXML
-    public void updateThankYouList(){
-        thankyouList.getChildren().clear();
-        for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >=0; i--) {
-            thankyouList.getChildren().add(new kvittoBox(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this));
-        }
 
-    }
 
 
     @FXML
@@ -327,7 +320,7 @@ public class iMatController implements Initializable {
             case "SWEET":
                 return "Sötsaker";
             case "HERB":
-                return "Örter";
+                return "''Örter''";
 
         }
         return name;
@@ -432,6 +425,16 @@ public class iMatController implements Initializable {
         //System.out.println(customer.getFirstName());
 
         //dataHandler.placeOrder();
+    }
+
+    @FXML
+    public void updateThankYouList(){
+        thankyouList.getChildren().clear();
+
+            Order order = dataHandler.getOrders().get(dataHandler.getOrders().size()-1);
+            thankyouList.getChildren().add(new orderBox(order, this));
+
+
     }
 
     public void comboBox() {

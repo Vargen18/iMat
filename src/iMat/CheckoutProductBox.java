@@ -41,7 +41,7 @@ public class CheckoutProductBox extends AnchorPane {
 
     private int amount;
 
-    public CheckoutProductBox(Product product, iMatController controller){
+    public CheckoutProductBox(ShoppingItem shoppingItem, iMatController controller){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("checkoutProductBox.fxml"));
         fxmlLoader.setRoot(this);
@@ -56,7 +56,7 @@ public class CheckoutProductBox extends AnchorPane {
         }
 
         //System.out.println("Working Directory = " + System.getProperty("user.dir"));
-        this.product = product;
+        this.product = shoppingItem.getProduct();
         this.controller = controller;
 
         this.productImageView.setImage(dataHandler.getFXImage(product));
