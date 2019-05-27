@@ -132,7 +132,7 @@
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button fx:id="clearShoppingCartButton" layoutX="88.0" layoutY="851.0" mnemonicParsing="false" onAction="#ClearShoppingCart" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Töm varukorgen">
+                  <Button fx:id="clearShoppingCartButton" layoutX="75.0" layoutY="847.0" mnemonicParsing="false" onAction="#ClearShoppingCart" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Töm varukorgen">
                      <font>
                         <Font name="Roboto" size="24.0" />
                      </font>
