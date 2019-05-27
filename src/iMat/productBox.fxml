@@ -15,7 +15,7 @@
          <children>
             <Label fx:id="productTitle" layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="204.0" text="Produkt">
                <font>
-                  <Font name="Verdana" size="24.0" />
+                  <Font name="Roboto" size="24.0" />
                </font>
             </Label>
             <ImageView fx:id="addToFavorites" fitHeight="34.0" fitWidth="36.0" layoutX="223.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
@@ -53,7 +53,7 @@
          </children></AnchorPane>
       <Label fx:id="priceLabel" layoutX="72.0" layoutY="234.0" prefHeight="35.0" prefWidth="132.0" style="-fx-background-color: FFFFFF;" text="Pris">
          <font>
-            <Font name="Verdana" size="24.0" />
+            <Font name="Roboto" size="24.0" />
          </font>
       </Label>
    </children>

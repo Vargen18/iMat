@@ -11,7 +11,7 @@
       <ImageView fx:id="productImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" />
       <Text fx:id="productNameText" layoutX="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varunamn" AnchorPane.topAnchor="33.0">
          <font>
-            <Font name="Verdana" size="24.0" />
+            <Font name="Roboto" size="24.0" />
          </font>
       </Text>
       <Text fx:id="productPriceText" layoutX="320.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" AnchorPane.topAnchor="33.0">

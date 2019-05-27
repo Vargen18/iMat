@@ -16,12 +16,12 @@
       </ImageView>
       <Label fx:id="quantity" layoutX="256.0" layoutY="41.0" prefHeight="27.0" prefWidth="58.0" text="3 st">
          <font>
-            <Font name="Verdana" size="18.0" />
+            <Font name="Roboto" size="18.0" />
          </font>
       </Label>
       <Label fx:id="productName" layoutX="111.0" layoutY="10.0" prefHeight="23.0" prefWidth="243.0" text="Väldigt långt produktnamn">
          <font>
-            <Font name="Verdana" size="18.0" />
+            <Font name="Roboto" size="18.0" />
          </font>
       </Label>
       <ImageView fx:id="addButton" fitHeight="39.0" fitWidth="39.0" layoutX="317.0" layoutY="37.0" onMouseClicked="#addAmount" pickOnBounds="true" preserveRatio="true">
@@ -36,7 +36,7 @@
       </ImageView>
       <Label fx:id="totalLabel" layoutX="113.0" layoutY="41.0" text="total">
          <font>
-            <Font name="Verdana" size="18.0" />
+            <Font name="Roboto" size="18.0" />
          </font>
       </Label>
    </children>
