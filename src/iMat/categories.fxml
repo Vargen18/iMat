@@ -24,21 +24,28 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <Button fx:id="favoritesButton" layoutX="1231.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateFavoriteGrid" prefHeight="48.0" prefWidth="150.0" style="-fx-background-color: FFFF; -fx-background-radius: 26; -fx-border-color: BLACK; -fx-border-radius: 26;" text="Favoriter" AnchorPane.leftAnchor="1231.0" AnchorPane.rightAnchor="539.0">
+            <Button fx:id="favoritesButton" layoutX="1245.0" layoutY="21.0" mnemonicParsing="false" onAction="#updateFavoriteGrid" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Favoriter" AnchorPane.leftAnchor="1245.0" AnchorPane.rightAnchor="475.0">
                <font>
                   <Font name="Verdana" size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: FFFF;" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/bättrast_hjärta.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="myPageButton" layoutX="1744.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1744.0" AnchorPane.rightAnchor="26.0">
                <font>
                   <Font size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Button fx:id="checkoutButton" layoutX="1387.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1545.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToCheckout" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Varukorgen">
                <font>
                   <Font name="Verdana" size="24.0" />
                </font>
