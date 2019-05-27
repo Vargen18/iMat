@@ -18,34 +18,34 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label layoutX="888.0" layoutY="346.0" text="Pris: 1000kr">
+      <Label layoutX="1361.0" layoutY="356.0" text="Pris: 1000kr">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="746.0" layoutY="416.0" prefHeight="53.0" prefWidth="544.0" text="Din beställning kommer levereras:">
+      <Label layoutX="1204.0" layoutY="416.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="927.0" layoutY="480.0" text="1 Mars">
+      <Label layoutX="1402.0" layoutY="470.0" text="1 Mars">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="897.0" layoutY="561.0" text="Till adressen:">
+      <Label layoutX="1363.0" layoutY="530.0" text="Till adressen:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="843.0" layoutY="633.0" text="Eklandagatan 48">
+      <Label layoutX="1286.0" layoutY="574.0" text="Eklandagatan 48">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
       <AnchorPane layoutY="334.0" prefHeight="669.0" prefWidth="724.0">
          <children>
-            <ScrollPane prefHeight="669.0" prefWidth="724.0">
+            <ScrollPane prefHeight="669.0" prefWidth="1130.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                      <children>
@@ -56,12 +56,12 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="887.0" layoutY="726.0" mnemonicParsing="false" onAction="#switchToCategories" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1339.0" layoutY="635.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <AnchorPane layoutX="55.0" layoutY="33.0" prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
+      <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
             <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                <image>
