@@ -125,9 +125,9 @@
                <children>
                   <ScrollPane prefHeight="738.0" prefWidth="775.0" style="-fx-background-color: FFFF;" AnchorPane.leftAnchor="0.0">
                      <content>
-                        <AnchorPane prefHeight="735.0" prefWidth="766.0">
+                        <AnchorPane>
                            <children>
-                              <FlowPane fx:id="priorOrdersFlowPane" layoutX="6.0" prefHeight="723.0" prefWidth="594.0" />
+                              <FlowPane fx:id="priorOrdersFlowPane" layoutX="6.0" />
                            </children>
                         </AnchorPane>
                      </content>

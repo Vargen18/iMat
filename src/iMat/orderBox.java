@@ -12,6 +12,10 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class orderBox extends AnchorPane {
 
@@ -42,11 +46,19 @@ public class orderBox extends AnchorPane {
         this.order = order;
         for (int i = 0; i < order.getItems().size(); i++){
             ShoppingItem shoppingItem = order.getItems().get(i);
-            kvittoBox kvittoBox = new kvittoBox(shoppingItem.getProduct(),controller);
+            kvittoBox kvittoBox = new kvittoBox(shoppingItem.getProduct(), order, controller);
             orderFlowPane.getChildren().add(kvittoBox);
-            this.totalCost += (this.totalCost + shoppingItem.getTotal());
+            this.totalCost += shoppingItem.getTotal();
         }
-        this.total.setText("Antal pengar: " + String.valueOf(totalCost));
+        this.total.setText("Summa: " + controller.round(totalCost) + " kr");
+        this.date.setText(formatDate(order.getDate()));
+
     }
 
+    private String formatDate(Date date){
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+        String formattedDate = formatter.format(date);
+        return formattedDate;
+    }
 }

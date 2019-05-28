@@ -69,7 +69,7 @@ public class ShoppingCartListItem extends AnchorPane {
 
     @FXML void setTotal(int amount){
         double total = product.getPrice() * amount;
-        this.totalLabel.setText(total + "kr");
+        this.totalLabel.setText(controller.round(total) + "kr");
     }
 
     @FXML

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#updateProductGrid" prefHeight="64.0" prefWidth="364.0" style="-fx-background-color: #FFFF; -fx-border-style: solid;" styleClass="button" stylesheets="@CategoryListItemEffect.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="categoryImage" fitHeight="60.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+
+            </image>
+        </ImageView>
+        <Label fx:id="categoryName" layoutX="104.0" layoutY="13.0" text="kategori">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </children>
+    <opaqueInsets>
+        <Insets bottom="10.0" top="10.0" />
+    </opaqueInsets>
+    <cursor>
+        <Cursor fx:constant="HAND" />
+    </cursor>
+</fx:root>
