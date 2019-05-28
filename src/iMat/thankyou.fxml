@@ -131,7 +131,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Kassa">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
