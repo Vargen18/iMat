@@ -163,7 +163,7 @@
       </AnchorPane>
       <AnchorPane layoutX="480.0" layoutY="107.0" prefHeight="70.0" prefWidth="1152.0">
          <children>
-            <Text layoutX="-247.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Översikt" x="320.0" y="40.0">
+            <Text layoutX="-247.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kassan" x="320.0" y="40.0">
                <font>
                   <Font size="22.0" />
                </font>
