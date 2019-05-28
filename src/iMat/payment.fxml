@@ -17,7 +17,7 @@
    <children>
       <AnchorPane layoutX="2.0" layoutY="81.0" prefHeight="919.0" prefWidth="1920.0" style="-fx-background-color: FFFF;">
          <children>
-            <Label fx:id="totalLabel" layoutX="783.0" layoutY="677.0" prefHeight="53.0" prefWidth="385.0" text="Totalbelopp:" textFill="RED">
+            <Label fx:id="totalLabel" layoutX="783.0" layoutY="677.0" prefHeight="53.0" prefWidth="385.0" text="Totalbelopp:">
                <font>
                   <Font size="35.0" />
                </font>
@@ -100,7 +100,7 @@
                   <Font size="35.0" />
                </font>
             </Label>
-            <Button layoutX="182.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till varukorgen" AnchorPane.bottomAnchor="707.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="1510.0" AnchorPane.topAnchor="163.0">
+            <Button layoutX="180.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till varukorgen" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="1500.0" AnchorPane.topAnchor="160.0">
                <font>
                   <Font size="24.0" />
                </font>
@@ -108,7 +108,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="payButton" layoutX="1392.0" layoutY="163.0" mnemonicParsing="false" onAction="#switchToThankYou" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Betala &gt;" AnchorPane.bottomAnchor="707.0" AnchorPane.leftAnchor="1392.0" AnchorPane.rightAnchor="308.0" AnchorPane.topAnchor="163.0">
+            <Button fx:id="payButton" layoutX="1392.0" layoutY="173.0" mnemonicParsing="false" onAction="#switchToThankYou" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Betala &gt;" AnchorPane.bottomAnchor="696.0" AnchorPane.leftAnchor="1400.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="173.0">
                <font>
                   <Font size="24.0" />
                </font>
@@ -118,7 +118,7 @@
             </Button>
             <AnchorPane layoutX="365.0" layoutY="14.0" prefHeight="70.0" prefWidth="1152.0">
                <children>
-                  <Text layoutX="-176.0" layoutY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Översikt" x="320.0" y="40.0">
+                  <Text layoutX="-188.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kassan" x="320.0" y="40.0">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -211,7 +211,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Varukorgen">
+            <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Kassa">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
