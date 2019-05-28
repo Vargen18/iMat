@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
@@ -168,7 +169,7 @@ public class iMatController implements Initializable {
     public void updateCategoryList() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(1);
+            Product p = dataHandler.getProducts(pc).get(0);
             categoriesList.getChildren().add(new CategoryListItem(p, this));
         }
     }
@@ -212,13 +213,17 @@ public class iMatController implements Initializable {
     @FXML
     public void updateShoppingCartList() {
 
+        int amount = 0;
         //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
         shoppingCartList.getChildren().clear();
         for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
+            amount += dataHandler.getShoppingCart().getItems().get(i).getAmount();
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
+
+
         totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
-        quantityLabel.setText(String.valueOf("Antal: " + dataHandler.getShoppingCart().getItems().size()) + " st");
+        quantityLabel.setText(String.valueOf("Antal: " + amount + " st"));
     }
 
     @FXML
