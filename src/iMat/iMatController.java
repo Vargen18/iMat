@@ -123,6 +123,9 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToCategories() throws Exception {
+        if (iMat.scene.equals("categories.fxml")) {
+            //          mainLabel.setText("Kategorier");
+        }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
@@ -515,7 +518,7 @@ public class iMatController implements Initializable {
                 //  Block of code to handle errors
             }
             //TODO
-            //fixa search från mittt konto och varukorgen
+            //fixa search från mitt konto och varukorgen
         }
         if (!categoriesGrid.getChildren().isEmpty()){
             categoriesGrid.getChildren().clear();
