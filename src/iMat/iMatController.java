@@ -104,7 +104,7 @@ public class iMatController implements Initializable {
 
         // TODO
         //updatefavorites();
-        searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+        /*searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
