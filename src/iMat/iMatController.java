@@ -148,7 +148,7 @@ public class iMatController implements Initializable {
     private void switchToPayment() throws  Exception {
 
         iMat.scene = "payment.fxml";
-        iMat.switchScene(toCheckOut, "payment.fxml");
+        iMat.switchScene(paymentButton, "payment.fxml");
     }
 
     @FXML
