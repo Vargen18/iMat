@@ -32,7 +32,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton, toCheckOut;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton, toCheckOut, payButtonTop;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -59,7 +59,7 @@ public class iMatController implements Initializable {
     private ComboBox<Integer> monthComboBox, deliveryDayComboBox;
 
     @FXML
-    private FlowPane checkoutList, priorOrdersFlowPane, thankyouList;
+    private FlowPane checkoutList, priorOrdersFlowPane, thankYouList;
 
     @FXML
     private Text total;
@@ -481,10 +481,10 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateThankYouList(){
-        thankyouList.getChildren().clear();
+        thankYouList.getChildren().clear();
 
             Order order = dataHandler.getOrders().get(dataHandler.getOrders().size()-1);
-            //thankyouList.getChildren().add(new orderBox(order, this));
+            thankYouList.getChildren().add(new orderBox(order, this));
 
 
     }
@@ -574,5 +574,6 @@ public class iMatController implements Initializable {
 
         return mainLabel.getText();
     }
+
 }
 

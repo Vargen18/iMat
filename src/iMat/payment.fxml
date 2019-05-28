@@ -108,7 +108,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="payButton" layoutX="1392.0" layoutY="173.0" mnemonicParsing="false" onAction="#switchToThankYou" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Betala &gt;" AnchorPane.bottomAnchor="696.0" AnchorPane.leftAnchor="1400.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="173.0">
+            <Button fx:id="payButtonTop" layoutX="1392.0" layoutY="173.0" mnemonicParsing="false" onAction="#switchToThankYou" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Betala &gt;" AnchorPane.bottomAnchor="696.0" AnchorPane.leftAnchor="1400.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="173.0">
                <font>
                   <Font size="24.0" />
                </font>
