@@ -1,6 +1,8 @@
 package iMat;
 
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -19,7 +21,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -34,7 +36,7 @@ public class iMatController implements Initializable {
     private TextField productBoxAmount, firstNameField, lastNameField, phoneField, mobileField, mailField, adressField, postCodeField;
 
     @FXML
-    private TextField holderNameField, yearField, cardNumberField, cvcField;
+    private TextField holderNameField, yearField, cardNumberField, cvcField, searchTextField;
 
     @FXML
     private Label mainLabel, totalLabel, quantityLabel;
@@ -102,7 +104,18 @@ public class iMatController implements Initializable {
 
         // TODO
         //updatefavorites();
+        searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+
+                if (newValue) {
+                    //focusgained - do nothing
+                } else {
+                    search();
+                }
+            }
+        });
     }
 
     @FXML
@@ -470,12 +483,23 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void ClearShoppingCart(){
+    public void clearShoppingCart(){
         dataHandler.getShoppingCart().getItems().clear();
         shoppingCartList.getChildren().clear();
         updateShoppingCartList();
     }
 
-
+    public void search(){
+        categoriesGrid.getChildren().clear();
+        mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
+        if (!searchTextField.getText().equals("")){
+            for (Product p :dataHandler.getProducts()) {
+             //   System.out.println(p.getName());
+                   if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
+                       categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
+                   }
+            }
+        }
+    }
 }
 
