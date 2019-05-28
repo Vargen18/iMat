@@ -8,7 +8,7 @@
 
 <fx:root maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1050.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane>
+      <ScrollPane layoutY="64.0">
         <content>
           <AnchorPane>
                <children>
