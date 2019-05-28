@@ -9,6 +9,8 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -71,7 +73,6 @@ public class iMatController implements Initializable {
         } else {
             dataHandler.addFavorite(product);
         }
-        //System.out.println("Favorited " + product.getName());
     }
 
     @Override
@@ -104,6 +105,8 @@ public class iMatController implements Initializable {
 
         // TODO
         //updatefavorites();
+        /*
+
         searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
             @Override
@@ -115,14 +118,11 @@ public class iMatController implements Initializable {
                     search();
                 }
             }
-        });
+        });*/
     }
 
     @FXML
     private void switchToCategories() throws Exception {
-        if (iMat.scene.equals("categories.fxml")) {
-            //          mainLabel.setText("Kategorier");
-        }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
@@ -215,7 +215,11 @@ public class iMatController implements Initializable {
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
         totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
-        quantityLabel.setText(String.valueOf("Antal: " + dataHandler.getShoppingCart().getItems().size()) + " st");
+        int antal= 0;
+        for (ShoppingItem si: dataHandler.getShoppingCart().getItems()) {
+            antal =(int) si.getAmount()+antal;
+        }
+        quantityLabel.setText("Antal: " + (antal)+ " st");
     }
 
     @FXML
@@ -490,15 +494,35 @@ public class iMatController implements Initializable {
     }
 
     public void search(){
+        //TODO
+        //uppdatera sök sidan vid ändring
+
+        if (!iMat.scene.equals("categories.fxml")){
+            try {
+                switchToCategories();
+                //  Block of code to try
+            }
+            catch(Exception e) {
+                //  Block of code to handle errors
+            }
+            //TODO
+            //fixa search från mittt konto och varukorgen
+        }
         categoriesGrid.getChildren().clear();
         mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
-        if (!searchTextField.getText().equals("")){
-            for (Product p :dataHandler.getProducts()) {
-             //   System.out.println(p.getName());
-                   if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
-                       categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
-                   }
-            }
+        for (Product p :dataHandler.getProducts()) {
+               if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
+                   categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
+               }
+        }
+        if (categoriesGrid.getChildren().isEmpty()){
+            mainLabel.setText("Tyvärr '" + searchTextField.getText() + "' gav inga träffar");
+        }
+    }
+    public void keyListener(KeyEvent event){
+        if(event.getCode() == KeyCode.ENTER) {
+            search();
+            ((TextField)event.getSource()).clear(); // clear textfield
         }
     }
 }
