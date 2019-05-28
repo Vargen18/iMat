@@ -9,6 +9,8 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.shape.StrokeLineCap;
@@ -105,7 +107,7 @@ public class iMatController implements Initializable {
 
         // TODO
         //updatefavorites();
-        /*searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+        searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
@@ -116,14 +118,11 @@ public class iMatController implements Initializable {
                     search();
                 }
             }
-        });*/
+        });
     }
 
     @FXML
     private void switchToCategories() throws Exception {
-        if (iMat.scene.equals("categories.fxml")) {
-            //          mainLabel.setText("Kategorier");
-        }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
@@ -498,15 +497,35 @@ public class iMatController implements Initializable {
     }
 
     public void search(){
+        //TODO
+        //uppdatera sök sidan vid ändring
+
+        if (!iMat.scene.equals("categories.fxml")){
+            try {
+                switchToCategories();
+                //  Block of code to try
+            }
+            catch(Exception e) {
+                //  Block of code to handle errors
+            }
+            //TODO
+            //fixa search från mittt konto och varukorgen
+        }
         categoriesGrid.getChildren().clear();
         mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
-        if (!searchTextField.getText().equals("")){
-            for (Product p :dataHandler.getProducts()) {
-             //   System.out.println(p.getName());
-                   if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
-                       categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
-                   }
-            }
+        for (Product p :dataHandler.getProducts()) {
+               if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
+                   categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
+               }
+        }
+        if (categoriesGrid.getChildren().isEmpty()){
+            mainLabel.setText("Tyvärr '" + searchTextField.getText() + "' gav inga träffar");
+        }
+    }
+    public void keyListener(KeyEvent event){
+        if(event.getCode() == KeyCode.ENTER) {
+            search();
+            ((TextField)event.getSource()).clear(); // clear textfield
         }
     }
 }
