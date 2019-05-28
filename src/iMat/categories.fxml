@@ -61,7 +61,7 @@
             </AnchorPane>
             <AnchorPane layoutX="1536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="384.0" style="-fx-background-color: FFFF;">
                <children>
-                  <Label fx:id="totalLabel" layoutX="8.0" layoutY="2.0" text="Totalkostnad:" textFill="RED">
+                  <Label fx:id="totalLabel" text="Totalkostnad:">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -83,7 +83,7 @@
                         </AnchorPane>
                      </content>
                   </ScrollPane>
-                  <Button fx:id="paymentButton" layoutX="15.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Till kassan">
+                  <Button fx:id="paymentButton" layoutX="15.0" layoutY="48.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Till kassan">
                      <font>
                         <Font name="Roboto" size="24.0" />
                      </font>

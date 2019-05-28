@@ -214,9 +214,11 @@ public class iMatController implements Initializable {
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.favorites();
+
         mainLabel.setText("Favoriter");
         for (Product product : products) {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
+
         }
     }
 
@@ -273,8 +275,9 @@ public class iMatController implements Initializable {
     public void updateScene(Product product){
         if (iMat.scene.equals("checkout.fxml")) {
             updateCheckoutList();
-        } else if (iMat.scene.equals("favorites.fxml")) {
+        } else if (mainLabel.getText().equals("Favoriter")) {
             updateFavoriteGrid();
+            updateShoppingCartList();
         } else if (iMat.scene.equals("categories.fxml")) {
             updateShoppingCartList();
             if(product.getCategory() == this.category) {
@@ -554,6 +557,11 @@ public class iMatController implements Initializable {
         BigDecimal bd = new BigDecimal(value);
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
+    }
+
+    public String getMainLabel(){
+
+        return mainLabel.getText();
     }
 }
 
