@@ -1,6 +1,8 @@
 package iMat;
 
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -9,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
@@ -19,7 +22,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -34,7 +37,7 @@ public class iMatController implements Initializable {
     private TextField productBoxAmount, firstNameField, lastNameField, phoneField, mobileField, mailField, adressField, postCodeField;
 
     @FXML
-    private TextField holderNameField, yearField, cardNumberField, cvcField;
+    private TextField holderNameField, yearField, cardNumberField, cvcField, searchTextField;
 
     @FXML
     private Label mainLabel, totalLabel, quantityLabel;
@@ -58,6 +61,8 @@ public class iMatController implements Initializable {
     ProductCategory[] categories = ProductCategory.class.getEnumConstants();// for att hämta alla kategorier
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
+
+    ProductCategory category;
 
     List<Product> products = dataHandler.getProducts();
 
@@ -100,7 +105,18 @@ public class iMatController implements Initializable {
 
         // TODO
         //updatefavorites();
+        /*searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+
+                if (newValue) {
+                    //focusgained - do nothing
+                } else {
+                    search();
+                }
+            }
+        });*/
     }
 
     @FXML
@@ -153,7 +169,7 @@ public class iMatController implements Initializable {
     public void updateCategoryList() {
 
         for (ProductCategory pc : categories) {
-            Product p = dataHandler.getProducts(pc).get(1);
+            Product p = dataHandler.getProducts(pc).get(0);
             categoriesList.getChildren().add(new CategoryListItem(p, this));
         }
     }
@@ -170,8 +186,12 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateProductGrid(ProductCategory category) {
+        if(!iMat.scene.equals("categories.fxml")){
+            iMat.scene = "categories.fxml";
+        }
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
+        this.category = category;
         List<Product> products = dataHandler.getProducts(category);
         mainLabel.setText(switchName(products.get(0)));
         for (Product product : products) {
@@ -193,13 +213,17 @@ public class iMatController implements Initializable {
     @FXML
     public void updateShoppingCartList() {
 
+        int amount = 0;
         //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
         shoppingCartList.getChildren().clear();
         for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
+            amount += dataHandler.getShoppingCart().getItems().get(i).getAmount();
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
+
+
         totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
-        quantityLabel.setText(String.valueOf("Antal: " + dataHandler.getShoppingCart().getItems().size()) + " st");
+        quantityLabel.setText(String.valueOf("Antal: " + amount + " st"));
     }
 
     @FXML
@@ -226,23 +250,27 @@ public class iMatController implements Initializable {
         int change = 1;
         changeAmount(product, change);
 
-        updateScene();
+        updateScene(product);
     }
 
     public void minus(Product product) {
         int change = -1;
         changeAmount(product, change);
 
-        updateScene();
+        updateScene(product);
     }
 
-    public void updateScene(){
+    public void updateScene(Product product){
         if (iMat.scene.equals("checkout.fxml")) {
             updateCheckoutList();
         } else if (iMat.scene.equals("favorites.fxml")) {
             updateFavoriteGrid();
         } else if (iMat.scene.equals("categories.fxml")) {
             updateShoppingCartList();
+            if(product.getCategory() == this.category) {
+                updateProductGrid(product.getCategory());
+            }
+
         }
 
     }
@@ -306,7 +334,7 @@ public class iMatController implements Initializable {
             case "MELONS":
                 return "Melon";
             case "FLOUR_SUGAR_SALT":
-                return "Salt & Socker & Mjöl";
+                return "Salt, Socker & Mjöl";
             case "NUTS_AND_SEEDS":
                 return "Nötter";
             case "PASTA":
@@ -432,7 +460,7 @@ public class iMatController implements Initializable {
         thankyouList.getChildren().clear();
 
             Order order = dataHandler.getOrders().get(dataHandler.getOrders().size()-1);
-            thankyouList.getChildren().add(new orderBox(order, this));
+            //thankyouList.getChildren().add(new orderBox(order, this));
 
 
     }
@@ -463,12 +491,23 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void ClearShoppingCart(){
+    public void clearShoppingCart(){
         dataHandler.getShoppingCart().getItems().clear();
         shoppingCartList.getChildren().clear();
         updateShoppingCartList();
     }
 
-
+    public void search(){
+        categoriesGrid.getChildren().clear();
+        mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
+        if (!searchTextField.getText().equals("")){
+            for (Product p :dataHandler.getProducts()) {
+             //   System.out.println(p.getName());
+                   if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
+                       categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
+                   }
+            }
+        }
+    }
 }
 

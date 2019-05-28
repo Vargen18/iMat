@@ -104,20 +104,38 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     public void add() {
         controller.add(product);
-        amount++;
-        productBoxAmount.setText(String.valueOf(amount));
+        //amount++;
+
+        //productBoxAmount.setText(String.valueOf(dataHandler.getShoppingCart().getItems().get(checkMatch(product)).getAmount()));
+        //controller.updateProductGrid(product.getCategory());
     }
 
 
 
     @FXML
     public void remove() { controller.minus(product);
-        amount--;
+
+    /*amount--;
         if(amount <= 0){
             amount = 0;
         }
 
-        productBoxAmount.setText(String.valueOf(amount));
+        productBoxAmount.setText(String.valueOf(dataHandler.getShoppingCart().getItems().get(checkMatch(product)).getAmount()));
+
+
+        controller.updateProductGrid(product.getCategory());
+        controller.updateShoppingCartList(); */
+    }
+
+    public int checkMatch(Product product) {
+        int match = 0;
+        for (int i = 0; i < dataHandler.getShoppingCart().getItems().size(); i++) {
+
+            if(product == dataHandler.getShoppingCart().getItems().get(i).getProduct()) {
+                match = i;
+            }
+        } return match;
+
     }
 
     @FXML

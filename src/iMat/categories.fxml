@@ -58,7 +58,7 @@
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button fx:id="clearShoppingCartButton" layoutX="75.0" layoutY="847.0" mnemonicParsing="false" onAction="#ClearShoppingCart" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Töm varukorgen">
+                  <Button fx:id="clearShoppingCartButton" layoutX="75.0" layoutY="847.0" mnemonicParsing="false" onAction="#clearShoppingCart" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Töm varukorgen">
                      <font>
                         <Font name="Roboto" size="24.0" />
                      </font>
@@ -171,12 +171,26 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
+            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
+            <Label layoutX="128.0" layoutY="16.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="128.0" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow height="24.02" width="17.98" />
+               </effect>
+            </Label>
+            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font size="24.0" />
                </font>

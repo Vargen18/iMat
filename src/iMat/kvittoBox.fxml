@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="724.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="productImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="25.0" />
       <Text fx:id="productNameText" layoutX="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varunamn" AnchorPane.topAnchor="33.0">
@@ -24,10 +24,10 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Label fx:id="amount" layoutX="473.0" layoutY="31.0" text="Antal">
+      <Label fx:id="quantityLabel" layoutX="473.0" layoutY="31.0" text="Antal">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
    </children>
-</AnchorPane>
+</fx:root>
