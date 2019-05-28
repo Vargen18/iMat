@@ -26,7 +26,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -125,6 +125,9 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToCategories() throws Exception {
+        if (iMat.scene.equals("categories.fxml")) {
+            //          mainLabel.setText("Kategorier");
+        }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
@@ -177,7 +180,7 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateCategoryGrid() {
-
+        backButton.setVisible(false);
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(0);
             categoriesGrid.getChildren().add(new CategoryBoxItem(p, this));
@@ -190,6 +193,7 @@ public class iMatController implements Initializable {
         if(!iMat.scene.equals("categories.fxml")){
             iMat.scene = "categories.fxml";
         }
+        backButton.setVisible(true);
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         this.category = category;
@@ -202,6 +206,10 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateFavoriteGrid() {
+        if(!iMat.scene.equals("categories.fxml")){
+            iMat.scene = "categories.fxml";
+        }
+        backButton.setVisible(true);
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         List<Product> products = dataHandler.favorites();
@@ -223,7 +231,7 @@ public class iMatController implements Initializable {
         }
 
 
-        totalLabel.setText(String.valueOf("Totalkostnad: " + round(dataHandler.getShoppingCart().getTotal())) + " kr");
+        totalLabel.setText(String.valueOf("Totalbelopp: " + round(dataHandler.getShoppingCart().getTotal())) + " kr");
         quantityLabel.setText(String.valueOf("Antal: " + amount + " st"));
     }
 
@@ -505,15 +513,19 @@ public class iMatController implements Initializable {
         if (!iMat.scene.equals("categories.fxml")){
             try {
                 switchToCategories();
+                updateCategoryGrid();
                 //  Block of code to try
             }
             catch(Exception e) {
                 //  Block of code to handle errors
             }
             //TODO
-            //fixa search från mittt konto och varukorgen
+            //fixa search från mitt konto och varukorgen
         }
-        categoriesGrid.getChildren().clear();
+        if (!categoriesGrid.getChildren().isEmpty()){
+            categoriesGrid.getChildren().clear();
+        }
+        backButton.setVisible(true);
         mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
         for (Product p :dataHandler.getProducts()) {
                if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
