@@ -115,7 +115,7 @@ public class iMatController implements Initializable {
                     search();
                 }
             }
-        });
+        });*/
     }
 
     @FXML
@@ -393,10 +393,10 @@ public class iMatController implements Initializable {
         this.cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
 
         this.priorOrdersFlowPane.getChildren().clear();
-        /*for (Order order : dataHandler.getOrders()){
+        for (Order order : dataHandler.getOrders()){
             orderBox orderBox = new orderBox(order, this);
             this.priorOrdersFlowPane.getChildren().add(orderBox);
-        }*/
+        }
 
         System.out.println(dataHandler.getOrders().size());
     }
