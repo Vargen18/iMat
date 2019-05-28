@@ -20,27 +20,27 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label layoutX="1361.0" layoutY="356.0" text="Pris: 1000kr">
+      <Label layoutX="1359.0" layoutY="408.0" text="Pris: 1000kr">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1204.0" layoutY="416.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
+      <Label layoutX="1198.0" layoutY="485.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1402.0" layoutY="470.0" text="1 Mars">
+      <Label layoutX="1400.0" layoutY="552.0" text="1 Mars">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1363.0" layoutY="530.0" text="Till adressen:">
+      <Label layoutX="1361.0" layoutY="623.0" text="Till adressen:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1286.0" layoutY="574.0" text="Eklandagatan 48">
+      <Label layoutX="1284.0" layoutY="675.0" text="Eklandagatan 48">
          <font>
             <Font size="48.0" />
          </font>
@@ -58,7 +58,7 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1333.0" layoutY="644.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1336.0" layoutY="776.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>
@@ -68,14 +68,38 @@
       </Button>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
-            <ImageView fx:id="escapehatch" fitHeight="91.0" fitWidth="99.0" layoutX="22.0" layoutY="-1.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/images/homepagebutton.png" />
-               </image>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </ImageView>
+            <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="76.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
+               <children>
+                  <ImageView fx:id="escapehatch" fitHeight="66.0" fitWidth="69.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/images/homepagebutton.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow height="24.0" width="18.0" />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="115.0" layoutY="13.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="13.0">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <DropShadow height="24.0" width="18.0" />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
             <Button fx:id="favoritesButton" layoutX="1160.7" layoutY="22.0" mnemonicParsing="false" onAction="#switchToFavorites" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text=" Favoriter" AnchorPane.leftAnchor="1152.0" AnchorPane.rightAnchor="566.0">
                <font>
                   <Font name="Roboto" size="24.0" />
@@ -121,25 +145,11 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
+            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="128.0" layoutY="16.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="128.0" AnchorPane.topAnchor="16.0">
-               <font>
-                  <Font size="45.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <effect>
-                  <DropShadow height="24.02" width="17.98" />
-               </effect>
-            </Label>
             <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font size="24.0" />

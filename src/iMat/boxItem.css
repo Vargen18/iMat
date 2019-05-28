@@ -9,3 +9,9 @@
     -fx-background-color: #FFFF !important;
 }
 
+.imat:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 4, 0, 0, 0);
+    -fx-padding: 1;
+    -fx-background-color: #71c3bf !important;
+}
+
