@@ -185,6 +185,9 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateProductGrid(ProductCategory category) {
+        if(!iMat.scene.equals("categories.fxml")){
+            iMat.scene = "categories.fxml";
+        }
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
         this.category = category;
