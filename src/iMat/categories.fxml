@@ -35,7 +35,7 @@
             </AnchorPane>
             <AnchorPane layoutX="384.0" layoutY="68.0" prefWidth="1152.0" style="-fx-background-color: FFFF;">
                <children>
-                  <Button fx:id="backButton" layoutX="52.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
+                  <Button fx:id="backButton" layoutX="52.0" layoutY="-35.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
                      <font>
                         <Font name="Roboto" size="24.0" />
                      </font>
@@ -43,12 +43,12 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="431.0" layoutY="14.0" text="Kategorier">
+                  <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="431.0" layoutY="-50.0" text="Kategorier">
                      <font>
                         <Font name="Roboto" size="64.0" />
                      </font>
                   </Label>
-                  <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="107.0" maxHeight="802.0" pannable="true" prefWidth="1152.0" style="-fx-background-color: FFFF;">
+                  <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="43.0" maxHeight="802.0" pannable="true" prefWidth="1152.0" style="-fx-background-color: FFFF;">
                      <content>
                         <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" prefWidth="1148.0" style="-fx-background-color: FFFF;" vgap="10.0">
                            <padding>
