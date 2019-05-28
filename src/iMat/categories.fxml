@@ -66,7 +66,7 @@
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Button fx:id="clearShoppingCartButton" layoutX="75.0" layoutY="847.0" mnemonicParsing="false" onAction="#clearShoppingCart" prefHeight="51.0" prefWidth="233.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Töm varukorgen">
+                  <Button fx:id="paymentButton" layoutX="75.0" layoutY="847.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Till kassan &gt;">
                      <font>
                         <Font name="Roboto" size="24.0" />
                      </font>
@@ -83,7 +83,7 @@
                         </AnchorPane>
                      </content>
                   </ScrollPane>
-                  <Button fx:id="paymentButton" layoutX="15.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Till kassan">
+                  <Button fx:id="clearShoppingCartButton" layoutX="59.0" layoutY="46.0" mnemonicParsing="false" onAction="#clearShoppingCart" prefHeight="48.0" prefWidth="233.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Töm varukorgen">
                      <font>
                         <Font name="Roboto" size="24.0" />
                      </font>
