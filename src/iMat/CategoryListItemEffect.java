@@ -14,7 +14,7 @@ import java.io.IOException;
 
 //Kontrollern till list elementen på vänstra sidan där kategorier kommer vara i en lista
 
-public class CategoryListItem extends AnchorPane {
+public class CategoryListItemEffect extends AnchorPane {
 
     @FXML
     private ImageView categoryImage;
@@ -27,8 +27,8 @@ public class CategoryListItem extends AnchorPane {
     iMatController controller;
     Product product;
 
-    public CategoryListItem(Product product, iMatController controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryListItem.fxml"));
+    public CategoryListItemEffect(Product product, iMatController controller){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("categoryListItemEffect.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -65,5 +65,21 @@ public class CategoryListItem extends AnchorPane {
 
     public void setCategoryName(Label categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public IMatDataHandler getDataHandler() {
+        return dataHandler;
+    }
+
+    public void setDataHandler(IMatDataHandler dataHandler) {
+        this.dataHandler = dataHandler;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }

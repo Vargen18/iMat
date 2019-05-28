@@ -5,7 +5,12 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.scene.effect.BlurType;
+import javafx.scene.effect.ColorInput;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Shadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -13,6 +18,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
@@ -109,25 +115,10 @@ public class iMatController implements Initializable {
 
         // TODO
         //updatefavorites();
-        searchTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-
-                if (newValue) {
-                    //focusgained - do nothing
-                } else {
-                    search();
-                }
-            }
-        });
     }
 
     @FXML
     private void switchToCategories() throws Exception {
-        if (iMat.scene.equals("categories.fxml")) {
-            //          mainLabel.setText("Kategorier");
-        }
         iMat.escapehatch(escapehatch, "categories.fxml");
 
     }
@@ -201,6 +192,16 @@ public class iMatController implements Initializable {
         mainLabel.setText(switchName(products.get(0)));
         for (Product product : products) {
             categoriesGrid.getChildren().add(new ProductBoxItem(product, this));
+        }
+        categoriesList.getChildren().clear();
+        for (ProductCategory c: categories){
+            if(c.equals(category)){
+                categoriesList.getChildren().add(new CategoryListItemEffect(dataHandler.getProducts(category).get(0), this));
+                System.out.println(1);
+            }else{
+                categoriesList.getChildren().add(new CategoryListItem(dataHandler.getProducts(c).get(0), this));
+            }
+            System.out.println(c.name());
         }
     }
 
@@ -520,7 +521,7 @@ public class iMatController implements Initializable {
                 //  Block of code to handle errors
             }
             //TODO
-            //fixa search från mitt konto och varukorgen
+            //fixa search från mittt konto och varukorgen
         }
         if (!categoriesGrid.getChildren().isEmpty()){
             categoriesGrid.getChildren().clear();
