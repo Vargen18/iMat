@@ -32,7 +32,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton, toCheckOut, payButtonTop;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton, toCheckOut, payButtonTop, backToCategories;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -50,7 +50,7 @@ public class iMatController implements Initializable {
     private TextField holderNameField, yearField, cardNumberField, cvcField, searchTextField;
 
     @FXML
-    private Label mainLabel, totalLabel, quantityLabel;
+    private Label mainLabel, totalLabel, quantityLabel, dateLabel, adressLabel;
 
     @FXML
     private ComboBox<String> deliveryMonthComboBox, cardTypeComboBox;
@@ -75,6 +75,9 @@ public class iMatController implements Initializable {
     ProductCategory category;
 
     List<Product> products = dataHandler.getProducts();
+
+    int day;
+    String month;
 
     public void changeFavorite(Product product) {
         if (dataHandler.isFavorite(product)) {
@@ -153,7 +156,9 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToThankYou() throws Exception {
-        dataHandler.placeOrder();
+        //dataHandler.placeOrder();
+        month = deliveryMonthComboBox.getSelectionModel().getSelectedItem();
+        day = deliveryDayComboBox.getSelectionModel().getSelectedItem();
         iMat.scene = "thankyou.fxml";
         iMat.switchScene(payButton, "thankyou.fxml");
     }
@@ -438,6 +443,9 @@ public class iMatController implements Initializable {
         deliveryDayComboBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
         deliveryMonthComboBox.getItems().addAll("Januari","February","Mars","April","Maj","Juni","Juli", "Augusti","September","Oktober","November","December");
 
+        deliveryDayComboBox.getSelectionModel().select(1);
+        deliveryMonthComboBox.getSelectionModel().select(1);
+
         Customer customer = dataHandler.getCustomer();
         CreditCard creditCard = dataHandler.getCreditCard();
         adressField.setText(customer.getAddress());
@@ -479,6 +487,7 @@ public class iMatController implements Initializable {
         //dataHandler.placeOrder();
     }
 
+
     @FXML
     public void updateThankYouList(){
         thankYouList.getChildren().clear();
@@ -510,7 +519,15 @@ public class iMatController implements Initializable {
     }
 
     public void loadThankYou(){
+        Customer customer = dataHandler.getCustomer();
+        //adressLabel.setText(customer.getAddress());
+        //totalLabel.setText("Pris " + dataHandler.getOrders().get(dataHandler.getOrders().size()-1).toString() + " kr");
+        //dateLabel.setText(String.valueOf(day) + " " + month);
+
+
         updateThankYouList();
+
+
 
     }
 
