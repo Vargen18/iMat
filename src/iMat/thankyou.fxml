@@ -58,10 +58,13 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1339.0" layoutY="635.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1333.0" layoutY="644.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>

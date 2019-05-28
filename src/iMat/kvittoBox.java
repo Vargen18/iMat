@@ -45,7 +45,7 @@ public class kvittoBox extends AnchorPane {
 
     public kvittoBox(Product product, iMatController controller){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("checkoutProductBox.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("kvittoBox.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

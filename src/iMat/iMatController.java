@@ -59,6 +59,8 @@ public class iMatController implements Initializable {
 
     IMatDataHandler dataHandler = IMatDataHandler.getInstance();
 
+    ProductCategory category;
+
     List<Product> products = dataHandler.getProducts();
 
     public void changeFavorite(Product product) {
@@ -172,6 +174,7 @@ public class iMatController implements Initializable {
     public void updateProductGrid(ProductCategory category) {
         categoriesScrollPane.setVvalue(0);
         categoriesGrid.getChildren().clear();
+        this.category = category;
         List<Product> products = dataHandler.getProducts(category);
         mainLabel.setText(switchName(products.get(0)));
         for (Product product : products) {
@@ -226,23 +229,27 @@ public class iMatController implements Initializable {
         int change = 1;
         changeAmount(product, change);
 
-        updateScene();
+        updateScene(product);
     }
 
     public void minus(Product product) {
         int change = -1;
         changeAmount(product, change);
 
-        updateScene();
+        updateScene(product);
     }
 
-    public void updateScene(){
+    public void updateScene(Product product){
         if (iMat.scene.equals("checkout.fxml")) {
             updateCheckoutList();
         } else if (iMat.scene.equals("favorites.fxml")) {
             updateFavoriteGrid();
         } else if (iMat.scene.equals("categories.fxml")) {
             updateShoppingCartList();
+            if(product.getCategory() == this.category) {
+                updateProductGrid(product.getCategory());
+            }
+
         }
 
     }
@@ -306,7 +313,7 @@ public class iMatController implements Initializable {
             case "MELONS":
                 return "Melon";
             case "FLOUR_SUGAR_SALT":
-                return "Salt & Socker & Mjöl";
+                return "Salt, Socker & Mjöl";
             case "NUTS_AND_SEEDS":
                 return "Nötter";
             case "PASTA":
@@ -370,10 +377,10 @@ public class iMatController implements Initializable {
         this.cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
 
         this.priorOrdersFlowPane.getChildren().clear();
-        for (Order order : dataHandler.getOrders()){
+        /*for (Order order : dataHandler.getOrders()){
             orderBox orderBox = new orderBox(order, this);
             this.priorOrdersFlowPane.getChildren().add(orderBox);
-        }
+        }*/
 
         System.out.println(dataHandler.getOrders().size());
     }
@@ -432,7 +439,7 @@ public class iMatController implements Initializable {
         thankyouList.getChildren().clear();
 
             Order order = dataHandler.getOrders().get(dataHandler.getOrders().size()-1);
-            thankyouList.getChildren().add(new orderBox(order, this));
+            //thankyouList.getChildren().add(new orderBox(order, this));
 
 
     }
