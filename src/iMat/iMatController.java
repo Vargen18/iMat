@@ -32,7 +32,7 @@ import java.util.List;
 public class iMatController implements Initializable {
 
     @FXML
-    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton;
+    private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton, toCheckOut;
 
     @FXML
     private ImageView escapehatch, addToFavorites;
@@ -148,7 +148,7 @@ public class iMatController implements Initializable {
     private void switchToPayment() throws  Exception {
 
         iMat.scene = "payment.fxml";
-        iMat.switchScene(paymentButton, "payment.fxml");
+        iMat.switchScene(toCheckOut, "payment.fxml");
     }
 
     @FXML
@@ -201,7 +201,6 @@ public class iMatController implements Initializable {
             }else{
                 categoriesList.getChildren().add(new CategoryListItem(dataHandler.getProducts(c).get(0), this));
             }
-            System.out.println(c.name());
         }
     }
 
@@ -223,6 +222,11 @@ public class iMatController implements Initializable {
     }
 
     @FXML
+    public void updateSearchGrid(){
+
+    }
+
+    @FXML
     public void updateShoppingCartList() {
 
         int amount = 0;
@@ -232,6 +236,7 @@ public class iMatController implements Initializable {
             amount += dataHandler.getShoppingCart().getItems().get(i).getAmount();
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
+
 
 
         totalLabel.setText(String.valueOf("Totalbelopp: " + round(dataHandler.getShoppingCart().getTotal())) + " kr");
@@ -246,6 +251,12 @@ public class iMatController implements Initializable {
         }
 
         total.setText("Totalbelopp: " + round(dataHandler.getShoppingCart().getTotal()) + " kr");
+
+        if(dataHandler.getShoppingCart().getItems().isEmpty()){
+            paymentButton.setDisable(true);
+        }else{
+            paymentButton.setDisable(false);
+        }
     }
 
 
