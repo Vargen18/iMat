@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000" prefWidth="1920.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
-    <children>
+   <children>
       <AnchorPane layoutX="3.0" layoutY="92.0" prefHeight="909.0" prefWidth="1920.0">
          <children>
             <Text fx:id="total" fill="RED" layoutX="630.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp: Z" x="330.0" y="40.0">
@@ -24,7 +24,7 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="backButton" layoutX="148.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
+            <Button fx:id="backButton" layoutX="90.0" layoutY="58.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier" AnchorPane.bottomAnchor="800.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="1614.0" AnchorPane.topAnchor="60.0">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -169,20 +169,6 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="128.0" layoutY="16.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="128.0" AnchorPane.topAnchor="16.0">
-               <font>
-                  <Font size="45.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <effect>
-                  <DropShadow height="24.02" width="17.98" />
-               </effect>
-            </Label>
             <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font size="24.0" />

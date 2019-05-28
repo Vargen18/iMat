@@ -8,15 +8,6 @@
 
 <fx:root maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1050.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane layoutY="64.0">
-        <content>
-          <AnchorPane>
-               <children>
-                  <FlowPane fx:id="orderFlowPane" />
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
       <Text fx:id="date" layoutX="15.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum: ">
          <font>
             <Font size="18.0" />
@@ -27,5 +18,14 @@
             <Font size="18.0" />
          </font>
       </Text>
+      <ScrollPane layoutY="64.0">
+        <content>
+          <AnchorPane>
+               <children>
+                  <FlowPane fx:id="orderFlowPane" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
    </children>
 </fx:root>
