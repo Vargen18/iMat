@@ -21,7 +21,7 @@
             <AnchorPane prefHeight="907.0" prefWidth="1086.0" style="-fx-background-color: FFFFFF;">
                <children>
                   <TextField fx:id="firstNameField" layoutX="773.0" layoutY="169.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-                  <Label layoutX="688.0" layoutY="46.0" text="Mitt Konto" AnchorPane.leftAnchor="960.0">
+                  <Label layoutX="942.0" layoutY="37.0" text="Mitt Konto 1" AnchorPane.leftAnchor="942.0">
                      <font>
                         <Font name="System Bold" size="35.0" />
                      </font>
