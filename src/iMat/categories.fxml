@@ -35,7 +35,15 @@
             </AnchorPane>
             <AnchorPane layoutX="384.0" prefWidth="1152.0" style="-fx-background-color: #e6e6e6;">
                <children>
-                  <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="83.0" prefWidth="1152.0" text="Kategorier">
+                  <Button fx:id="backButton" layoutX="40.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
+                     <font>
+                        <Font name="Roboto" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="-4.0" text="Kategorier">
                      <font>
                         <Font name="Roboto" size="64.0" />
                      </font>
@@ -53,7 +61,7 @@
             </AnchorPane>
             <AnchorPane layoutX="1536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="902.0" prefWidth="384.0" style="-fx-background-color: f6f6f6;">
                <children>
-                  <Label fx:id="totalLabel" layoutX="8.0" layoutY="2.0" text="Totalkostnad:">
+                  <Label fx:id="totalLabel" layoutX="8.0" layoutY="2.0" text="Totalkostnad:" textFill="RED">
                      <font>
                         <Font size="36.0" />
                      </font>
