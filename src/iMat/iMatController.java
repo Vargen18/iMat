@@ -324,7 +324,7 @@ public class iMatController implements Initializable {
             case "BERRY":
                 return "Bär";
             case "CITRUS_FRUIT":
-                return "Citrus Frukter";
+                return "Citrusfrukter";
             case "HOT_DRINKS":
                 return "Varm Dryck";
             case "COLD_DRINKS":
@@ -521,7 +521,7 @@ public class iMatController implements Initializable {
                 //  Block of code to handle errors
             }
             //TODO
-            //fixa search från mittt konto och varukorgen
+            //fixa search från mitt konto och varukorgen
         }
         if (!categoriesGrid.getChildren().isEmpty()){
             categoriesGrid.getChildren().clear();
