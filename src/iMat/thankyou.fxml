@@ -20,27 +20,27 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label layoutX="1361.0" layoutY="356.0" text="Pris: 1000kr">
+      <Label layoutX="1359.0" layoutY="408.0" text="Pris: 1000kr">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1200.0" layoutY="433.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
+      <Label layoutX="1198.0" layoutY="485.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1402.0" layoutY="486.0" text="1 Mars">
+      <Label layoutX="1400.0" layoutY="552.0" text="1 Mars">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1363.0" layoutY="546.0" text="Till adressen:">
+      <Label layoutX="1361.0" layoutY="623.0" text="Till adressen:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1286.0" layoutY="590.0" text="Eklandagatan 48">
+      <Label layoutX="1284.0" layoutY="675.0" text="Eklandagatan 48">
          <font>
             <Font size="48.0" />
          </font>
@@ -58,7 +58,7 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1339.0" layoutY="635.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1336.0" layoutY="776.0" mnemonicParsing="false" onAction="#switchToCategories" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>
@@ -145,25 +145,11 @@
                   </ImageView>
                </graphic>
             </Button>
-            <TextField layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
+            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="128.0" layoutY="16.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="128.0" AnchorPane.topAnchor="16.0">
-               <font>
-                  <Font size="45.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <effect>
-                  <DropShadow height="24.02" width="17.98" />
-               </effect>
-            </Label>
             <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font size="24.0" />
