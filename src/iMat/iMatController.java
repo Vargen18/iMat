@@ -17,6 +17,8 @@ import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
@@ -221,7 +223,7 @@ public class iMatController implements Initializable {
         }
 
 
-        totalLabel.setText(String.valueOf("Totalkostnad: " + dataHandler.getShoppingCart().getTotal()) + " kr");
+        totalLabel.setText(String.valueOf("Totalkostnad: " + round(dataHandler.getShoppingCart().getTotal())) + " kr");
         quantityLabel.setText(String.valueOf("Antal: " + amount + " st"));
     }
 
@@ -232,7 +234,7 @@ public class iMatController implements Initializable {
             checkoutList.getChildren().add(new CheckoutProductBox(dataHandler.getShoppingCart().getItems().get(i), this));
         }
 
-        total.setText("Totalbelopp: " + dataHandler.getShoppingCart().getTotal() + " kr");
+        total.setText("Totalbelopp: " + round(dataHandler.getShoppingCart().getTotal()) + " kr");
     }
 
 
@@ -424,7 +426,7 @@ public class iMatController implements Initializable {
         cardNumberField.setText(creditCard.getCardNumber());
         cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
 
-        totalLabel.setText("Totalkostnad: " +  String.valueOf(dataHandler.getShoppingCart().getTotal()) + "kr");
+        totalLabel.setText("Totalkostnad: " +  round(dataHandler.getShoppingCart().getTotal()) + "kr");
 
     }
 
@@ -527,6 +529,18 @@ public class iMatController implements Initializable {
             search();
             ((TextField)event.getSource()).clear(); // clear textfield
         }
+    }
+
+    public double round(double value) {
+       return(round(value, 2));
+    }
+
+    private double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }
 

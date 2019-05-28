@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
@@ -43,7 +44,9 @@ public class kvittoBox extends AnchorPane {
 
     private int amount;
 
-    public kvittoBox(Product product, iMatController controller){
+    private Order order;
+
+    public kvittoBox(Product product, Order order, iMatController controller){
         IMatDataHandler dataHandler = IMatDataHandler.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("kvittoBox.fxml"));
         fxmlLoader.setRoot(this);
@@ -57,14 +60,14 @@ public class kvittoBox extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        //System.out.println("Working Directory = " + System.getProperty("user.dir"));
         this.product = product;
+        this.order = order;
         this.controller = controller;
 
         this.productImageView.setImage(dataHandler.getFXImage(product));
 
         if(shoppingItem == null) {
-            for(ShoppingItem shitem : this.dataHandler.getShoppingCart().getItems()) {
+            for(ShoppingItem shitem : order.getItems()){
                 if(shitem.getProduct().getName().equals(product.getName())) {
                     shoppingItem = shitem;
                 }
@@ -78,8 +81,8 @@ public class kvittoBox extends AnchorPane {
 
 
         this.productNameText.setText(product.getName());
-        this.quantityLabel.setText(String.valueOf(amount));
-        this.sumText.setText(Integer.toString((int) (product.getPrice() * this.amount)) + " kr");
+        this.quantityLabel.setText(String.valueOf(amount) + " st");
+        this.sumText.setText(Integer.toString((int) shoppingItem.getTotal()) + " kr");
         this.productPriceText.setText(String.valueOf(product.getPrice()) + product.getUnit());
 
     }

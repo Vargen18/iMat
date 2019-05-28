@@ -77,7 +77,7 @@ public class CheckoutProductBox extends AnchorPane {
 
         this.productNameText.setText(product.getName());
         this.productAmountTextField.setText(String.valueOf(amount));
-        this.sumText.setText(Integer.toString((int) (product.getPrice() * this.amount)) + " kr");
+        this.sumText.setText( controller.round(product.getPrice() * this.amount) + " kr");
         this.productPriceText.setText(String.valueOf(product.getPrice()) + product.getUnit());
 
     }
