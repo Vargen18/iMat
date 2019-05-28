@@ -21,7 +21,7 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label layoutX="1359.0" layoutY="408.0" text="Pris: 1000kr">
+      <Label fx:id="totalLabel" layoutX="1359.0" layoutY="408.0" text="Pris: 437.85kr">
          <font>
             <Font size="48.0" />
          </font>
@@ -31,24 +31,24 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1400.0" layoutY="552.0" text="1 Mars">
+      <Label fx:id="dateLabel" layoutX="1400.0" layoutY="552.0" text="2 Februari">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1361.0" layoutY="623.0" text="Till adressen:">
+      <Label layoutX="1405.0" layoutY="622.0" text="Till adressen:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1284.0" layoutY="675.0" text="Eklandagatan 48">
+      <Label fx:id="adressLabel" layoutX="1320.0" layoutY="675.0" text="Eklandagatan 48">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <AnchorPane layoutY="334.0" prefHeight="669.0" prefWidth="724.0">
+      <AnchorPane layoutY="334.0" prefHeight="100.0" prefWidth="100.0">
          <children>
-            <ScrollPane prefHeight="669.0" prefWidth="1130.0">
+            <ScrollPane prefHeight="660.0" prefWidth="730.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
                      <children>
@@ -59,7 +59,7 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1329.0" layoutY="775.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1341.0" layoutY="774.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>

@@ -14,7 +14,7 @@
             <Font name="Roboto" size="24.0" />
          </font>
       </Text>
-      <Text fx:id="productPriceText" layoutX="320.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" AnchorPane.topAnchor="33.0">
+      <Text fx:id="productPriceText" layoutX="378.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" x="37.0" AnchorPane.topAnchor="33.0">
          <font>
             <Font size="24.0" />
          </font>
@@ -24,7 +24,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Label fx:id="quantityLabel" layoutX="473.0" layoutY="31.0" text="Antal">
+      <Label fx:id="quantityLabel" layoutX="531.0" layoutY="31.0" text="Antal">
          <font>
             <Font size="24.0" />
          </font>

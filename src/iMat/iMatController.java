@@ -156,7 +156,7 @@ public class iMatController implements Initializable {
 
     @FXML
     private void switchToThankYou() throws Exception {
-        //dataHandler.placeOrder();
+        dataHandler.placeOrder();
         month = deliveryMonthComboBox.getSelectionModel().getSelectedItem();
         day = deliveryDayComboBox.getSelectionModel().getSelectedItem();
         iMat.scene = "thankyou.fxml";
