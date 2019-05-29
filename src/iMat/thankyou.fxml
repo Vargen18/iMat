@@ -21,7 +21,7 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label fx:id="totalLabel" layoutX="1359.0" layoutY="408.0" text="Pris: 437.85kr">
+      <Label fx:id="totalLabel" layoutX="1359.0" layoutY="408.0" text="Pris: 19.5kr">
          <font>
             <Font size="48.0" />
          </font>
@@ -31,17 +31,17 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" layoutX="1400.0" layoutY="552.0" text="2 Februari">
+      <Label fx:id="dateLabel" layoutX="1409.0" layoutY="552.0" text="30 Maj">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1405.0" layoutY="622.0" text="Till adressen:">
+      <Label layoutX="1382.0" layoutY="622.0" text="Till adressen:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="adressLabel" layoutX="1320.0" layoutY="675.0" text="Eklandagatan 48">
+      <Label fx:id="adressLabel" layoutX="1311.0" layoutY="675.0" text="Eklandagatan 48">
          <font>
             <Font size="48.0" />
          </font>

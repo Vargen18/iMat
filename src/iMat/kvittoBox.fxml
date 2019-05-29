@@ -14,7 +14,7 @@
             <Font name="Roboto" size="24.0" />
          </font>
       </Text>
-      <Text fx:id="productPriceText" layoutX="378.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" x="37.0" AnchorPane.topAnchor="33.0">
+      <Text fx:id="productPriceText" layoutX="367.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" x="37.0" AnchorPane.topAnchor="33.0">
          <font>
             <Font size="24.0" />
          </font>

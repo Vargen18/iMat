@@ -443,8 +443,8 @@ public class iMatController implements Initializable {
         deliveryDayComboBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
         deliveryMonthComboBox.getItems().addAll("Januari","February","Mars","April","Maj","Juni","Juli", "Augusti","September","Oktober","November","December");
 
-        deliveryDayComboBox.getSelectionModel().select(1);
-        deliveryMonthComboBox.getSelectionModel().select(1);
+        deliveryDayComboBox.getSelectionModel().select(29);
+        deliveryMonthComboBox.getSelectionModel().select(4);
 
         Customer customer = dataHandler.getCustomer();
         CreditCard creditCard = dataHandler.getCreditCard();
