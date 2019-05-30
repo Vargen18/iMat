@@ -21,45 +21,41 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label fx:id="totalLabel" layoutX="1359.0" layoutY="408.0" text="Pris: 171 kr">
+      <Label fx:id="totalLabel" layoutX="1344.0" layoutY="404.0" text="Pris: 171 kr">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1198.0" layoutY="485.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
+      <Label layoutX="1074.0" layoutY="479.0" prefHeight="53.0" prefWidth="593.0" text="Din beställning kommer levereras:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="dateLabel" layoutX="1409.0" layoutY="552.0" text="30 Maj">
+      <Label fx:id="dateLabel" layoutX="1285.0" layoutY="546.0" text="30 Maj">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label layoutX="1382.0" layoutY="622.0" text="Till adressen:">
+      <Label layoutX="1258.0" layoutY="616.0" text="Till adressen:">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="adressLabel" layoutX="1311.0" layoutY="675.0" text="Eklandagatan 48">
+      <Label fx:id="adressLabel" layoutX="1187.0" layoutY="669.0" text="Eklandagatan 48">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <AnchorPane layoutY="334.0" prefHeight="100.0" prefWidth="100.0">
+      <AnchorPane layoutY="334.0" prefHeight="100.0" prefWidth="750.0">
          <children>
-            <ScrollPane prefHeight="660.0" prefWidth="730.0">
+            <ScrollPane layoutX="152.0" layoutY="10.0" prefHeight="578.0" prefWidth="730.0" style="-fx-background-color: FFFF;">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <FlowPane fx:id="thankYouList" prefHeight="206.0" prefWidth="204.0" />
-                     </children>
-                  </AnchorPane>
+                  <FlowPane fx:id="thankYouList" prefHeight="206.0" prefWidth="204.0" />
               </content>
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1341.0" layoutY="774.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1217.0" layoutY="768.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>
@@ -190,5 +186,10 @@
             </Text>
          </children>
       </AnchorPane>
+      <Label layoutX="1235.0" layoutY="404.0" text="Pris:">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

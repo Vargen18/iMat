@@ -16,7 +16,7 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-      <AnchorPane layoutX="-7.0" layoutY="94.0" maxWidth="2090.0" prefHeight="905.0" prefWidth="2090.0" style="-fx-background-color: FFFFFF;">
+      <AnchorPane layoutX="-7.0" layoutY="94.0" maxWidth="2090.0" prefHeight="905.0" prefWidth="2050.0" style="-fx-background-color: FFFFFF;">
          <children>
             <TextField fx:id="firstNameField" layoutX="1121.0" layoutY="235.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
             <Label layoutX="1311.0" layoutY="103.0" text="Mitt Konto" AnchorPane.leftAnchor="1311.0">
@@ -116,16 +116,16 @@
             </Label>
             <ComboBox fx:id="cardTypeComboBox" layoutX="1590.0" layoutY="241.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
             <ComboBox fx:id="monthComboBox" layoutX="1590.0" layoutY="330.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" visibleRowCount="12" />
-            <Label layoutX="50.0" layoutY="94.0" text="Tidigare köp: ">
+            <Label layoutX="93.0" layoutY="95.0" text="Tidigare köp: ">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="22.0" layoutY="134.0" prefHeight="755.0" prefWidth="775.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1281.0">
+            <AnchorPane layoutX="35.0" layoutY="135.0" prefHeight="762.0" prefWidth="836.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1281.0">
                <children>
-                  <ScrollPane prefHeight="738.0" prefWidth="775.0" style="-fx-background-color: FFFF;" AnchorPane.leftAnchor="0.0">
+                  <ScrollPane prefHeight="763.0" prefWidth="836.0" style="-fx-background-color: FFFF;" AnchorPane.leftAnchor="0.0">
                      <content>
-                        <AnchorPane>
+                        <AnchorPane style="-fx-background-color: FFFF;">
                            <children>
                               <FlowPane fx:id="priorOrdersFlowPane" layoutX="6.0" />
                            </children>
