@@ -438,7 +438,8 @@ public class iMatController implements Initializable {
         this.cvcField.setText(String.valueOf(creditCard.getVerificationCode()));
 
         this.priorOrdersFlowPane.getChildren().clear();
-        for (Order order : dataHandler.getOrders()){
+        for (int i = dataHandler.getOrders().size() - 1; i >= 0; i--){
+            Order order = dataHandler.getOrders().get(i);
             orderBox orderBox = new orderBox(order, this);
             this.priorOrdersFlowPane.getChildren().add(orderBox);
         }
@@ -452,7 +453,7 @@ public class iMatController implements Initializable {
         cardTypeComboBox.getItems().addAll("MasterCard", "Visa", "Maestro");
         monthComboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
         deliveryDayComboBox.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31);
-        deliveryMonthComboBox.getItems().addAll("Januari","February","Mars","April","Maj","Juni","Juli", "Augusti","September","Oktober","November","December");
+        deliveryMonthComboBox.getItems().addAll("Januari","Februari","Mars","April","Maj","Juni","Juli", "Augusti","September","Oktober","November","December");
 
         deliveryDayComboBox.getSelectionModel().select(day-1);
         deliveryMonthComboBox.getSelectionModel().select(month);
