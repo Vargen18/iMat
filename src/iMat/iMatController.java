@@ -388,7 +388,7 @@ public class iMatController implements Initializable {
             case "SWEET":
                 return "Sötsaker";
             case "HERB":
-                return "''Örter''";
+                return "Örter";
 
         }
         return name;
