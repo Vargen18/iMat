@@ -213,7 +213,7 @@ public class iMatController implements Initializable {
         for (ProductCategory c: categories){
             if(c.equals(category)){
                 categoriesList.getChildren().add(new CategoryListItemEffect(dataHandler.getProducts(category).get(0), this));
-                System.out.println(1);
+
             }else{
                 categoriesList.getChildren().add(new CategoryListItem(dataHandler.getProducts(c).get(0), this));
             }
@@ -444,7 +444,7 @@ public class iMatController implements Initializable {
             this.priorOrdersFlowPane.getChildren().add(orderBox);
         }
 
-        System.out.println(dataHandler.getOrders().size());
+        //System.out.println(dataHandler.getOrders().size());
     }
 
     public void loadPayment(){
@@ -504,7 +504,7 @@ public class iMatController implements Initializable {
         adressLabel.setText(customer.getAddress());
         totalLabel.setText("Pris " + dataHandler.getOrders().get(dataHandler.getOrders().size()-1).getItems().toString() + " kr");
         dateLabel.setText(day + " " + month);
-        totalLabel.setText(String.valueOf(finalPrice) + " kr");
+        totalLabel.setText(String.valueOf(round(finalPrice)) + " kr");
 
         updateThankYouList();
     }
