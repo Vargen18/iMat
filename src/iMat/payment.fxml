@@ -100,15 +100,7 @@
                   <Font size="35.0" />
                </font>
             </Label>
-            <Button layoutX="180.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till varukorgen" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="1500.0" AnchorPane.topAnchor="160.0">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="payButtonTop" layoutX="1392.0" layoutY="173.0" mnemonicParsing="false" onAction="#switchToThankYou" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Betala &gt;" AnchorPane.bottomAnchor="696.0" AnchorPane.leftAnchor="1400.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="173.0">
+            <Button fx:id="backToCheckout" layoutX="180.0" layoutY="179.0" mnemonicParsing="false" onAction="#backToCheckout" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till varukorgen" AnchorPane.bottomAnchor="710.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="1500.0" AnchorPane.topAnchor="160.0">
                <font>
                   <Font size="24.0" />
                </font>

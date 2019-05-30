@@ -21,7 +21,7 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label fx:id="totalLabel" layoutX="1359.0" layoutY="408.0" text="Pris: 19.5kr">
+      <Label fx:id="totalLabel" layoutX="1359.0" layoutY="408.0" text="Pris: 171 kr">
          <font>
             <Font size="48.0" />
          </font>
