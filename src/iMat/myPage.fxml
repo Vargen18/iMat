@@ -18,112 +18,120 @@
    <children>
       <AnchorPane layoutX="-7.0" layoutY="94.0" maxWidth="2090.0" prefHeight="905.0" prefWidth="2050.0" style="-fx-background-color: FFFFFF;">
          <children>
-            <TextField fx:id="firstNameField" layoutX="1121.0" layoutY="235.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <Label layoutX="1311.0" layoutY="103.0" text="Mitt Konto" AnchorPane.leftAnchor="1311.0">
+            <AnchorPane layoutX="905.0" layoutY="136.0" prefHeight="457.0" prefWidth="469.0" style="-fx-border-color: GREY;">
+               <children>
+                  <TextField fx:id="firstNameField" layoutX="233.0" layoutY="106.0" prefHeight="29.0" prefWidth="182.0" promptText="Alex" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <Label alignment="CENTER_RIGHT" layoutX="85.0" layoutY="104.0" prefHeight="34.0" prefWidth="133.0" text="Förnamn:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="69.0" layoutY="149.0" prefHeight="34.0" prefWidth="150.0" text="Efternamn:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="86.0" layoutY="194.0" prefHeight="34.0" prefWidth="133.0" text="Telefon:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastNameField" layoutX="233.0" layoutY="152.0" prefHeight="29.0" prefWidth="182.0" promptText="Gerdes" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="phoneField" layoutX="233.0" layoutY="197.0" prefHeight="29.0" prefWidth="182.0" promptText="031414826" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="mobileField" layoutX="233.0" layoutY="242.0" prefHeight="29.0" prefWidth="182.0" promptText="0767346574" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="mailField" layoutX="233.0" layoutY="287.0" prefHeight="29.0" prefWidth="182.0" promptText="alex.gerdes@hotmail.com" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="adressField" layoutX="233.0" layoutY="332.0" prefHeight="29.0" prefWidth="182.0" promptText="Quarl Ankas Väg 1" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="postCodeField" layoutX="233.0" layoutY="377.0" prefHeight="29.0" prefWidth="182.0" promptText="411 17" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <Label alignment="CENTER_RIGHT" layoutX="86.0" layoutY="239.0" prefHeight="34.0" prefWidth="133.0" text="Mobil:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="86.0" layoutY="284.0" prefHeight="34.0" prefWidth="133.0" text="E-mail:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="86.0" layoutY="329.0" prefHeight="34.0" prefWidth="133.0" text="Adress:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="86.0" layoutY="374.0" prefHeight="34.0" prefWidth="133.0" text="Postkod:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="36.0" text="Kontaktuppgifter">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label layoutX="1297.0" layoutY="55.0" text="Mitt Konto" AnchorPane.leftAnchor="1297.0">
                <font>
-                  <Font name="System Bold" size="35.0" />
+                  <Font name="System Bold" size="42.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="973.0" layoutY="240.0" prefHeight="17.0" prefWidth="91.0" text="Förnamn:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="957.0" layoutY="285.0" prefHeight="23.0" prefWidth="107.0" text="Efternamn:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="974.0" layoutY="330.0" prefHeight="17.0" prefWidth="91.0" text="Telefon:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="lastNameField" layoutX="1121.0" layoutY="281.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="phoneField" layoutX="1121.0" layoutY="326.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="mobileField" layoutX="1121.0" layoutY="371.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="mailField" layoutX="1121.0" layoutY="416.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="adressField" layoutX="1121.0" layoutY="461.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="postCodeField" layoutX="1121.0" layoutY="506.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <Label alignment="CENTER_RIGHT" layoutX="974.0" layoutY="375.0" prefHeight="17.0" prefWidth="91.0" text="Mobil:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="974.0" layoutY="420.0" prefHeight="17.0" prefWidth="91.0" text="E-mail:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="974.0" layoutY="465.0" prefHeight="17.0" prefWidth="91.0" text="Adress:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="974.0" layoutY="510.0" prefHeight="17.0" prefWidth="91.0" text="Postkod:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Button fx:id="saveMyPage" layoutX="1320.0" layoutY="593.0" mnemonicParsing="false" onAction="#saveMypage" prefHeight="43.0" prefWidth="133.0" style="-fx-background-radius: 25; -fx-background-color: FFFF; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Spara">
+            <Button fx:id="saveMyPage" layoutX="1334.0" layoutY="661.0" mnemonicParsing="false" onAction="#saveMypage" prefHeight="43.0" prefWidth="133.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Spara">
                <font>
                   <Font size="24.0" />
                </font>
             </Button>
-            <Label alignment="CENTER_RIGHT" layoutX="1477.0" layoutY="468.0" prefHeight="17.0" prefWidth="91.0" text="CVC:" textAlignment="RIGHT">
+            <AnchorPane layoutX="1426.0" layoutY="136.0" prefHeight="457.0" prefWidth="469.0" style="-fx-border-color: GREY;">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutX="144.0" layoutY="324.0" prefHeight="17.0" prefWidth="91.0" text="CVC:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cvcField" layoutX="252.0" layoutY="327.0" prefHeight="29.0" prefWidth="182.0" promptText="123" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <Label alignment="CENTER_RIGHT" layoutX="111.0" layoutY="99.0" prefHeight="34.0" prefWidth="122.0" text="Korttyp:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="145.0" prefHeight="34.0" prefWidth="219.0" text="Kortinnehavare:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="111.0" layoutY="190.0" prefHeight="34.0" prefWidth="122.0" text="Månad:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="holderNameField" layoutX="252.0" layoutY="147.0" prefHeight="29.0" prefWidth="182.0" promptText="Alex Gerdes" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="yearField" layoutX="252.0" layoutY="237.0" prefHeight="29.0" prefWidth="182.0" promptText="2019" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="cardNumberField" layoutX="252.0" layoutY="283.0" prefHeight="29.0" prefWidth="182.0" promptText="1234 5678 9123 4567" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <Label alignment="CENTER_RIGHT" layoutX="144.0" layoutY="235.0" prefHeight="17.0" prefWidth="91.0" text="År:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" layoutX="56.0" layoutY="280.0" prefHeight="34.0" prefWidth="182.0" text="Kortnummer:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="34.0" text="Betalningsuppgifter">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cardTypeComboBox" layoutX="252.0" layoutY="102.0" prefHeight="29.0" prefWidth="182.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <ComboBox fx:id="monthComboBox" layoutX="252.0" layoutY="193.0" prefHeight="29.0" prefWidth="182.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" visibleRowCount="12" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="58.0" layoutY="81.0" text="Tidigare köp: ">
                <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="cvcField" layoutX="1590.0" layoutY="468.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <Label layoutX="1065.0" layoutY="187.0" text="Kontaktuppgifter">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="1476.0" layoutY="242.0" prefHeight="17.0" prefWidth="91.0" text="Korttyp:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="1417.0" layoutY="287.0" prefHeight="27.0" prefWidth="150.0" text="Kortinnehavare:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="1477.0" layoutY="332.0" prefHeight="17.0" prefWidth="91.0" text="Månad:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="holderNameField" layoutX="1590.0" layoutY="287.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="yearField" layoutX="1590.0" layoutY="377.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <TextField fx:id="cardNumberField" layoutX="1590.0" layoutY="422.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <Label alignment="CENTER_RIGHT" layoutX="1477.0" layoutY="377.0" prefHeight="17.0" prefWidth="91.0" text="År:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="1432.0" layoutY="422.0" prefHeight="27.0" prefWidth="136.0" text="Kortnummer:" textAlignment="RIGHT">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="1508.0" layoutY="187.0" text="Betalningsuppgifter">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="cardTypeComboBox" layoutX="1590.0" layoutY="241.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-            <ComboBox fx:id="monthComboBox" layoutX="1590.0" layoutY="330.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" visibleRowCount="12" />
-            <Label layoutX="93.0" layoutY="95.0" text="Tidigare köp: ">
-               <font>
-                  <Font size="25.0" />
+                  <Font size="36.0" />
                </font>
             </Label>
             <AnchorPane layoutX="35.0" layoutY="135.0" prefHeight="762.0" prefWidth="836.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1281.0">
                <children>
-                  <ScrollPane prefHeight="763.0" prefWidth="836.0" style="-fx-background-color: FFFF;" AnchorPane.leftAnchor="0.0">
+                  <ScrollPane prefHeight="763.0" prefWidth="818.0" style="-fx-background-color: FFFF; -fx-border-color: GREY;" AnchorPane.leftAnchor="0.0">
                      <content>
                         <AnchorPane style="-fx-background-color: FFFF;">
                            <children>
@@ -134,9 +142,17 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-            <Button layoutX="1259.0" layoutY="705.0" mnemonicParsing="false" onAction="#switchToCategories" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="241.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Fortsätt Handla">
+            <Button layoutX="1280.0" layoutY="764.0" mnemonicParsing="false" onAction="#switchToCategories" onMouseClicked="#switchToCheckout" prefHeight="50.0" prefWidth="241.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Fortsätt Handla">
                <font>
                   <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backButton" layoutX="58.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Tillbaka">
+               <font>
+                  <Font name="Roboto" size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />

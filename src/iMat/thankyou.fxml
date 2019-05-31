@@ -14,9 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1980.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.iMatController">
    <children>
-      <Label layoutX="607.0" layoutY="178.0" prefHeight="141.0" prefWidth="1034.0" text="Tack för ditt köp!">
+      <Label layoutX="539.0" layoutY="177.0" prefHeight="141.0" prefWidth="1034.0" text="Tack för ditt köp!">
          <font>
             <Font size="96.0" />
          </font>
@@ -48,14 +48,14 @@
       </Label>
       <AnchorPane layoutY="334.0" prefHeight="100.0" prefWidth="750.0">
          <children>
-            <ScrollPane layoutX="152.0" layoutY="10.0" prefHeight="578.0" prefWidth="730.0" style="-fx-background-color: FFFF;">
+            <ScrollPane layoutX="42.0" layoutY="10.0" prefHeight="578.0" prefWidth="860.0" style="-fx-background-color: FFFF;">
               <content>
-                  <FlowPane fx:id="thankYouList" prefHeight="206.0" prefWidth="204.0" />
+                  <FlowPane fx:id="thankYouList" prefHeight="531.0" prefWidth="852.0" />
               </content>
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1217.0" layoutY="768.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1217.0" layoutY="768.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>
@@ -157,7 +157,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="480.0" layoutY="107.0" prefHeight="70.0" prefWidth="1152.0">
+      <AnchorPane layoutX="384.0" layoutY="107.0" prefHeight="70.0" prefWidth="1152.0">
          <children>
             <Text layoutX="-247.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kassan" x="320.0" y="40.0">
                <font>
