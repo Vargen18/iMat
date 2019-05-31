@@ -153,6 +153,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <Button fx:id="myPageButton" layoutX="1687.7" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1679.0" AnchorPane.rightAnchor="35.0">
                <font>
@@ -168,6 +171,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Kassa">
                <font>
@@ -183,19 +189,28 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
-            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" onKeyPressed="#keyListener" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
+            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                <font>
                   <Font size="18.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </TextField>
-            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
+            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font size="24.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
          </children>
       </AnchorPane>

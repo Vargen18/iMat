@@ -63,6 +63,40 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <AnchorPane layoutX="384.0" layoutY="107.0" prefHeight="70.0" prefWidth="1152.0" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="107.0">
+         <children>
+            <Text layoutX="-247.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kassan" x="320.0" y="40.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="-92.0" layoutY="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;&gt;&gt;&gt;" x="320.0" y="40.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="32.0" layoutY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalning och leverans" x="320.0" y="40.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="340.0" layoutY="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;&gt;&gt;&gt;" x="320.0" y="40.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="517.0" layoutY="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tack för ditt köp!" underline="true" x="320.0" y="40.0">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Label layoutX="1235.0" layoutY="404.0" text="Pris:">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
             <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="76.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
@@ -111,6 +145,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <Button fx:id="myPageButton" layoutX="1687.7" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAccount" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Mitt Konto" AnchorPane.leftAnchor="1679.0" AnchorPane.rightAnchor="35.0">
                <font>
@@ -126,6 +163,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <Button fx:id="checkoutButton" layoutX="1368.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToCheckout" prefHeight="50.0" prefWidth="210.0" style="-fx-background-color: FFFF; -fx-background-radius: 25;" text="Kassa">
                <font>
@@ -141,11 +181,17 @@
                      </image>
                   </ImageView>
                </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                <font>
                   <Font size="18.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </TextField>
             <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
@@ -154,42 +200,11 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="384.0" layoutY="107.0" prefHeight="70.0" prefWidth="1152.0">
-         <children>
-            <Text layoutX="-247.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kassan" x="320.0" y="40.0">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Text>
-            <Text layoutX="-92.0" layoutY="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;&gt;&gt;&gt;" x="320.0" y="40.0">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Text layoutX="32.0" layoutY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalning och leverans" x="320.0" y="40.0">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Text>
-            <Text layoutX="340.0" layoutY="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;&gt;&gt;&gt;" x="320.0" y="40.0">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Text layoutX="517.0" layoutY="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tack för ditt köp!" underline="true" x="320.0" y="40.0">
-               <font>
-                  <Font name="System Bold" size="37.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <Label layoutX="1235.0" layoutY="404.0" text="Pris:">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
