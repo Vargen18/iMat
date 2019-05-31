@@ -91,9 +91,6 @@ public class iMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
-        //dataHandler.addFavorite(25);
-
         if (iMat.scene.equals("categories.fxml")) {
             //System.out.println(dataHandler.getShoppingCart().getItems().size());
             updateCategoryGrid();
@@ -554,7 +551,7 @@ public class iMatController implements Initializable {
         if (!iMat.scene.equals("categories.fxml")){
             try {
                 switchToCategories();
-                updateCategoryGrid();
+
                 //  Block of code to try
             }
             catch(Exception e) {
@@ -563,15 +560,19 @@ public class iMatController implements Initializable {
             //TODO
             //fixa search från mitt konto och varukorgen
         }
-        if (!categoriesGrid.getChildren().isEmpty()){
+        searchFor();
+
+    }
+    public void searchFor(){
+        if(!categoriesGrid.getChildren().isEmpty()){
             categoriesGrid.getChildren().clear();
         }
         backButton.setVisible(true);
         mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
         for (Product p :dataHandler.getProducts()) {
-               if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
-                   categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
-               }
+            if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
+                categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
+            }
         }
         if (categoriesGrid.getChildren().isEmpty()){
             mainLabel.setText("Tyvärr '" + searchTextField.getText() + "' gav inga träffar");
