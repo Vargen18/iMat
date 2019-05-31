@@ -62,6 +62,9 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
       </Button>
       <AnchorPane layoutX="384.0" layoutY="107.0" prefHeight="70.0" prefWidth="1152.0" AnchorPane.leftAnchor="384.0" AnchorPane.rightAnchor="384.0" AnchorPane.topAnchor="107.0">
          <children>

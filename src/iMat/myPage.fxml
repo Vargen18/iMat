@@ -78,6 +78,9 @@
                <font>
                   <Font size="24.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <AnchorPane layoutX="1435.0" layoutY="135.0" prefHeight="457.0" prefWidth="469.0" style="-fx-border-color: GREY;">
                <children>
@@ -149,6 +152,9 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <Button fx:id="backButton" layoutX="58.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Tillbaka">
                <font>
@@ -157,6 +163,9 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
          </children>
       </AnchorPane>

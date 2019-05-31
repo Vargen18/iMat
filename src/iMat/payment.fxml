@@ -24,6 +24,9 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
             <Label fx:id="totalLabel" layoutX="755.0" layoutY="697.0" prefHeight="53.0" prefWidth="419.0" text="Totalbelopp:">
                <font>
@@ -34,6 +37,12 @@
                <font>
                   <Font size="36.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <AnchorPane layoutX="964.0" layoutY="478.0" prefHeight="195.0" prefWidth="408.0" style="-fx-border-color: GREY;">
                <children>
@@ -94,7 +103,7 @@
                   <TextField fx:id="yearField" layoutX="197.0" layoutY="229.0" promptText="19" style="-fx-border-color: BLACK; -fx-border-radius: 25; -fx-background-radius: 25;" />
                   <ComboBox fx:id="monthComboBox" layoutX="197.0" layoutY="185.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" visibleRowCount="12" />
                   <TextField fx:id="holderNameField" layoutX="196.0" layoutY="132.0" promptText="Förnamn Efternamn" style="-fx-background-radius: 25; -fx-border-color: BLACk; -fx-border-radius: 25;" />
-                  <ComboBox fx:id="cardTypeComboBox" layoutX="197.0" layoutY="84.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" />
+                  <ComboBox fx:id="cardTypeComboBox" layoutX="197.0" layoutY="84.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: light grey; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="46.0" layoutY="82.0" prefHeight="34.0" prefWidth="139.0" text="Korttyp:" textAlignment="RIGHT">
                      <font>
                         <Font size="28.0" />
@@ -151,6 +160,11 @@
                   </Text>
                </children>
             </AnchorPane>
+            <Text layoutX="576.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen fyll i dina uppgifter nedan:" wrappingWidth="723.595703125">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="91.0" prefWidth="1926.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
