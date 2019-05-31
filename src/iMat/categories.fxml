@@ -92,12 +92,12 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="634.0" layoutY="12.0" prefHeight="93.0" prefWidth="888.0" style="-fx-text-alignment: center;" text="Kategorier" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" AnchorPane.leftAnchor="634.0" AnchorPane.rightAnchor="398.0">
+            <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="371.0" layoutY="21.0" prefHeight="70.0" prefWidth="1152.0" style="-fx-text-alignment: center; -fx-alignment: center;" text="Kategorier" textAlignment="CENTER">
                <font>
-                  <Font name="Roboto" size="64.0" />
+                  <Font size="48.0" />
                </font>
             </Label>
-            <Button fx:id="backButton" layoutX="414.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
+            <Button fx:id="backButton" layoutX="394.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
                <font>
                   <Font name="Roboto" size="24.0" />
                </font>
@@ -198,7 +198,7 @@
                   <DropShadow />
                </effect>
             </Button>
-            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
+            <TextField fx:id="searchTextField" layoutX="379.0" layoutY="20.0" onKeyPressed="#keyListener" prefHeight="51.0" prefWidth="734.0" promptText="sök efter tusentals varor här..." style="-fx-background-radius: 25;">
                <font>
                   <Font size="18.0" />
                </font>
@@ -206,7 +206,7 @@
                   <DropShadow />
                </effect>
             </TextField>
-            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
+            <Button fx:id="searchButton" layoutX="1028.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#search" prefHeight="49.0" prefWidth="85.0" style="-fx-background-radius: 25;" text="Sök">
                <font>
                   <Font size="24.0" />
                </font>

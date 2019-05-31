@@ -560,24 +560,19 @@ public class iMatController implements Initializable {
             //TODO
             //fixa search från mitt konto och varukorgen
         }
-        searchFor();
-
-    }
-    public void searchFor(){
         if(!categoriesGrid.getChildren().isEmpty()){
             categoriesGrid.getChildren().clear();
         }
         backButton.setVisible(true);
-        mainLabel.setText("Du har sökt på '" + searchTextField.getText() + "'");
         for (Product p :dataHandler.getProducts()) {
             if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
                 categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
             }
         }
-        if (categoriesGrid.getChildren().isEmpty()){
-            mainLabel.setText("Tyvärr '" + searchTextField.getText() + "' gav inga träffar");
-        }
+        mainLabel.setText("Sökningen gav " + categoriesGrid.getChildren().size() + " träffar");
+
     }
+
     public void keyListener(KeyEvent event){
         if(event.getCode() == KeyCode.ENTER) {
             search();
