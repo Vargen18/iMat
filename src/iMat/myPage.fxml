@@ -171,7 +171,7 @@
       </AnchorPane>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
-            <AnchorPane layoutX="14.0" layoutY="8.0" prefHeight="76.0" prefWidth="221.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
+            <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="76.0" prefWidth="221.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
                <children>
                   <ImageView fx:id="escapehatch" fitHeight="66.0" fitWidth="69.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                      <image>

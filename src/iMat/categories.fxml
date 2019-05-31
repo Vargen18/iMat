@@ -92,7 +92,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="788.0" layoutY="14.0" prefHeight="79.0" prefWidth="344.0" text="Kategorier" AnchorPane.leftAnchor="788.0" AnchorPane.rightAnchor="788.0">
+            <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="634.0" layoutY="12.0" prefHeight="93.0" prefWidth="888.0" style="-fx-text-alignment: center;" text="Kategorier" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" AnchorPane.leftAnchor="634.0" AnchorPane.rightAnchor="398.0">
                <font>
                   <Font name="Roboto" size="64.0" />
                </font>
@@ -112,7 +112,7 @@
       </AnchorPane>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
-            <AnchorPane layoutX="14.0" layoutY="8.0" prefHeight="76.0" prefWidth="221.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
+            <AnchorPane layoutX="4.0" layoutY="4.0" prefHeight="76.0" prefWidth="221.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
                <children>
                   <ImageView fx:id="escapehatch" fitHeight="66.0" fitWidth="69.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                      <image>
