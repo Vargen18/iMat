@@ -17,9 +17,17 @@
    <children>
       <AnchorPane layoutX="2.0" layoutY="81.0" prefHeight="919.0" prefWidth="1920.0" style="-fx-background-color: FFFF;">
          <children>
-            <Label fx:id="totalLabel" layoutX="783.0" layoutY="696.0" prefHeight="53.0" prefWidth="385.0" text="Totalbelopp:">
+            <Button fx:id="backToCheckout" layoutX="172.0" layoutY="113.0" mnemonicParsing="false" onAction="#backToCheckout" prefHeight="57.0" prefWidth="240.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till varukorgen" AnchorPane.bottomAnchor="749.0" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="1585.0" AnchorPane.topAnchor="113.0">
                <font>
-                  <Font size="35.0" />
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="totalLabel" layoutX="755.0" layoutY="697.0" prefHeight="53.0" prefWidth="419.0" text="Totalbelopp:">
+               <font>
+                  <Font size="38.0" />
                </font>
             </Label>
             <Button fx:id="payButton" layoutX="843.0" layoutY="781.0" mnemonicParsing="false" onAction="#switchToThankYou" prefHeight="76.0" prefWidth="189.0" style="-fx-border-radius: 25; -fx-border-color: BLACK; -fx-background-radius: 25;" stylesheets="@boxItem.css" text="Betala">
@@ -51,7 +59,7 @@
             <AnchorPane layoutX="964.0" layoutY="237.0" prefHeight="195.0" prefWidth="408.0" style="-fx-border-color: GREY;">
                <children>
                   <TextField fx:id="adressField" layoutX="180.0" layoutY="97.0" promptText="Quarl Ankas Väg 1" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
-                  <TextField fx:id="postCodeField" layoutX="180.0" layoutY="142.0" promptText="411 17" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
+                  <TextField fx:id="postCodeField" layoutX="180.0" layoutY="141.0" promptText="411 17" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" />
                   <Label alignment="CENTER_RIGHT" layoutX="57.0" layoutY="94.0" prefHeight="34.0" prefWidth="110.0" text="Adress:" textAlignment="RIGHT">
                      <font>
                         <Font size="28.0" />
@@ -83,9 +91,9 @@
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="yearField" layoutX="197.0" layoutY="229.0" promptText="2019" style="-fx-border-color: BLACK; -fx-border-radius: 25; -fx-background-radius: 25;" />
-                  <ComboBox fx:id="monthComboBox" layoutX="197.0" layoutY="181.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" visibleRowCount="12" />
-                  <TextField fx:id="holderNameField" layoutX="197.0" layoutY="129.0" promptText="Alex Gerdes" style="-fx-background-radius: 25; -fx-border-color: BLACk; -fx-border-radius: 25;" />
+                  <TextField fx:id="yearField" layoutX="197.0" layoutY="229.0" promptText="19" style="-fx-border-color: BLACK; -fx-border-radius: 25; -fx-background-radius: 25;" />
+                  <ComboBox fx:id="monthComboBox" layoutX="197.0" layoutY="185.0" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" visibleRowCount="12" />
+                  <TextField fx:id="holderNameField" layoutX="196.0" layoutY="132.0" promptText="Förnamn Efternamn" style="-fx-background-radius: 25; -fx-border-color: BLACk; -fx-border-radius: 25;" />
                   <ComboBox fx:id="cardTypeComboBox" layoutX="197.0" layoutY="84.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="46.0" layoutY="82.0" prefHeight="34.0" prefWidth="139.0" text="Korttyp:" textAlignment="RIGHT">
                      <font>
@@ -114,14 +122,6 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Button fx:id="backToCheckout" layoutX="172.0" layoutY="155.0" mnemonicParsing="false" onAction="#backToCheckout" prefHeight="50.0" prefWidth="240.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till varukorgen" AnchorPane.bottomAnchor="715.0" AnchorPane.leftAnchor="172.0" AnchorPane.rightAnchor="1508.0" AnchorPane.topAnchor="155.0">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
             <AnchorPane layoutX="362.0" layoutY="22.0" prefHeight="70.0" prefWidth="1152.0" AnchorPane.leftAnchor="362.0" AnchorPane.rightAnchor="406.0" AnchorPane.topAnchor="22.0">
                <children>
                   <Text layoutX="-188.0" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kassan" x="320.0" y="40.0">
@@ -153,9 +153,9 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
+      <AnchorPane prefHeight="91.0" prefWidth="1926.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
-            <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="76.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
+            <AnchorPane layoutX="14.0" layoutY="8.0" prefHeight="76.0" prefWidth="221.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
                <children>
                   <ImageView fx:id="escapehatch" fitHeight="66.0" fitWidth="69.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -168,7 +168,7 @@
                         <DropShadow height="24.0" width="18.0" />
                      </effect>
                   </ImageView>
-                  <Label layoutX="115.0" layoutY="13.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="13.0">
+                  <Label layoutX="111.0" layoutY="13.0" onMouseClicked="#switchToCategories" prefHeight="39.0" prefWidth="101.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="111.0" AnchorPane.topAnchor="13.0">
                      <font>
                         <Font size="45.0" />
                      </font>

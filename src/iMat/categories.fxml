@@ -26,7 +26,8 @@
                               <FlowPane fx:id="categoriesList" hgap="4.0" prefWidth="384.0" style="-fx-background-color: FFFF;" vgap="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <padding>
                                     <Insets bottom="10.0" top="10.0" />
-                                 </padding></FlowPane>
+                                 </padding>
+                              </FlowPane>
                            </children>
                         </AnchorPane>
                     </content>
@@ -35,14 +36,6 @@
             </AnchorPane>
             <AnchorPane layoutX="384.0" layoutY="68.0" prefWidth="1152.0" style="-fx-background-color: FFFF;">
                <children>
-                  <Button fx:id="backButton" layoutX="52.0" layoutY="-35.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
-                     <font>
-                        <Font name="Roboto" size="24.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
                   <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="43.0" maxHeight="802.0" pannable="true" prefWidth="1152.0" style="-fx-background-color: FFFF;">
                      <content>
                         <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" prefWidth="1148.0" style="-fx-background-color: FFFF;" vgap="10.0">
@@ -98,11 +91,19 @@
                   <Font name="Roboto" size="64.0" />
                </font>
             </Label>
+            <Button fx:id="backButton" layoutX="414.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="50.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: BLACK; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="&lt; Till kategorier">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="91.0" prefWidth="1920.0" style="-fx-background-color: #45A29E;" stylesheets="@boxItem.css">
          <children>
-            <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="76.0" prefWidth="216.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
+            <AnchorPane layoutX="14.0" layoutY="8.0" prefHeight="76.0" prefWidth="221.0" style="-fx-background-radius: 25; -fx-border-color: FFFF; -fx-border-radius: 25;" styleClass="imat" stylesheets="@boxItem.css">
                <children>
                   <ImageView fx:id="escapehatch" fitHeight="66.0" fitWidth="69.0" layoutX="14.0" layoutY="8.0" onMouseClicked="#switchToCategories" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -115,7 +116,7 @@
                         <DropShadow height="24.0" width="18.0" />
                      </effect>
                   </ImageView>
-                  <Label layoutX="115.0" layoutY="13.0" onMouseClicked="#switchToCategories" prefHeight="57.0" prefWidth="102.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="13.0">
+                  <Label layoutX="111.0" layoutY="13.0" onMouseClicked="#switchToCategories" prefHeight="39.0" prefWidth="101.0" text="iMat" textFill="WHITE" AnchorPane.leftAnchor="111.0" AnchorPane.topAnchor="13.0">
                      <font>
                         <Font size="45.0" />
                      </font>

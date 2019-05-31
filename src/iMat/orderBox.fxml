@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root maxWidth="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="788.0" style="-fx-border-color: FREY;" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxWidth="-Infinity" minWidth="-Infinity" prefHeight="122.0" prefWidth="733.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Text fx:id="date" layoutX="15.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum: ">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Text>
-      <Text fx:id="total" layoutX="633.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp: ">
+      <Text fx:id="total" layoutX="589.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp: ">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Text>
-      <ScrollPane layoutY="64.0" prefWidth="836.0" style="-fx-border-color: BLACK;">
-        <content>
-          <AnchorPane>
-               <children>
-                  <FlowPane fx:id="orderFlowPane" prefHeight="36.0" prefWidth="826.0" />
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
+      <FlowPane fx:id="orderFlowPane" layoutY="74.0" prefHeight="14.0" prefWidth="733.0" style="-fx-border-color: GREY;" />
    </children>
 </fx:root>
