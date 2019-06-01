@@ -35,10 +35,13 @@ public class iMatController implements Initializable {
     private Button switchSceneButton, favoritesButton, checkoutButton, myPageButton, clearShoppingCartButton, paymentButton, payButton, searchButton, backButton, toCheckOut, payButtonTop, backToCategories, backToCheckout;
 
     @FXML
+    private Button  cancelSearch;
+
+    @FXML
     private ImageView escapehatch, addToFavorites;
 
     @FXML
-    private AnchorPane anchorPane;
+    private AnchorPane checkoutAnchorPane, searchAnchorPane;
 
     @FXML
     private FlowPane categoriesList, categoriesGrid, shoppingCartList;
@@ -79,7 +82,8 @@ public class iMatController implements Initializable {
     static int day = 30;
     static String month = "Maj";
     static double finalPrice;
-
+    String searchWord;
+    Boolean isSearching = false;
     public void changeFavorite(Product product) {
         if (dataHandler.isFavorite(product)) {
             dataHandler.removeFavorite(product);
@@ -184,6 +188,7 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateCategoryGrid() {
+        isSearching = false;
         backButton.setVisible(false);
         for (ProductCategory pc : categories) {
             Product p = dataHandler.getProducts(pc).get(0);
@@ -194,6 +199,7 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateProductGrid(ProductCategory category) {
+        isSearching = false;
         if(!iMat.scene.equals("categories.fxml")){
             iMat.scene = "categories.fxml";
         }
@@ -219,6 +225,7 @@ public class iMatController implements Initializable {
 
     @FXML
     public void updateFavoriteGrid() {
+        isSearching = false;
         if(!iMat.scene.equals("categories.fxml")){
             iMat.scene = "categories.fxml";
         }
@@ -235,23 +242,14 @@ public class iMatController implements Initializable {
     }
 
     @FXML
-    public void updateSearchGrid(){
-
-    }
-
-    @FXML
     public void updateShoppingCartList() {
 
         int amount = 0;
-        //System.out.println(dataHandler.getShoppingCart().getItems().get(0).getProduct());
         shoppingCartList.getChildren().clear();
         for (int i = dataHandler.getShoppingCart().getItems().size() - 1; i >= 0; i--) {
             amount += dataHandler.getShoppingCart().getItems().get(i).getAmount();
             shoppingCartList.getChildren().add(new ShoppingCartListItem(dataHandler.getShoppingCart().getItems().get(i).getProduct(), this, dataHandler.getShoppingCart().getItems().get(i).getAmount()));
         }
-
-
-
         totalLabel.setText(String.valueOf("Totalbelopp: " + round(dataHandler.getShoppingCart().getTotal())) + " kr");
         quantityLabel.setText(String.valueOf("Antal: " + amount + " st"));
     }
@@ -281,14 +279,12 @@ public class iMatController implements Initializable {
         changeAmount(item.product, change);
         shoppingCartList.getChildren().remove(item);
     }
-
     public void add(Product product) {
         int change = 1;
         changeAmount(product, change);
 
         updateScene(product);
     }
-
     public void minus(Product product) {
         int change = -1;
         changeAmount(product, change);
@@ -299,13 +295,20 @@ public class iMatController implements Initializable {
     public void updateScene(Product product){
         if (iMat.scene.equals("checkout.fxml")) {
             updateCheckoutList();
+            if (searchAnchorPane.isVisible()) {
+                updateSearchGrid(searchWord);
+            }
         } else if (mainLabel.getText().equals("Favoriter")) {
             updateFavoriteGrid();
             updateShoppingCartList();
         } else if (iMat.scene.equals("categories.fxml")) {
             updateShoppingCartList();
-            if(product.getCategory() == this.category) {
-                updateProductGrid(product.getCategory());
+            if (isSearching){
+                updateSearchGrid(searchWord);
+            }else {
+                if(product.getCategory() == this.category) {
+                    updateProductGrid(product.getCategory());
+                }
             }
 
         }
@@ -333,10 +336,6 @@ public class iMatController implements Initializable {
             shoppingCart.addProduct(product);
         }
 
-    }
-
-    public void clearShoppingCartList() {
-        shoppingCartList.getChildren().clear();
     }
 
 
@@ -539,38 +538,42 @@ public class iMatController implements Initializable {
 
     @FXML
     public void clearShoppingCart(){
-        dataHandler.getShoppingCart().getItems().clear();
-        shoppingCartList.getChildren().clear();
-        updateShoppingCartList();
+        if (!dataHandler.getShoppingCart().getItems().isEmpty()){
+            Product product = dataHandler.getShoppingCart().getItems().get(0).getProduct();
+            dataHandler.getShoppingCart().getItems().clear();
+            shoppingCartList.getChildren().clear();
+            updateScene(product);
+        }
     }
 
     public void search(){
-        //TODO
-        //uppdatera sök sidan vid ändring
+        isSearching = true;
+        searchWord = searchTextField.getText().toLowerCase();
+        if (iMat.scene.equals("categories.fxml")){
+            backButton.setVisible(true);
 
-        if (!iMat.scene.equals("categories.fxml")){
-            try {
-                switchToCategories();
+        }else if(iMat.scene.equals("myPage.fxml")){
 
-                //  Block of code to try
-            }
-            catch(Exception e) {
-                //  Block of code to handle errors
-            }
-            //TODO
-            //fixa search från mitt konto och varukorgen
+        }else {
+            cancelSearch.setVisible(true);
+            backButton.setVisible(false);
+            checkoutAnchorPane.setVisible(false);
+            searchAnchorPane.setVisible(true);
+            checkoutAnchorPane.toBack();
         }
-        if(!categoriesGrid.getChildren().isEmpty()){
-            categoriesGrid.getChildren().clear();
-        }
-        backButton.setVisible(true);
+
+        updateSearchGrid(searchWord);
+        mainLabel.setText("Sökningen gav " + categoriesGrid.getChildren().size() + " träffar");
+
+    }
+
+    public void updateSearchGrid(String word){
+        categoriesGrid.getChildren().clear();
         for (Product p :dataHandler.getProducts()) {
-            if (p.getName().toLowerCase().contains(searchTextField.getText().toLowerCase())){
+            if (p.getName().toLowerCase().contains(word)){
                 categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
             }
         }
-        mainLabel.setText("Sökningen gav " + categoriesGrid.getChildren().size() + " träffar");
-
     }
 
     public void keyListener(KeyEvent event){
