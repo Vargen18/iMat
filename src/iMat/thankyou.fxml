@@ -41,7 +41,12 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Label fx:id="adressLabel" layoutX="1187.0" layoutY="669.0" text="Eklandagatan 48">
+      <Label fx:id="adressLabel" layoutX="1118.0" layoutY="669.0" prefHeight="70.0" prefWidth="593.0" style="-fx-text-alignment: center; -fx-alignment: center;" text="Eklandagatan 48">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="postCodeLabel" layoutX="1306.0" layoutY="730.0" style="-fx-text-alignment: center; -fx-alignment: center;" text="12345">
          <font>
             <Font size="48.0" />
          </font>
@@ -55,7 +60,7 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button fx:id="backToCategories" layoutX="1217.0" layoutY="768.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
+      <Button fx:id="backToCategories" layoutX="1217.0" layoutY="803.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="76.0" prefWidth="291.0" style="-fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" stylesheets="@boxItem.css" text="Handla mera!">
          <font>
             <Font size="36.0" />
          </font>

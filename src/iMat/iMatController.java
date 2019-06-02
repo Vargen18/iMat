@@ -54,7 +54,7 @@ public class iMatController implements Initializable {
     private TextField holderNameField, yearField, cardNumberField, cvcField, searchTextField;
 
     @FXML
-    private Label mainLabel, totalLabel, quantityLabel, dateLabel, adressLabel;
+    private Label mainLabel, totalLabel, quantityLabel, dateLabel, adressLabel, postCodeLabel;
 
     @FXML
     private ComboBox<String> deliveryMonthComboBox, cardTypeComboBox;
@@ -164,6 +164,7 @@ public class iMatController implements Initializable {
 
         month = deliveryMonthComboBox.getSelectionModel().getSelectedItem();
         day = deliveryDayComboBox.getSelectionModel().getSelectedItem();
+        saveAtCheckoout();
         iMat.scene = "thankyou.fxml";
         iMat.switchScene(payButton, "thankyou.fxml");
     }
@@ -500,9 +501,21 @@ public class iMatController implements Initializable {
         //dataHandler.placeOrder();
     }
 
+    public void saveAtCheckoout(){
+        Customer customer = dataHandler.getCustomer();
+        CreditCard creditCard = dataHandler.getCreditCard();
+        if (!adressField.getText().equals("")){
+            customer.setAddress(this.adressField.getText());
+        }
+        if (!postCodeField.getText().equals("")){
+            customer.setPostCode(this.postCodeField.getText());
+        }
+    }
+
     public void loadThankYou(){
         Customer customer = dataHandler.getCustomer();
         adressLabel.setText(customer.getAddress());
+        postCodeLabel.setText(customer.getPostCode());
         totalLabel.setText("Pris " + dataHandler.getOrders().get(dataHandler.getOrders().size()-1).getItems().toString() + " kr");
         dateLabel.setText(day + " " + month);
         totalLabel.setText(String.valueOf(round(finalPrice)) + " kr");
