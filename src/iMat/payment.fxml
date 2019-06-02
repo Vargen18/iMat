@@ -48,12 +48,12 @@
                <children>
                   <ComboBox fx:id="deliveryDayComboBox" layoutX="170.0" layoutY="94.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" />
                   <ComboBox fx:id="deliveryMonthComboBox" layoutX="170.0" layoutY="142.0" prefHeight="27.0" prefWidth="167.0" style="-fx-background-color: FFFF; -fx-border-color: BLACK; -fx-background-radius: 25; -fx-border-radius: 25;" visibleRowCount="12" />
-                  <Label layoutX="93.0" layoutY="92.0" text="Dag:">
+                  <Label alignment="CENTER_RIGHT" layoutX="93.0" layoutY="92.0" text="Dag:">
                      <font>
                         <Font size="28.0" />
                      </font>
                   </Label>
-                  <Label layoutX="57.0" layoutY="140.0" text="Månad:">
+                  <Label alignment="CENTER_RIGHT" layoutX="57.0" layoutY="140.0" text="Månad:">
                      <font>
                         <Font size="28.0" />
                      </font>
