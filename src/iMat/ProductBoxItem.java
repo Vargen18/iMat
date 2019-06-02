@@ -113,24 +113,16 @@ public class ProductBoxItem extends AnchorPane {
     @FXML
     public void remove() {
         controller.minus(product);
-
-
-    setText();
-
-        //controller.updateShoppingCartList();
+        setText();
     }
 
     public void setText(){
         amount = -1;
         amount = (int) dataHandler.getShoppingCart().getItems().get(checkMatch(product)).getAmount();
-        if(amount == -1) {
+        if(amount <= 0) {
             productBoxAmount.setText(String.valueOf(0));
+            dataHandler.getShoppingCart().getItems().get(checkMatch(product)).setAmount(0);
         }
-        /*if(controller.getMainLabel().equals("Favoriter")) {
-            controller.updateFavoriteGrid();
-        } else {
-            controller.updateProductGrid(product.getCategory());
-        }*/
     }
 
     public int checkMatch(Product product) {

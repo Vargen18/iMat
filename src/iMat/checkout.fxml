@@ -129,16 +129,16 @@
                   </AnchorPane>
                   <AnchorPane fx:id="searchAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="909.0" prefWidth="1148.0" visible="false">
                      <children>
-                        <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="74.0" maxHeight="802.0" pannable="true" prefWidth="1152.0" style="-fx-background-color: FFF;">
+                        <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutY="93.0" maxHeight="802.0" minHeight="816.0" pannable="true" prefWidth="1152.0" style="-fx-background-color: FFF;">
                            <content>
-                              <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" prefWidth="1148.0" style="-fx-background-color: FFF;" vgap="10.0">
+                              <FlowPane fx:id="categoriesGrid" columnHalignment="CENTER" hgap="10.0" minHeight="814.0" prefWidth="1148.0" style="-fx-background-color: FFF;" vgap="10.0">
                                  <padding>
                                     <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                                  </padding>
                               </FlowPane>
                            </content>
                         </ScrollPane>
-                        <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="1152.0" style="-fx-text-alignment: center; -fx-alignment: center;" text="Kategorier" textAlignment="CENTER">
+                        <Label fx:id="mainLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="16.0" prefHeight="70.0" prefWidth="1152.0" style="-fx-text-alignment: center; -fx-alignment: center;" text="Kategorier" textAlignment="CENTER">
                            <font>
                               <Font size="48.0" />
                            </font>

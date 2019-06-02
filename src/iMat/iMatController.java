@@ -3,6 +3,7 @@ package iMat;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -41,7 +42,7 @@ public class iMatController implements Initializable {
     private ImageView escapehatch, addToFavorites;
 
     @FXML
-    private AnchorPane checkoutAnchorPane, searchAnchorPane;
+    private AnchorPane checkoutAnchorPane, searchAnchorPane, myPageAnchorPane;
 
     @FXML
     private FlowPane categoriesList, categoriesGrid, shoppingCartList;
@@ -301,6 +302,10 @@ public class iMatController implements Initializable {
         } else if (mainLabel.getText().equals("Favoriter")) {
             updateFavoriteGrid();
             updateShoppingCartList();
+        }else if (iMat.scene.equals("myPage.fxml")) {
+            if (isSearching){
+                updateSearchGrid(searchWord);
+            }
         } else if (iMat.scene.equals("categories.fxml")) {
             updateShoppingCartList();
             if (isSearching){
@@ -553,7 +558,9 @@ public class iMatController implements Initializable {
             backButton.setVisible(true);
 
         }else if(iMat.scene.equals("myPage.fxml")){
-
+            myPageAnchorPane.setVisible(false);
+            searchAnchorPane.setVisible(true);
+            myPageAnchorPane.toBack();
         }else {
             cancelSearch.setVisible(true);
             backButton.setVisible(false);
@@ -574,6 +581,16 @@ public class iMatController implements Initializable {
                 categoriesGrid.getChildren().add(new ProductBoxItem(p, this));
             }
         }
+        if (iMat.scene.equals("myPage.fxml")) {
+            backButton.setOnAction((event) -> {
+                try {
+                    switchToAccount();
+                } catch (Exception e){
+
+                }
+            });
+        }
+
     }
 
     public void keyListener(KeyEvent event){
