@@ -1,0 +1,3 @@
+.searchBar:disabled{
+    -fx-prompt-text-fill: black;
+}
